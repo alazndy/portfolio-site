@@ -57,7 +57,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans bg-[#030305] text-white overflow-hidden`} suppressHydrationWarning>
         <Providers>
           <div className="flex h-screen w-screen overflow-hidden">
-            <Sidebar />
+            <Sidebar projects={projects} />
             
             <div className="flex-1 flex flex-col min-w-0 overflow-hidden relative">
               <Header />
