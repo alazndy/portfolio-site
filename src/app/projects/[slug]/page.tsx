@@ -121,12 +121,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                       <span className="text-white/80">{spec.value}</span>
                     </div>
                     <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden">
-                       <motion.div 
-                         initial={{ width: 0 }}
-                         animate={{ width: "100%" }}
-                         transition={{ duration: 1, delay: 0.5 }}
-                         className={cn("h-full opacity-40", spec.bar)} 
-                       />
+                       <div className={cn("h-full opacity-40 w-full", spec.bar)} />
                     </div>
                   </div>
                 ))}
