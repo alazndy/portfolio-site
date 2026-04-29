@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const coreSlugs = ['AI_Trader', 'Crucix', 'ENV-I', 'GTab', 'NEXUS', 'UniControl', 'tek-ui'];
+const coreSlugs = ['AI_Trader', 'ENV-I', 'GTab', 'NEXUS', 'UniControl', 'tek-ui'];
 
 for (const slug of coreSlugs) {
     const pagePath = path.join(__dirname, 'src', 'app', 'projects', slug, 'page.tsx');
