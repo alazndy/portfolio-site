@@ -1,4 +1,5 @@
 ---
+image: "/projects/Oyuntd.png"
 title: "Oyuntd"
 category: "Diğer"
 status: "Pending"

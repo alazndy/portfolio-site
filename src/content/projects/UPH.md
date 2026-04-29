@@ -1,4 +1,5 @@
 ---
+image: "/projects/UPH.webp"
 title: "UPH"
 category: "Diğer"
 status: "Pending"

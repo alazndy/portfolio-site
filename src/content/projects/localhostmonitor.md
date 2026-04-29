@@ -1,4 +1,5 @@
 ---
+image: "/projects/localhostmonitor.png"
 title: "localhostmonitor"
 category: "UI Altyapısı"
 status: "Active"

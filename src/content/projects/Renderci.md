@@ -1,4 +1,5 @@
 ---
+image: "/projects/Renderci.webp"
 title: "Renderci"
 category: "İletişim & Sosyal"
 status: "Pending"

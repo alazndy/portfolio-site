@@ -1,4 +1,5 @@
 ---
+image: "/projects/tek-ui.png"
 title: tek-ui
 category: UI Infrastructure
 status: Stable

@@ -1,4 +1,5 @@
 ---
+image: "/projects/Weave.webp"
 title: "Weave"
 category: "Medya & Ses"
 status: "Active"

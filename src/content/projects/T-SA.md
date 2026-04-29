@@ -1,4 +1,5 @@
 ---
+image: "/projects/T-SA.webp"
 title: "T-SA"
 category: "Diğer"
 status: "Pending"

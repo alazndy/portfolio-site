@@ -1,4 +1,5 @@
 ---
+image: "/projects/Bangen.png"
 title: "Bangen"
 category: "İletişim & Sosyal"
 status: "Pending"
