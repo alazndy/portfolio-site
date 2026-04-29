@@ -41,9 +41,19 @@ export function CategoryGrid({ categories }: CategoryGridProps) {
                 href={`/projects/${project.slug}`}
                 className="group flex items-center gap-4 px-4 py-3 rounded-xl border border-transparent hover:border-foreground/5 hover:bg-foreground/5 transition-all duration-150"
               >
-                <div className={cn("w-8 h-8 rounded-lg bg-foreground/5 flex items-center justify-center shrink-0 group-hover:bg-foreground/10 transition-colors", cat.accent)}>
-                  <Icon className="w-3.5 h-3.5" />
-                </div>
+                {project.image ? (
+                  <div className="w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-foreground/5 bg-foreground/5">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                ) : (
+                  <div className={cn("w-12 h-12 rounded-lg bg-foreground/5 flex items-center justify-center shrink-0 group-hover:bg-foreground/10 transition-colors", cat.accent)}>
+                    <Icon className="w-5 h-5" />
+                  </div>
+                )}
 
                 <div className="flex-1 min-w-0">
                   <div className="flex items-baseline gap-2">

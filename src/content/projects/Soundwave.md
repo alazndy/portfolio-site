@@ -1,4 +1,5 @@
 ---
+image: "/projects/Soundwave.png"
 title: "Soundwave"
 category: "Diğer"
 status: "Concept"

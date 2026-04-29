@@ -1,4 +1,5 @@
 ---
+image: "/projects/Android-LCARS-Launcher.png"
 title: "Android LCARS Launcher"
 category: "Diğer"
 status: "Active"

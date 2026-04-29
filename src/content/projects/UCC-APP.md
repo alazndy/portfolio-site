@@ -1,4 +1,5 @@
 ---
+image: "/projects/UCC-APP.png"
 title: "UCC APP"
 category: "AI & Veri"
 status: "Active"

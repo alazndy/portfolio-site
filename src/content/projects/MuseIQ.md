@@ -1,4 +1,5 @@
 ---
+image: "/projects/MuseIQ.png"
 title: "MuseIQ"
 category: "Diğer"
 status: "Pending"

@@ -1,4 +1,5 @@
 ---
+image: "/projects/AkortAPP.png"
 title: "AkortAPP"
 category: "Diğer"
 status: "Pending"

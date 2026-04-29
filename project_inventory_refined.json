@@ -1,0 +1,392 @@
+{
+  "web": [
+    {
+      "id": "Pro-Gect",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\Yönetim & Takip\\Pro-Gect",
+      "images": [],
+      "devScript": "dev"
+    },
+    {
+      "id": "Oyuntd",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Oyuntd",
+      "images": [
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Oyuntd\\android\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\drawable\\splash.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Oyuntd\\android\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\drawable-land-hdpi-v4\\splash.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Oyuntd\\android\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\drawable-land-mdpi-v4\\splash.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Oyuntd\\android\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\drawable-land-xhdpi-v4\\splash.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Oyuntd\\android\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\drawable-land-xxhdpi-v4\\splash.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Oyuntd\\android\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\drawable-land-xxxhdpi-v4\\splash.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Oyuntd\\android\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\drawable-port-hdpi-v4\\splash.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Oyuntd\\android\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\drawable-port-mdpi-v4\\splash.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Oyuntd\\android\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\drawable-port-xhdpi-v4\\splash.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Oyuntd\\android\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\drawable-port-xxhdpi-v4\\splash.png"
+      ],
+      "devScript": "dev"
+    },
+    {
+      "id": "parfm-parfmsite",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\E-Ticaret\\parfüm",
+      "images": [
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\E-Ticaret\\parfüm\\.next\\dev\\cache\\images\\8xZka8vaWAzemYEVanA2tuGVeoUM6e4SL4U45qYXfGQ\\31536000.1795456782326.KTIFeahGTrP1CpnowDw8-bGgDGXL0yvKauQUB0ZJ468.ImE4MTJkOGRkZTcxYjk3Y2NhZGY0NzkzMjUyODBkOWQ1Ig.webp",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\E-Ticaret\\parfüm\\.next\\dev\\cache\\images\\aTqLUnVmDdPhWUCZgEMVewiJa-cUx80T_MNjDfOFIQo\\31536000.1795645420224.4iP9Q0R81A5EDf1y3E3p5FlntBlntL-5OPevH8IVka0.IGbp0aNuOLupXiLVsfnILNNWAKwFxtLzIeCmusTMnIY.webp",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\E-Ticaret\\parfüm\\.next\\dev\\cache\\images\\B9JGT6ElxsoXx8ZnHYFaSbQKwEq8ARC78-7NS1DKlQ8\\31536000.1795714221522.oV2p46GB9_wyG7y7rEBAX133GMq2tQ88taLM8ivBgWc.IjA5NGYyOWQyYjg4YjFmMmNmZTJmNGZkNzcwMmMzZTk1Ig.webp",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\E-Ticaret\\parfüm\\.next\\dev\\cache\\images\\dFRC8KT-50aB19oEl8DxVz-Dd2mJeBp3U534FYo99jo\\31536000.1795441938875.cYOet8OFP3FjCeV5IY6dz8WDedPWXXV4i3R5gUtCBbM.CN4jqY1kjaG73rUiJw_nxxaiLNsp1Dd0aaGtRzKESao.webp",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\E-Ticaret\\parfüm\\.next\\dev\\cache\\images\\gTEhVJie6w5tj8RZozyGCGxIAIacKqA9yUikbd0XyJ8\\31536000.1795714134585.rcPer1d476F0Qq07jQ9Bk5Bq49YVKMHyIZJZHtceBag.IjE3MjM4ZTZiZmRjZTFkN2I0ZTg3Zjc1NDRlYTA2ZWMyIg.webp",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\E-Ticaret\\parfüm\\.next\\dev\\cache\\images\\IrTrbabxzZrhYOrHQiDiK1-j6nt1Z7hx3q-1F_7C10c\\31536000.1795508561009.3Gq33qjN6V5l0iDRQzT_FHlsriuSWE0HWIe0Nf-Cm80.CN4jqY1kjaG73rUiJw_nxxaiLNsp1Dd0aaGtRzKESao.webp",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\E-Ticaret\\parfüm\\.next\\dev\\cache\\images\\lqpdE_UsdF_wUVejiEXbRm3c5djhXIHLfAdnzZVgcRI\\31536000.1795441938146.VBVsDFN2Ys_ZruxLxTLZgpRaTS0Jd6qQl7EV0xs1KZA.2DChkF5tTfQL0QXIRZWSJZ_pdKIGYy5vxxRGKPgIZo4.webp",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\E-Ticaret\\parfüm\\.next\\dev\\cache\\images\\mTtp_TxNmCjO581ldRJt2fnwWF-FA426SeCXOYA2hW8\\31536000.1795441938093.ZkxK0HueIYGnkqcM5Z6GiN_HPFPBYI62xxR24Z-1MdU.PvBzaZ5JkB2IfXFJiao7AAegRJoyh_H-auRG0UwIDBw.webp",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\E-Ticaret\\parfüm\\.next\\dev\\cache\\images\\nAUngAp4xTjBPUtxNdRgi6jOPXm0r4KIs4kfDjEhG9g\\31536000.1795443817316.brf3aib2aJMjrZn_49bduQRUh2x-YZcGU2QVd1G6Ojg.IjIwZmRkYzUzMThkNjFiMjM1MGRhNTY1MjhjYjc3ZGUzIg.webp",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\E-Ticaret\\parfüm\\.next\\dev\\cache\\images\\pfj0VkkcUUIRnP4EHvEM04zHWWHdnXsgITE-wXiUawk\\31536000.1795645420309.F4E0OmpG_3Zer8O0ERrZp2Cpxox25_cRCJtaT6CfFNg.G8uZI0vqg0sH1HlnFLyoNwJ8D8KXT7o64zFDAqRQHIw.webp"
+      ],
+      "devScript": "dev"
+    },
+    {
+      "id": "tek-ui",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\UI Altyapısı\\tek-ui",
+      "images": [
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\UI Altyapısı\\tek-ui\\apps\\env-i\\.idx\\icon.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\UI Altyapısı\\tek-ui\\apps\\env-i\\android\\app\\src\\main\\assets\\public\\icons\\icon-128x128.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\UI Altyapısı\\tek-ui\\apps\\env-i\\android\\app\\src\\main\\assets\\public\\icons\\icon-144x144.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\UI Altyapısı\\tek-ui\\apps\\env-i\\android\\app\\src\\main\\assets\\public\\icons\\icon-152x152.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\UI Altyapısı\\tek-ui\\apps\\env-i\\android\\app\\src\\main\\assets\\public\\icons\\icon-192x192.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\UI Altyapısı\\tek-ui\\apps\\env-i\\android\\app\\src\\main\\assets\\public\\icons\\icon-384x384.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\UI Altyapısı\\tek-ui\\apps\\env-i\\android\\app\\src\\main\\assets\\public\\icons\\icon-512x512.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\UI Altyapısı\\tek-ui\\apps\\env-i\\android\\app\\src\\main\\assets\\public\\icons\\icon-72x72.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\UI Altyapısı\\tek-ui\\apps\\env-i\\android\\app\\src\\main\\assets\\public\\icons\\icon-96x96.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\UI Altyapısı\\tek-ui\\apps\\env-i\\android\\app\\src\\main\\assets\\public\\logo.png"
+      ],
+      "devScript": "dev"
+    },
+    {
+      "id": "GTab",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\GTab",
+      "images": [
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\GTab\\public\\icons\\icon128.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\GTab\\public\\icons\\icon16.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\GTab\\public\\icons\\icon48.png"
+      ],
+      "devScript": "dev"
+    },
+    {
+      "id": "cisemogrencitakip",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\Yönetim & Takip\\cisem_ogrenci_takip",
+      "images": [],
+      "devScript": "dev"
+    },
+    {
+      "id": "Tekel",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Tekel",
+      "images": [],
+      "devScript": "dev"
+    },
+    {
+      "id": "t-Market",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\E-Ticaret\\t-Market",
+      "images": [],
+      "devScript": "dev"
+    },
+    {
+      "id": "MSNN",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\İletişim & Sosyal\\MSNN",
+      "images": [],
+      "devScript": "dev"
+    },
+    {
+      "id": "PR-HUB",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\Yönetim & Takip\\PR-HUB",
+      "images": [],
+      "devScript": "dev"
+    },
+    {
+      "id": "UPH",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\Yönetim & Takip\\UPH",
+      "images": [
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\Yönetim & Takip\\UPH\\.next\\dev\\cache\\images\\HYTUX2VYa0XUJX4EOTTw51MkoVu3Vl7WssAYtgogblE\\14400.1767646638158.HXQ3CExAliIFhZ9xZ66qE8GWrl9gW9qf1Jpi3Zbc2Y8.Vy8iNjgxY2UtMTliMjY2M2M1YzUi.webp",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\Yönetim & Takip\\UPH\\android\\app\\src\\main\\res\\drawable\\splash.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\Yönetim & Takip\\UPH\\android\\app\\src\\main\\res\\drawable-land-hdpi\\splash.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\Yönetim & Takip\\UPH\\android\\app\\src\\main\\res\\drawable-land-mdpi\\splash.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\Yönetim & Takip\\UPH\\android\\app\\src\\main\\res\\drawable-land-xhdpi\\splash.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\Yönetim & Takip\\UPH\\android\\app\\src\\main\\res\\drawable-land-xxhdpi\\splash.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\Yönetim & Takip\\UPH\\android\\app\\src\\main\\res\\drawable-land-xxxhdpi\\splash.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\Yönetim & Takip\\UPH\\android\\app\\src\\main\\res\\drawable-port-hdpi\\splash.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\Yönetim & Takip\\UPH\\android\\app\\src\\main\\res\\drawable-port-mdpi\\splash.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Web Platformları\\Yönetim & Takip\\UPH\\android\\app\\src\\main\\res\\drawable-port-xhdpi\\splash.png"
+      ],
+      "devScript": "dev"
+    },
+    {
+      "id": "GT-UI",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\UI Altyapısı\\GT-UI",
+      "images": [],
+      "devScript": "dev"
+    },
+    {
+      "id": "TEchschem",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Tasarım & Geliştirici Araçları\\Devre & Şematik\\TEchschem",
+      "images": [],
+      "devScript": "dev"
+    },
+    {
+      "id": "Crucix",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Crucix",
+      "images": [
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Crucix\\docs\\boot.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Crucix\\docs\\dashboard.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Crucix\\docs\\globe.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Crucix\\docs\\map.png"
+      ],
+      "devScript": "dev"
+    },
+    {
+      "id": "adctasarm-com",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\_eski\\Web & Apps\\adctasarım.com",
+      "images": [],
+      "devScript": "dev"
+    },
+    {
+      "id": "localhostmonitor",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Tasarım & Geliştirici Araçları\\Sistem Araçları\\localhostmonitor",
+      "images": [
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Tasarım & Geliştirici Araçları\\Sistem Araçları\\localhostmonitor\\src-tauri\\icons\\128x128.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Tasarım & Geliştirici Araçları\\Sistem Araçları\\localhostmonitor\\src-tauri\\icons\\128x128@2x.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Tasarım & Geliştirici Araçları\\Sistem Araçları\\localhostmonitor\\src-tauri\\icons\\32x32.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Tasarım & Geliştirici Araçları\\Sistem Araçları\\localhostmonitor\\src-tauri\\icons\\icon.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Tasarım & Geliştirici Araçları\\Sistem Araçları\\localhostmonitor\\src-tauri\\icons\\Square107x107Logo.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Tasarım & Geliştirici Araçları\\Sistem Araçları\\localhostmonitor\\src-tauri\\icons\\Square142x142Logo.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Tasarım & Geliştirici Araçları\\Sistem Araçları\\localhostmonitor\\src-tauri\\icons\\Square150x150Logo.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Tasarım & Geliştirici Araçları\\Sistem Araçları\\localhostmonitor\\src-tauri\\icons\\Square284x284Logo.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Tasarım & Geliştirici Araçları\\Sistem Araçları\\localhostmonitor\\src-tauri\\icons\\Square30x30Logo.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Tasarım & Geliştirici Araçları\\Sistem Araçları\\localhostmonitor\\src-tauri\\icons\\Square310x310Logo.png"
+      ],
+      "devScript": "dev"
+    },
+    {
+      "id": "Renderci",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Tasarım & Geliştirici Araçları\\3D & Görselleştirme\\Renderci",
+      "images": [],
+      "devScript": "dev"
+    }
+  ],
+  "withImages": [
+    {
+      "id": "UCC-APP",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Endüstriyel & Saha\\Kontrol Sistemleri\\UCC APP",
+      "images": [
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Endüstriyel & Saha\\Kontrol Sistemleri\\UCC APP\\code\\.dart_tool\\widget_preview_scaffold\\web\\favicon.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Endüstriyel & Saha\\Kontrol Sistemleri\\UCC APP\\code\\.dart_tool\\widget_preview_scaffold\\web\\icons\\Icon-192.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Endüstriyel & Saha\\Kontrol Sistemleri\\UCC APP\\code\\.dart_tool\\widget_preview_scaffold\\web\\icons\\Icon-512.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Endüstriyel & Saha\\Kontrol Sistemleri\\UCC APP\\code\\.dart_tool\\widget_preview_scaffold\\web\\icons\\Icon-maskable-192.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Endüstriyel & Saha\\Kontrol Sistemleri\\UCC APP\\code\\.dart_tool\\widget_preview_scaffold\\web\\icons\\Icon-maskable-512.png"
+      ],
+      "devScript": null
+    },
+    {
+      "id": "AkortAPP-Akort",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\AkortAPP",
+      "images": [
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\AkortAPP\\akort\\.idx\\icon.png"
+      ],
+      "devScript": null
+    },
+    {
+      "id": "NEXUS",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\NEXUS",
+      "images": [
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\NEXUS\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\NEXUS\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\NEXUS\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\NEXUS\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\NEXUS\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\NEXUS\\assets\\drawio\\images\\1x1.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\NEXUS\\assets\\drawio\\images\\2x2.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\NEXUS\\assets\\drawio\\images\\3x3.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\NEXUS\\assets\\drawio\\images\\android-chrome-512x512.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\NEXUS\\assets\\drawio\\images\\apple-touch-icon.png"
+      ],
+      "devScript": null
+    },
+    {
+      "id": "Soundwave",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\Soundwave",
+      "images": [
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\Soundwave\\juce_app\\build\\_deps\\juce-src\\examples\\Assets\\juce_icon.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\Soundwave\\juce_app\\build\\_deps\\juce-src\\examples\\Assets\\juce_icon_template.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\Soundwave\\juce_app\\build\\_deps\\juce-src\\examples\\Assets\\Notifications\\images\\ic_stat_name.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\Soundwave\\juce_app\\build\\_deps\\juce-src\\examples\\Assets\\Notifications\\images\\ic_stat_name10.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\Soundwave\\juce_app\\build\\_deps\\juce-src\\examples\\Assets\\Notifications\\images\\ic_stat_name2.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\Soundwave\\juce_app\\build\\_deps\\juce-src\\examples\\Assets\\Notifications\\images\\ic_stat_name3.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\Soundwave\\juce_app\\build\\_deps\\juce-src\\examples\\Assets\\Notifications\\images\\ic_stat_name4.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\Soundwave\\juce_app\\build\\_deps\\juce-src\\examples\\Assets\\Notifications\\images\\ic_stat_name5.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\Soundwave\\juce_app\\build\\_deps\\juce-src\\examples\\Assets\\Notifications\\images\\ic_stat_name6.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\Soundwave\\juce_app\\build\\_deps\\juce-src\\examples\\Assets\\Notifications\\images\\ic_stat_name7.png"
+      ],
+      "devScript": null
+    },
+    {
+      "id": "AkortAPP",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\AkortAPP",
+      "images": [
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\AkortAPP\\akort\\.idx\\icon.png"
+      ],
+      "devScript": null
+    },
+    {
+      "id": "MuseIQ",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\MuseIQ",
+      "images": [
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\MuseIQ\\.venv\\Lib\\site-packages\\networkx\\drawing\\tests\\baseline\\test_display_complex.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\MuseIQ\\.venv\\Lib\\site-packages\\networkx\\drawing\\tests\\baseline\\test_display_empty_graph.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\MuseIQ\\.venv\\Lib\\site-packages\\networkx\\drawing\\tests\\baseline\\test_display_house_with_colors.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\MuseIQ\\.venv\\Lib\\site-packages\\networkx\\drawing\\tests\\baseline\\test_display_labels_and_colors.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\MuseIQ\\.venv\\Lib\\site-packages\\networkx\\drawing\\tests\\baseline\\test_display_shortest_path.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\MuseIQ\\.venv\\Lib\\site-packages\\networkx\\drawing\\tests\\baseline\\test_house_with_colors.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\MuseIQ\\.venv\\Lib\\site-packages\\scipy\\ndimage\\tests\\dots.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\MuseIQ\\.venv\\Lib\\site-packages\\sklearn\\datasets\\images\\china.jpg",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\MuseIQ\\.venv\\Lib\\site-packages\\sklearn\\datasets\\images\\flower.jpg",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Medya & Ses\\MuseIQ\\.venv\\Lib\\site-packages\\sympy\\plotting\\tests\\test_region_and.png"
+      ],
+      "devScript": null
+    },
+    {
+      "id": "AG-Manager",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager",
+      "images": [
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\docs\\assets\\logo.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\docs\\assets\\screenshot-main.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\docs\\assets\\screenshot-proxy.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\docs\\assets\\screenshot-setting.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\images\\128x128.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\images\\128x128@2x.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\images\\32x32.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\images\\64x64.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\images\\favicon-120.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\images\\favicon-128.png"
+      ],
+      "devScript": null
+    },
+    {
+      "id": "Android-LCARS-Launcher",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Android LCARS Launcher",
+      "images": [
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Android LCARS Launcher\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\drawable\\ic_launcher_foreground.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Android LCARS Launcher\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\mipmap-hdpi-v4\\ic_launcher.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Android LCARS Launcher\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\mipmap-hdpi-v4\\ic_launcher_round.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Android LCARS Launcher\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\mipmap-mdpi-v4\\ic_launcher.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Android LCARS Launcher\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\mipmap-mdpi-v4\\ic_launcher_round.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Android LCARS Launcher\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\mipmap-xhdpi-v4\\ic_launcher.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Android LCARS Launcher\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\mipmap-xhdpi-v4\\ic_launcher_round.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Android LCARS Launcher\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\mipmap-xxhdpi-v4\\ic_launcher.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Android LCARS Launcher\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\mipmap-xxhdpi-v4\\ic_launcher_round.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Android LCARS Launcher\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\mipmap-xxxhdpi-v4\\ic_launcher.png"
+      ],
+      "devScript": null
+    },
+    {
+      "id": "TrAIder",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\AI & Veri\\Trading\\TrAIder",
+      "images": [
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\AI & Veri\\Trading\\TrAIder\\backend\\venv\\Lib\\site-packages\\scipy\\ndimage\\tests\\dots.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\AI & Veri\\Trading\\TrAIder\\backend\\venv\\Lib\\site-packages\\sklearn\\datasets\\images\\china.jpg",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\AI & Veri\\Trading\\TrAIder\\backend\\venv\\Lib\\site-packages\\sklearn\\datasets\\images\\flower.jpg"
+      ],
+      "devScript": null
+    },
+    {
+      "id": "ADC-Web-Sitesi",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Endüstriyel & Saha\\Şirket\\ADC Web Sitesi",
+      "images": [
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Endüstriyel & Saha\\Şirket\\ADC Web Sitesi\\adc-web-sitesi-\\page.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Endüstriyel & Saha\\Şirket\\ADC Web Sitesi\\public\\assets\\products\\BE-870FM.jpg"
+      ],
+      "devScript": null
+    }
+  ],
+  "other": [
+    {
+      "id": "UCPS-Series",
+      "status": "Path not found"
+    },
+    {
+      "id": "AI-360-VCT",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Endüstriyel & Saha\\Sensör & Algılama\\AI 360 VCT",
+      "images": [],
+      "devScript": null
+    },
+    {
+      "id": "Radar-Firmware",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Endüstriyel & Saha\\Sensör & Algılama\\Radar Firmware",
+      "images": [],
+      "devScript": null
+    },
+    {
+      "id": "Arduino-Firmware-Sketches",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Endüstriyel & Saha\\Sensör & Algılama\\Arduino Firmware Sketches",
+      "images": [],
+      "devScript": null
+    },
+    {
+      "id": "WorkFlowEngine",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\WorkFlowEngine",
+      "images": [],
+      "devScript": null
+    },
+    {
+      "id": "Rutn-Krc",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Rutın Kırıcı",
+      "images": [],
+      "devScript": null
+    },
+    {
+      "id": "ENV-I",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Web & Apps\\portfolio-site\\src\\app\\projects\\ENV-I",
+      "images": [],
+      "devScript": null
+    },
+    {
+      "id": "Mesasge",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\_eski\\Web & Apps\\Projeler\\Mesasge",
+      "images": [],
+      "devScript": null
+    },
+    {
+      "id": "T-SA",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\T-SA",
+      "images": [],
+      "devScript": null
+    },
+    {
+      "id": "envanter-ENV-I",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\UI Altyapısı\\tek-ui\\apps\\env-i\\android\\app\\src\\main\\java\\com\\adc\\envanter",
+      "images": [],
+      "devScript": null
+    },
+    {
+      "id": "AI-Trader",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\AI & Veri\\Trading\\AI Trader",
+      "images": [],
+      "devScript": null
+    },
+    {
+      "id": "Weave",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Tasarım & Geliştirici Araçları\\Devre & Şematik\\Weave",
+      "images": [],
+      "devScript": null
+    },
+    {
+      "id": "espremote",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Tasarım & Geliştirici Araçları\\Sistem Araçları\\espremote",
+      "images": [],
+      "devScript": null
+    },
+    {
+      "id": "T-Launcher",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Tasarım & Geliştirici Araçları\\Sistem Araçları\\T-Launcher",
+      "images": [],
+      "devScript": null
+    },
+    {
+      "id": "Bangen",
+      "status": "Path not found"
+    }
+  ]
+}

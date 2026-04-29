@@ -29,7 +29,20 @@ export default async function UniControlPage() {
               <Microchip className="w-4 h-4" />
               Embedded Hardware
             </div>
-            <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter text-foreground">UniControl</h1>
+            
+          {/* Project Cover Image */}
+          {project?.metadata?.image && (
+            <div className="relative w-full aspect-[21/9] rounded-[32px] overflow-hidden border border-border mb-12 group">
+              <img 
+                src={project.metadata.image} 
+                alt={project.metadata.title}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
+            </div>
+          )}
+
+          <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter text-foreground">UniControl</h1>
             <p className="text-xl md:text-2xl text-foreground/60 font-light leading-relaxed">
               ESP32-S3 tabanlı gelişmiş araç güvenlik ve kontrol sistemi. Ağır vasıtalar ve endüstriyel sahalar için Brigade Radar destekli bütünleşik donanım mimarisi.
             </p>

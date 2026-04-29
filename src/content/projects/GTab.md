@@ -1,4 +1,5 @@
 ---
+image: "/projects/GTab.png"
 title: GTab
 category: Browser Extensions
 status: Live

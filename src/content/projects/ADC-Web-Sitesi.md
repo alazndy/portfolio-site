@@ -1,4 +1,5 @@
 ---
+image: "/projects/ADC-Web-Sitesi.png"
 title: "ADC Web Sitesi"
 category: "Tasarım & Geliştirici Araçları"
 status: "Active"

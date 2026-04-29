@@ -1,4 +1,5 @@
 ---
+image: "/projects/TrAIder.png"
 title: "TrAIder"
 category: "Kişisel Üretkenlik"
 status: "Pending"

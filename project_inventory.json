@@ -1,0 +1,114 @@
+{
+  "web": [
+    {
+      "id": "Crucix",
+      "name": "Crucix",
+      "path": "Crucix",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Crucix",
+      "images": [
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Crucix\\docs\\boot.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Crucix\\docs\\dashboard.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Crucix\\docs\\globe.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Crucix\\docs\\map.png"
+      ]
+    },
+    {
+      "id": "localhostmonitor",
+      "name": "localhostmonitor",
+      "path": "Tasarım & Geliştirici Araçları/Sistem Araçları/localhostmonitor",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Tasarım & Geliştirici Araçları\\Sistem Araçları\\localhostmonitor",
+      "images": [
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Tasarım & Geliştirici Araçları\\Sistem Araçları\\localhostmonitor\\src-tauri\\icons\\128x128.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Tasarım & Geliştirici Araçları\\Sistem Araçları\\localhostmonitor\\src-tauri\\icons\\128x128@2x.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Tasarım & Geliştirici Araçları\\Sistem Araçları\\localhostmonitor\\src-tauri\\icons\\32x32.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Tasarım & Geliştirici Araçları\\Sistem Araçları\\localhostmonitor\\src-tauri\\icons\\icon.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Tasarım & Geliştirici Araçları\\Sistem Araçları\\localhostmonitor\\src-tauri\\icons\\Square107x107Logo.png"
+      ]
+    }
+  ],
+  "withImages": [
+    {
+      "id": "UCC-APP",
+      "name": "UCC APP",
+      "path": "Endüstriyel & Saha/Kontrol Sistemleri/UCC APP",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Endüstriyel & Saha\\Kontrol Sistemleri\\UCC APP",
+      "images": [
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Endüstriyel & Saha\\Kontrol Sistemleri\\UCC APP\\code\\.dart_tool\\widget_preview_scaffold\\web\\favicon.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Endüstriyel & Saha\\Kontrol Sistemleri\\UCC APP\\code\\.dart_tool\\widget_preview_scaffold\\web\\icons\\Icon-192.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Endüstriyel & Saha\\Kontrol Sistemleri\\UCC APP\\code\\.dart_tool\\widget_preview_scaffold\\web\\icons\\Icon-512.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Endüstriyel & Saha\\Kontrol Sistemleri\\UCC APP\\code\\.dart_tool\\widget_preview_scaffold\\web\\icons\\Icon-maskable-192.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Endüstriyel & Saha\\Kontrol Sistemleri\\UCC APP\\code\\.dart_tool\\widget_preview_scaffold\\web\\icons\\Icon-maskable-512.png"
+      ]
+    },
+    {
+      "id": "AG-Manager",
+      "name": "AG Manager",
+      "path": "Kişisel Üretkenlik/AG Manager",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager",
+      "images": [
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\docs\\assets\\logo.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\docs\\assets\\screenshot-main.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\docs\\assets\\screenshot-proxy.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\docs\\assets\\screenshot-setting.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\images\\128x128.png"
+      ]
+    },
+    {
+      "id": "Android-LCARS-Launcher",
+      "name": "Android LCARS Launcher",
+      "path": "Mobil & Oyun/Android LCARS Launcher",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Android LCARS Launcher",
+      "images": [
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Android LCARS Launcher\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\drawable\\ic_launcher_foreground.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Android LCARS Launcher\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\mipmap-hdpi-v4\\ic_launcher.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Android LCARS Launcher\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\mipmap-hdpi-v4\\ic_launcher_round.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Android LCARS Launcher\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\mipmap-mdpi-v4\\ic_launcher.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Android LCARS Launcher\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\mipmap-mdpi-v4\\ic_launcher_round.png"
+      ]
+    },
+    {
+      "id": "TrAIder",
+      "name": "TrAIder",
+      "path": "AI & Veri/Trading/TrAIder",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\AI & Veri\\Trading\\TrAIder",
+      "images": [
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\AI & Veri\\Trading\\TrAIder\\backend\\venv\\Lib\\site-packages\\scipy\\ndimage\\tests\\dots.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\AI & Veri\\Trading\\TrAIder\\backend\\venv\\Lib\\site-packages\\sklearn\\datasets\\images\\china.jpg",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\AI & Veri\\Trading\\TrAIder\\backend\\venv\\Lib\\site-packages\\sklearn\\datasets\\images\\flower.jpg"
+      ]
+    },
+    {
+      "id": "ADC-Web-Sitesi",
+      "name": "ADC Web Sitesi",
+      "path": "Endüstriyel & Saha/Şirket/ADC Web Sitesi",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Endüstriyel & Saha\\Şirket\\ADC Web Sitesi",
+      "images": [
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Endüstriyel & Saha\\Şirket\\ADC Web Sitesi\\adc-web-sitesi-\\page.png",
+        "C:\\Users\\turha\\Desktop\\Dev Ops\\Endüstriyel & Saha\\Şirket\\ADC Web Sitesi\\public\\assets\\products\\BE-870FM.jpg"
+      ]
+    }
+  ],
+  "other": [
+    {
+      "id": "AI-360-VCT",
+      "name": "AI 360 VCT",
+      "path": "Endüstriyel & Saha/Sensör & Algılama/AI 360 VCT",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Endüstriyel & Saha\\Sensör & Algılama\\AI 360 VCT",
+      "images": []
+    },
+    {
+      "id": "Radar-Firmware",
+      "name": "Radar Firmware",
+      "path": "Endüstriyel & Saha/Sensör & Algılama/Radar Firmware",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Endüstriyel & Saha\\Sensör & Algılama\\Radar Firmware",
+      "images": []
+    },
+    {
+      "id": "Weave",
+      "name": "Weave",
+      "path": "Tasarım & Geliştirici Araçları/Devre & Şematik/Weave",
+      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Tasarım & Geliştirici Araçları\\Devre & Şematik\\Weave",
+      "images": []
+    }
+  ]
+}

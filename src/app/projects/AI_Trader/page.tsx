@@ -40,7 +40,20 @@ export default async function AITraderPage() {
               <BrainCircuit className="w-4 h-4" />
               Algorithmic Finance
             </div>
-            <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter text-foreground">AI Trader</h1>
+            
+          {/* Project Cover Image */}
+          {project?.metadata?.image && (
+            <div className="relative w-full aspect-[21/9] rounded-[32px] overflow-hidden border border-border mb-12 group">
+              <img 
+                src={project.metadata.image} 
+                alt={project.metadata.title}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
+            </div>
+          )}
+
+          <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter text-foreground">AI Trader</h1>
             <p className="text-xl md:text-2xl text-foreground/60 font-light max-w-2xl leading-relaxed">
               Yapay zeka destekli, düşük gecikmeli algoritmik ticaret motoru. Pazar sinyallerini gerçek zamanlı analiz eder ve otonom işlemler yürütür.
             </p>

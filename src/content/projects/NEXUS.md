@@ -1,4 +1,5 @@
 ---
+image: "/projects/NEXUS.png"
 title: NEXUS
 category: Hardware & Embedded
 status: Early

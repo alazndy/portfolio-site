@@ -13,6 +13,7 @@ export interface ProjectMetadata {
   date?: string;
   github?: string;
   live?: string;
+  image?: string;
   slug: string;
 }
 

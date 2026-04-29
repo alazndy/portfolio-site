@@ -90,6 +90,18 @@ export default async function ProjectPage({ params }: Props) {
             )}
           </div>
 
+          {/* Project Image */}
+          {metadata.image && (
+            <div className="relative w-full aspect-[21/9] rounded-[32px] overflow-hidden border border-border mb-8 group">
+              <img 
+                src={metadata.image} 
+                alt={metadata.title}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
+            </div>
+          )}
+
           {/* Title */}
           <h1 className="text-5xl md:text-7xl font-black tracking-tight text-foreground uppercase leading-[0.9]">
             {metadata.title}

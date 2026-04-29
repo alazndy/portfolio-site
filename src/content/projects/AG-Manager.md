@@ -1,4 +1,5 @@
 ---
+image: "/projects/AG-Manager.png"
 title: "AG Manager"
 category: "Diğer"
 status: "Active"
