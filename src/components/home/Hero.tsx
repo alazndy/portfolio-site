@@ -2,8 +2,10 @@
 
 import { motion } from 'framer-motion';
 import { Typewriter } from '@/components/ui/Typewriter';
+import { useI18n } from '@/lib/i18n';
 
 export function Hero() {
+  const { t } = useI18n();
   return (
     <section className="py-16 space-y-8">
       <motion.div
@@ -17,17 +19,16 @@ export function Hero() {
           <span className="text-[10px] font-mono text-lcars-orange uppercase tracking-widest">Available for work</span>
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] uppercase text-white">
-          Engineering<br />
+        <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] uppercase text-foreground">
+          {t('home.title').split(' ').slice(0, 2).join(' ')}<br />
           <span className="text-transparent bg-clip-text bg-linear-to-r from-lcars-orange to-lcars-cyan">
-            & Operations
-          </span><br />
-          Ecosystem
+            {t('home.title').split(' ').slice(2).join(' ')}
+          </span>
         </h1>
 
-        <p className="max-w-xl text-base text-white/50 leading-relaxed font-mono">
+        <p className="max-w-xl text-base text-foreground/60 leading-relaxed font-mono">
           <Typewriter
-            text="Secure by design. Performance is a feature. Building multi-disciplinary infrastructure from automotive systems to global AI trade engines."
+            text={t('home.subtitle')}
             speed={18}
             delay={600}
           />

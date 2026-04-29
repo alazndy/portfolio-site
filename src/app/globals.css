@@ -14,6 +14,20 @@
   --glass-accent: rgba(255, 255, 255, 0.02);
 }
 
+.light {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --lcars-orange: #ea580c;
+  --lcars-cyan: #0284c7;
+  --lcars-red: #dc2626;
+  --lcars-purple: #9333ea;
+  --lcars-gold: #d97706;
+  --lcars-green: #16a34a;
+  --border: rgba(0, 0, 0, 0.1);
+  --glass: rgba(255, 255, 255, 0.85);
+  --glass-accent: rgba(0, 0, 0, 0.02);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -64,7 +78,7 @@ body::after {
 
 /* Content Container Shadow */
 .content-glow {
-  box-shadow: 0 0 50px -12px rgba(0, 204, 255, 0.1);
+  box-shadow: 0 0 50px -12px var(--lcars-cyan);
 }
 
 /* Glass 3.0 */
@@ -85,12 +99,13 @@ body::after {
   font-size: 2.25rem !important;
   margin-top: 4rem !important;
   margin-bottom: 2rem !important;
-  color: #fff !important;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  color: var(--foreground) !important;
+  text-shadow: 0 0 20px rgba(150, 150, 150, 0.1);
 }
 
 .prose p {
-  color: rgba(255, 255, 255, 0.85) !important;
+  color: var(--foreground) !important;
+  opacity: 0.85;
   font-weight: 400 !important;
 }
 

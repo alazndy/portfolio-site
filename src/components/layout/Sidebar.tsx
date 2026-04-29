@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { ProjectMetadata } from '@/lib/markdown';
+import { useI18n } from '@/lib/i18n';
 
 const categoryConfig: Record<string, { icon: any, color: string }> = {
   'AI & Veri': { icon: BrainCircuit, color: 'bg-lcars-cyan' },
@@ -30,6 +31,7 @@ function getCategoryConfig(category: string) {
 
 export function Sidebar({ projects = [] }: { projects?: ProjectMetadata[] }) {
   const pathname = usePathname();
+  const { t } = useI18n();
   const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({});
 
   // Group projects by category
@@ -51,15 +53,15 @@ export function Sidebar({ projects = [] }: { projects?: ProjectMetadata[] }) {
   };
 
   return (
-    <aside className="w-64 shrink-0 flex flex-col h-full bg-[#030305] border-r border-white/5 relative z-30 select-none">
+    <aside className="w-64 shrink-0 flex flex-col h-full bg-background border-r border-border relative z-30 select-none">
       
       {/* Logo */}
-      <div className="px-6 py-6 border-b border-white/5 shrink-0">
+      <div className="px-6 py-6 border-b border-border shrink-0">
         <div className="flex items-center gap-3">
           <div className="w-2 h-8 bg-lcars-orange rounded-full" />
           <div>
-            <div className="text-sm font-black text-white tracking-widest uppercase">Göktuğ</div>
-            <div className="text-[10px] font-mono text-white/30 uppercase tracking-wider">System Architect</div>
+            <div className="text-sm font-black text-foreground tracking-widest uppercase">Göktuğ</div>
+            <div className="text-[10px] font-mono text-foreground/30 uppercase tracking-wider">System Architect</div>
           </div>
         </div>
       </div>
@@ -69,26 +71,26 @@ export function Sidebar({ projects = [] }: { projects?: ProjectMetadata[] }) {
         <nav className="px-3 space-y-1 mb-6">
           <Link href="/" className={cn(
             "flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200",
-            pathname === '/' ? "bg-white/10 text-white" : "text-white/40 hover:text-white/70 hover:bg-white/5"
+            pathname === '/' ? "bg-foreground/10 text-foreground" : "text-foreground/40 hover:text-foreground/70 hover:bg-foreground/5"
           )}>
             <div className={cn("w-1 h-4 rounded-full shrink-0 transition-opacity bg-lcars-orange", pathname === '/' ? "opacity-100" : "opacity-0")} />
             <Home className="w-4 h-4 shrink-0" />
-            <span className="text-xs font-semibold tracking-wide">Hub / Ana Sayfa</span>
+            <span className="text-xs font-semibold tracking-wide">{t('nav.home')}</span>
           </Link>
           <Link href="/about" className={cn(
             "flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200",
-            pathname === '/about' ? "bg-white/10 text-white" : "text-white/40 hover:text-white/70 hover:bg-white/5"
+            pathname === '/about' ? "bg-foreground/10 text-foreground" : "text-foreground/40 hover:text-foreground/70 hover:bg-foreground/5"
           )}>
             <div className={cn("w-1 h-4 rounded-full shrink-0 transition-opacity bg-lcars-gold", pathname === '/about' ? "opacity-100" : "opacity-0")} />
             <User className="w-4 h-4 shrink-0" />
-            <span className="text-xs font-semibold tracking-wide">Hakkımda</span>
+            <span className="text-xs font-semibold tracking-wide">{t('nav.about')}</span>
           </Link>
         </nav>
 
         {/* Categorized Projects */}
         <div className="px-3">
-          <div className="px-3 mb-2 text-[10px] font-black text-white/20 uppercase tracking-widest">
-            Portfolio Veritabanı
+          <div className="px-3 mb-2 text-[10px] font-black text-foreground/20 uppercase tracking-widest">
+            {t('nav.portfolio')}
           </div>
           
           <div className="space-y-1">
@@ -104,11 +106,11 @@ export function Sidebar({ projects = [] }: { projects?: ProjectMetadata[] }) {
                     onClick={() => toggleCategory(category)}
                     className={cn(
                       "flex items-center justify-between px-3 py-2 rounded-lg transition-colors w-full",
-                      isOpen || isActiveCategory ? "text-white" : "text-white/50 hover:text-white hover:bg-white/5"
+                      isOpen || isActiveCategory ? "text-foreground" : "text-foreground/50 hover:text-foreground hover:bg-foreground/5"
                     )}
                   >
                     <div className="flex items-center gap-3">
-                      <catConfig.icon className={cn("w-4 h-4", isOpen || isActiveCategory ? "text-white" : "opacity-60")} />
+                      <catConfig.icon className={cn("w-4 h-4", isOpen || isActiveCategory ? "text-foreground" : "opacity-60")} />
                       <span className="text-xs font-bold truncate">{category}</span>
                     </div>
                     {isOpen ? <ChevronDown className="w-3 h-3 opacity-50" /> : <ChevronRight className="w-3 h-3 opacity-50" />}
@@ -116,7 +118,7 @@ export function Sidebar({ projects = [] }: { projects?: ProjectMetadata[] }) {
 
                   {/* Project Links (Collapsible) */}
                   {(isOpen || isActiveCategory) && (
-                    <div className="mt-1 mb-2 ml-4 border-l border-white/5 pl-2 space-y-0.5">
+                    <div className="mt-1 mb-2 ml-4 border-l border-border pl-2 space-y-0.5">
                       {groupedProjects[category].map(project => {
                         // Handle special redirects/routes like GTab
                         const projectUrl = project.slug === 'GTab' ? '/gtab' : `/projects/${project.slug}`;
@@ -129,8 +131,8 @@ export function Sidebar({ projects = [] }: { projects?: ProjectMetadata[] }) {
                             className={cn(
                               "flex items-center gap-2 px-3 py-1.5 rounded-md transition-all",
                               isActive 
-                                ? "bg-white/10 text-white" 
-                                : "text-white/40 hover:text-white/70 hover:bg-white/5"
+                                ? "bg-foreground/10 text-foreground" 
+                                : "text-foreground/40 hover:text-foreground/70 hover:bg-foreground/5"
                             )}
                           >
                             <div className={cn("w-1 h-3 rounded-full shrink-0 transition-opacity", catConfig.color, isActive ? "opacity-100" : "opacity-0")} />
@@ -148,10 +150,10 @@ export function Sidebar({ projects = [] }: { projects?: ProjectMetadata[] }) {
       </div>
 
       {/* Footer */}
-      <div className="px-6 py-4 border-t border-white/5 shrink-0 bg-[#030305]">
+      <div className="px-6 py-4 border-t border-border shrink-0 bg-background">
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 rounded-full bg-lcars-green animate-pulse" />
-          <span className="text-[10px] font-mono text-white/30 uppercase tracking-wider">Systems Online ({projects.length})</span>
+          <span className="text-[10px] font-mono text-foreground/30 uppercase tracking-wider">{t('nav.systems')} ({projects.length})</span>
         </div>
       </div>
     </aside>

@@ -54,7 +54,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning className="dark">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans bg-[#030305] text-white overflow-hidden`} suppressHydrationWarning>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans bg-background text-foreground overflow-hidden`} suppressHydrationWarning>
         <Providers>
           <div className="flex h-screen w-screen overflow-hidden">
             <Sidebar projects={projects} />
@@ -65,7 +65,7 @@ export default function RootLayout({
               
               <main className="flex-1 overflow-y-auto p-6 md:p-12 relative scroll-smooth custom-scrollbar">
                 {/* Subtle Content Overlay */}
-                <div className="absolute inset-0 bg-linear-to-b from-[#030305]/80 to-transparent pointer-events-none -z-10" />
+                <div className="absolute inset-0 bg-linear-to-b from-background/80 to-transparent pointer-events-none -z-10" />
                 {children}
               </main>
             </div>

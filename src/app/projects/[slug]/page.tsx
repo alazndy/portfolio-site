@@ -60,7 +60,7 @@ export default async function ProjectPage({ params }: Props) {
       <div className="py-6">
         <Link
           href="/"
-          className="inline-flex items-center gap-1.5 text-xs font-mono text-white/25 hover:text-white/60 transition-colors group"
+          className="inline-flex items-center gap-1.5 text-xs font-mono text-foreground/25 hover:text-foreground/60 transition-colors group"
         >
           <ChevronLeft className="w-3.5 h-3.5 group-hover:-translate-x-0.5 transition-transform" />
           All projects
@@ -68,7 +68,7 @@ export default async function ProjectPage({ params }: Props) {
       </div>
 
       {/* ── HERO ── */}
-      <header className="relative mb-12 pb-12 border-b border-white/5">
+      <header className="relative mb-12 pb-12 border-b border-border">
         {/* Glow */}
         <div className={cn("absolute -top-20 -right-20 w-80 h-80 rounded-full blur-[120px] opacity-30 pointer-events-none", cat.glow)} />
 
@@ -83,7 +83,7 @@ export default async function ProjectPage({ params }: Props) {
               {metadata.status}
             </span>
             {metadata.date && (
-              <span className="inline-flex items-center gap-1 text-[10px] font-mono text-white/20">
+              <span className="inline-flex items-center gap-1 text-[10px] font-mono text-foreground/20">
                 <Calendar className="w-3 h-3" />
                 {new Date(metadata.date).getFullYear()}
               </span>
@@ -91,12 +91,12 @@ export default async function ProjectPage({ params }: Props) {
           </div>
 
           {/* Title */}
-          <h1 className="text-5xl md:text-7xl font-black tracking-tight text-white uppercase leading-[0.9]">
+          <h1 className="text-5xl md:text-7xl font-black tracking-tight text-foreground uppercase leading-[0.9]">
             {metadata.title}
           </h1>
 
           {/* Summary */}
-          <p className="text-base md:text-lg text-white/50 leading-relaxed max-w-2xl">
+          <p className="text-base md:text-lg text-foreground/50 leading-relaxed max-w-2xl">
             {metadata.summary}
           </p>
 
@@ -109,7 +109,7 @@ export default async function ProjectPage({ params }: Props) {
                 rel="noreferrer"
                 className={cn(
                   "inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all",
-                  "bg-white/10 hover:bg-white/15 border border-white/10 hover:border-white/20 text-white"
+                  "bg-foreground/10 hover:bg-foreground/15 border border-border hover:border-border text-foreground"
                 )}
               >
                 <ExternalLink className="w-4 h-4" />
@@ -121,7 +121,7 @@ export default async function ProjectPage({ params }: Props) {
                 href={metadata.github}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white/50 hover:text-white/70 bg-white/5 hover:bg-white/8 border border-white/8 transition-all"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-foreground/50 hover:text-foreground/70 bg-foreground/5 hover:bg-foreground/8 border border-border transition-all"
               >
                 <Code2 className="w-4 h-4" />
                 Source
@@ -139,16 +139,16 @@ export default async function ProjectPage({ params }: Props) {
           <div
             className={cn(
               "prose prose-invert max-w-none",
-              "prose-headings:font-black prose-headings:tracking-tight prose-headings:text-white",
+              "prose-headings:font-black prose-headings:tracking-tight prose-headings:text-foreground",
               "prose-h2:text-xl prose-h2:uppercase prose-h2:mt-10 prose-h2:mb-4 prose-h2:flex prose-h2:items-center prose-h2:gap-3",
               "prose-h2:before:content-[''] prose-h2:before:block prose-h2:before:w-1 prose-h2:before:h-5 prose-h2:before:rounded-full",
               cat.accent.replace('text-', 'prose-h2:before:bg-'),
-              "prose-h3:text-base prose-h3:text-white/70 prose-h3:mt-6 prose-h3:mb-2",
-              "prose-p:text-white/50 prose-p:leading-relaxed prose-p:mb-4 prose-p:text-sm",
-              "prose-li:text-white/45 prose-li:text-sm prose-li:marker:text-lcars-cyan",
-              "prose-strong:text-white/75 prose-strong:font-semibold",
-              "prose-code:text-lcars-gold prose-code:bg-white/5 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none prose-code:text-xs",
-              "prose-blockquote:border-l-2 prose-blockquote:border-lcars-orange prose-blockquote:text-white/40 prose-blockquote:not-italic prose-blockquote:pl-4"
+              "prose-h3:text-base prose-h3:text-foreground/70 prose-h3:mt-6 prose-h3:mb-2",
+              "prose-p:text-foreground/50 prose-p:leading-relaxed prose-p:mb-4 prose-p:text-sm",
+              "prose-li:text-foreground/45 prose-li:text-sm prose-li:marker:text-lcars-cyan",
+              "prose-strong:text-foreground/75 prose-strong:font-semibold",
+              "prose-code:text-lcars-gold prose-code:bg-foreground/5 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none prose-code:text-xs",
+              "prose-blockquote:border-l-2 prose-blockquote:border-lcars-orange prose-blockquote:text-foreground/40 prose-blockquote:not-italic prose-blockquote:pl-4"
             )}
             dangerouslySetInnerHTML={{ __html: contentHtml }}
           />
@@ -159,8 +159,8 @@ export default async function ProjectPage({ params }: Props) {
 
           {/* Tech stack */}
           {metadata.techStack && metadata.techStack.length > 0 && (
-            <div className="glass rounded-2xl p-5 border-white/8 space-y-4">
-              <div className="flex items-center gap-2 text-[10px] font-mono text-white/30 uppercase tracking-widest">
+            <div className="glass rounded-2xl p-5 border-border space-y-4">
+              <div className="flex items-center gap-2 text-[10px] font-mono text-foreground/30 uppercase tracking-widest">
                 <Tag className="w-3.5 h-3.5" />
                 Tech Stack
               </div>
@@ -168,7 +168,7 @@ export default async function ProjectPage({ params }: Props) {
                 {metadata.techStack.map(tech => (
                   <span
                     key={tech}
-                    className="px-2.5 py-1 bg-white/5 border border-white/8 rounded-lg text-[11px] font-mono text-white/50 hover:text-white/70 transition-colors cursor-default"
+                    className="px-2.5 py-1 bg-foreground/5 border border-border rounded-lg text-[11px] font-mono text-foreground/50 hover:text-foreground/70 transition-colors cursor-default"
                   >
                     {tech}
                   </span>
@@ -178,36 +178,36 @@ export default async function ProjectPage({ params }: Props) {
           )}
 
           {/* Quick info */}
-          <div className="glass rounded-2xl p-5 border-white/8 space-y-3">
-            <div className="text-[10px] font-mono text-white/30 uppercase tracking-widest mb-3">Details</div>
+          <div className="glass rounded-2xl p-5 border-border space-y-3">
+            <div className="text-[10px] font-mono text-foreground/30 uppercase tracking-widest mb-3">Details</div>
             <div className="space-y-3 text-xs">
               <div className="flex justify-between">
-                <span className="text-white/30 font-mono">Category</span>
-                <span className="text-white/60 font-medium">{metadata.category}</span>
+                <span className="text-foreground/30 font-mono">Category</span>
+                <span className="text-foreground/60 font-medium">{metadata.category}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-white/30 font-mono">Status</span>
+                <span className="text-foreground/30 font-mono">Status</span>
                 <span className={cn("px-2 py-0.5 rounded-full text-[10px] font-mono border", statusClass)}>{metadata.status}</span>
               </div>
               {metadata.date && (
                 <div className="flex justify-between">
-                  <span className="text-white/30 font-mono">Year</span>
-                  <span className="text-white/60">{new Date(metadata.date).getFullYear()}</span>
+                  <span className="text-foreground/30 font-mono">Year</span>
+                  <span className="text-foreground/60">{new Date(metadata.date).getFullYear()}</span>
                 </div>
               )}
               {metadata.techStack && (
                 <div className="flex justify-between">
-                  <span className="text-white/30 font-mono">Stack size</span>
-                  <span className="text-white/60">{metadata.techStack.length} technologies</span>
+                  <span className="text-foreground/30 font-mono">Stack size</span>
+                  <span className="text-foreground/60">{metadata.techStack.length} technologies</span>
                 </div>
               )}
             </div>
           </div>
 
           {/* Other projects */}
-          <div className="glass rounded-2xl p-5 border-white/8 space-y-3">
-            <div className="text-[10px] font-mono text-white/30 uppercase tracking-widest">All Projects</div>
-            <Link href="/" className="flex items-center gap-2 text-xs text-white/40 hover:text-white/70 transition-colors group">
+          <div className="glass rounded-2xl p-5 border-border space-y-3">
+            <div className="text-[10px] font-mono text-foreground/30 uppercase tracking-widest">All Projects</div>
+            <Link href="/" className="flex items-center gap-2 text-xs text-foreground/40 hover:text-foreground/70 transition-colors group">
               <ChevronLeft className="w-3.5 h-3.5 group-hover:-translate-x-0.5 transition-transform" />
               Back to overview
             </Link>

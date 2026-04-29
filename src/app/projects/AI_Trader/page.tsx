@@ -28,18 +28,18 @@ export default function AITraderPage() {
         <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-lcars-cyan/10 blur-[120px] rounded-full pointer-events-none" />
         
         <div className="max-w-5xl mx-auto relative z-10 space-y-8">
-          <Link href="/#projects" className="inline-flex items-center gap-2 text-white/50 hover:text-lcars-cyan transition-colors font-mono tracking-widest uppercase text-xs">
+          <Link href="/#projects" className="inline-flex items-center gap-2 text-foreground/50 hover:text-lcars-cyan transition-colors font-mono tracking-widest uppercase text-xs">
             <ArrowLeft className="w-4 h-4" />
             Back to Hub
           </Link>
 
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 border border-white/10 rounded-full font-mono text-xs uppercase tracking-widest text-lcars-cyan">
+            <div className="inline-flex items-center gap-3 px-4 py-2 bg-foreground/5 border border-border rounded-full font-mono text-xs uppercase tracking-widest text-lcars-cyan">
               <BrainCircuit className="w-4 h-4" />
               Algorithmic Finance
             </div>
-            <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter text-white">AI Trader</h1>
-            <p className="text-xl md:text-2xl text-white/60 font-light max-w-2xl leading-relaxed">
+            <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter text-foreground">AI Trader</h1>
+            <p className="text-xl md:text-2xl text-foreground/60 font-light max-w-2xl leading-relaxed">
               Yapay zeka destekli, düşük gecikmeli algoritmik ticaret motoru. Pazar sinyallerini gerçek zamanlı analiz eder ve otonom işlemler yürütür.
             </p>
           </div>
@@ -50,62 +50,62 @@ export default function AITraderPage() {
         
         {/* ── CORE ENGINE ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-          <div className="glass p-8 md:p-12 rounded-[32px] border-white/10 space-y-6">
+          <div className="glass p-8 md:p-12 rounded-[32px] border-border space-y-6">
             <div className="flex items-center justify-between">
-              <h2 className="text-2xl font-black text-white uppercase tracking-tight flex items-center gap-3">
+              <h2 className="text-2xl font-black text-foreground uppercase tracking-tight flex items-center gap-3">
                 <span className="w-2 h-6 bg-lcars-green rounded-full" />
                 Data Ingestion
               </h2>
               <Server className="w-6 h-6 text-lcars-green" />
             </div>
-            <p className="text-white/60 text-sm leading-relaxed">
+            <p className="text-foreground/60 text-sm leading-relaxed">
               Piyasa verilerini WebSocket üzerinden asenkron olarak toplayan, OHLCV verisini normalize eden ve time-series optimize edilmiş PostgreSQL & Redis mimarisinde depolayan gerçek zamanlı veri akışı.
             </p>
           </div>
 
-          <div className="glass p-8 md:p-12 rounded-[32px] border-white/10 space-y-6">
+          <div className="glass p-8 md:p-12 rounded-[32px] border-border space-y-6">
             <div className="flex items-center justify-between">
-              <h2 className="text-2xl font-black text-white uppercase tracking-tight flex items-center gap-3">
+              <h2 className="text-2xl font-black text-foreground uppercase tracking-tight flex items-center gap-3">
                 <span className="w-2 h-6 bg-lcars-orange rounded-full" />
                 Strategy Engine
               </h2>
               <ActivitySquare className="w-6 h-6 text-lcars-orange" />
             </div>
-            <p className="text-white/60 text-sm leading-relaxed">
+            <p className="text-foreground/60 text-sm leading-relaxed">
               Python ve TensorFlow tabanlı izolasyonlu mantık katmanı. LSTM ve Transformer modelleri kullanılarak sinyal tespiti, konfigüre edilebilir risk yönetimi ve backtesting altyapısı.
             </p>
           </div>
         </div>
 
         {/* ── EXECUTION & TECH STACK ── */}
-        <div className="glass rounded-[32px] border-white/10 p-8 md:p-12 space-y-8 bg-white/5">
-          <div className="flex flex-col md:flex-row gap-8 items-center justify-between border-b border-white/10 pb-8">
+        <div className="glass rounded-[32px] border-border p-8 md:p-12 space-y-8 bg-foreground/5">
+          <div className="flex flex-col md:flex-row gap-8 items-center justify-between border-b border-border pb-8">
             <div className="space-y-4 max-w-lg">
-              <h2 className="text-2xl font-black text-white uppercase tracking-tight flex items-center gap-3">
+              <h2 className="text-2xl font-black text-foreground uppercase tracking-tight flex items-center gap-3">
                 <Zap className="w-6 h-6 text-lcars-cyan" />
                 Execution Layer
               </h2>
-              <p className="text-white/50 text-sm leading-relaxed">
+              <p className="text-foreground/50 text-sm leading-relaxed">
                 Broker API entegrasyonuyla pozisyon yönetimi ve otomatik işlem emirleri. Ağ kopmalarına karşı Retry Logic ve sermaye koruması için Circuit Breaker algoritmaları devreye girer.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-black/40 p-4 rounded-xl border border-white/5 flex flex-col items-center">
+              <div className="bg-black/40 p-4 rounded-xl border border-border flex flex-col items-center">
                 <span className="text-lcars-red font-mono font-bold">Stop-Loss</span>
-                <span className="text-xs text-white/40 uppercase mt-1">Per-trade</span>
+                <span className="text-xs text-foreground/40 uppercase mt-1">Per-trade</span>
               </div>
-              <div className="bg-black/40 p-4 rounded-xl border border-white/5 flex flex-col items-center">
+              <div className="bg-black/40 p-4 rounded-xl border border-border flex flex-col items-center">
                 <span className="text-lcars-orange font-mono font-bold">Drawdown</span>
-                <span className="text-xs text-white/40 uppercase mt-1">Limits</span>
+                <span className="text-xs text-foreground/40 uppercase mt-1">Limits</span>
               </div>
             </div>
           </div>
 
           <div className="space-y-4">
-            <div className="text-[10px] font-mono text-white/30 uppercase tracking-widest">Technology Stack</div>
+            <div className="text-[10px] font-mono text-foreground/30 uppercase tracking-widest">Technology Stack</div>
             <div className="flex flex-wrap gap-2">
               {['Python', 'FastAPI', 'React 19', 'TypeScript', 'TensorFlow', 'PostgreSQL', 'Redis', 'WebSocket', 'Docker'].map(tech => (
-                <span key={tech} className="px-4 py-2 bg-black border border-white/10 rounded-lg text-xs font-mono text-white/70">
+                <span key={tech} className="px-4 py-2 bg-black border border-border rounded-lg text-xs font-mono text-foreground/70">
                   {tech}
                 </span>
               ))}
