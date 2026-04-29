@@ -1,7 +1,7 @@
 import { getProjectBySlug, getAllProjects } from '@/lib/markdown';
 import { notFound } from 'next/navigation';
 import { marked } from 'marked';
-import { ChevronLeft, ExternalLink, Github } from 'lucide-react';
+import { ChevronLeft, ExternalLink, Code2 } from 'lucide-react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
@@ -77,7 +77,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               rel="noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-xs font-semibold text-white/50 hover:text-white/70 transition-all"
             >
-              <Github className="w-3.5 h-3.5" />
+              <Code2 className="w-3.5 h-3.5" />
               Source
             </a>
           )}
