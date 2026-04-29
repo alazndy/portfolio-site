@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, Box, Cpu, Globe, Layers, Shield, Puzzle } from 'lucide-react';
+import { ArrowRight, Box, Cpu, Globe, Layers, Shield, Puzzle, type LucideIcon } from 'lucide-react';
 import type { ProjectMetadata } from '@/lib/markdown';
 import { cn } from '@/lib/utils';
 
@@ -10,14 +10,14 @@ interface CategoryGridProps {
   categories: Record<string, ProjectMetadata[]>;
 }
 
-const categoryConfig: Record<string, { icon: React.ElementType; accent: string }> = {
+const categoryConfig: Record<string, { icon: LucideIcon; accent: string }> = {
   'AI & Finance':       { icon: Cpu,    accent: 'text-lcars-purple border-lcars-purple/20' },
   'Security':           { icon: Shield, accent: 'text-lcars-red border-lcars-red/20' },
   'Hardware & Embedded':{ icon: Box,    accent: 'text-lcars-gold border-lcars-gold/20' },
   'Web & Apps':         { icon: Globe,  accent: 'text-lcars-cyan border-lcars-cyan/20' },
   'UI Infrastructure':  { icon: Layers, accent: 'text-lcars-orange border-lcars-orange/20' },
   'Browser Extensions': { icon: Puzzle, accent: 'text-lcars-green border-lcars-green/20' },
-};
+} satisfies Record<string, { icon: LucideIcon; accent: string }>;
 
 const statusColors: Record<string, string> = {
   'Live':   'bg-lcars-green/10 text-lcars-green border-lcars-green/20',
@@ -39,7 +39,7 @@ export function CategoryGrid({ categories }: CategoryGridProps) {
 
       <div className="space-y-3">
         {allProjects.map((project, idx) => {
-          const config = categoryConfig[project.category] ?? { icon: Globe, accent: 'text-white/40 border-white/10' };
+          const config: { icon: LucideIcon; accent: string } = categoryConfig[project.category] ?? { icon: Globe, accent: 'text-white/40 border-white/10' };
           const Icon = config.icon;
           const statusClass = statusColors[project.status] ?? statusColors['Early'];
 
