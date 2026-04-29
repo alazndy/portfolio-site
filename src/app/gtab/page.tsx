@@ -25,7 +25,7 @@ export default function GTabPage() {
 
           <div className="flex flex-wrap items-center gap-4">
             <a 
-              href="https://chrome.google.com/webstore/category/extensions" 
+              href="https://chromewebstore.google.com/detail/gtab-ki%C5%9Fiselle%C5%9Ftirilebili/ablekgbicginadinndchdojklkojgbdb" 
               target="_blank" 
               rel="noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 bg-lcars-cyan text-black font-black uppercase tracking-widest rounded-2xl hover:bg-white transition-all transform hover:scale-105"
