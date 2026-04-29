@@ -1,7 +1,7 @@
 # alazlab.com Memory
 
 ## Son Durum
-- Tarih: 2026-04-29
+- Tarih: 2026-04-30
 - Aktif agent: Claude
 
 ## Claude
@@ -12,11 +12,22 @@
 - GitHub reposu oluşturuldu: https://github.com/alazndy/alazlab.com
 - Tüm değişiklikler commit edilip push edildi
 - entities.json güncellendi
-- Vercel deploy yapıldı
+- Vercel production deploy yapıldı (https://alazlab.com canlı)
+- CyberBackground, marquee bar, Sidebar animasyonları kaldırıldı — tasarım sadeleştirildi
+- 7 proje için markdown içerik dosyaları oluşturuldu (src/content/projects/)
+- markdown.ts path'i düzeltildi (Portfolio/ → src/content/projects/)
+- CategoryGrid merkezi project-config.ts'e taşındı
+- Her proje sayfası için dinamik OG/Twitter metadata eklendi
+- sitemap.xml ve robots.txt oluşturuldu
+- layout.tsx global SEO metadata güncellendi
+- GTab Chrome Web Store linki güncellendi
+- lucide-react v1.8 ikon uyumsuzlukları (Chrome, Github) düzeltildi
 ### Yapacakları
 - —
 ### Notlar
 - Klasör adı hâlâ portfolio-site (VS Code kilidi nedeniyle). VS Code kapatılıp Windows Explorer'dan alazlab.com olarak yeniden adlandırılmalı.
+- Google OAuth Search Console domain doğrulaması yapılıyor (TXT kaydı Squarespace'e eklendi)
+- Vercel domain ayarlarında DNS Change Recommended uyarısı var (216.198.79.1 ve yeni CNAME)
 
 ## Gemini
 ### Yaptıkları
@@ -43,15 +54,21 @@
 - [x] /gtab sayfası
 - [x] Ana sayfada GTab kartı
 - [x] Proje adı alazlab.com yapıldı
-- [x] GitHub reposu oluşturuldu ve push edildi
-- [x] Vercel deploy
+- [x] GitHub reposu oluşturuldu: https://github.com/alazndy/alazlab.com
+- [x] Vercel production deploy (https://alazlab.com)
+- [x] Tasarım sadeleştirildi
+- [x] 7 proje içeriği yazıldı ve sayfalar oluşturuldu
+- [x] SEO: sitemap, robots, metadata, OG tags
+- [x] GTab Chrome Web Store linki güncellendi
 
 ### Devam Edenler
 - [ ] —
+
 ### Sıradakiler
 - [ ] Klasör adını manuel olarak portfolio-site → alazlab.com yap (VS Code kapalıyken)
-- [ ] alazlab.com custom domain Vercel'e bağla
-- [ ] Google OAuth consent screen privacy policy URL güncelle
+- [ ] Vercel'de DNS kayıtlarını güncelle (216.198.79.1 ve yeni CNAME)
+- [ ] Google Search Console domain doğrulamasını tamamla
+- [ ] Google OAuth consent screen re-verification gönder
 
 ## Karar Günlüğü
 | Tarih | Agent | Karar | Neden |
@@ -59,3 +76,6 @@
 | 2026-04-29 | Antigravity | memory.md eklendi | Sistem kuralları gereği |
 | 2026-04-29 | Claude | Proje adı alazlab.com yapıldı | Kullanıcı isteği |
 | 2026-04-29 | Claude | GitHub repo: alazndy/alazlab.com | Yeni proje adıyla eşleşsin |
+| 2026-04-29 | Claude | CyberBackground kaldırıldı | Göz yoruyor, performans düşürüyor |
+| 2026-04-29 | Claude | markdown.ts path düzeltildi | Vercel'de dışarıdaki Portfolio/ klasörü erişilemez |
+| 2026-04-30 | Claude | sitemap/robots/SEO eklendi | Arama motoru indexleme |
