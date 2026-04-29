@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, Box, Cpu, Globe, Layers, Shield, Terminal } from 'lucide-react';
+import { ArrowRight, Box, Cpu, Globe, Layers, Shield, Puzzle } from 'lucide-react';
 import type { ProjectMetadata } from '@/lib/markdown';
 import { cn } from '@/lib/utils';
 
@@ -10,93 +10,69 @@ interface CategoryGridProps {
   categories: Record<string, ProjectMetadata[]>;
 }
 
-const categoryIcons: Record<string, any> = {
-  'AI & Veri': Cpu,
-  'Crucix': Shield,
-  'Endüstriyel & Saha': Box,
-  'Web & Apps': Globe,
-  'UI Altyapısı': Layers,
-  'Default': Terminal
+const categoryConfig: Record<string, { icon: React.ElementType; accent: string }> = {
+  'AI & Finance':       { icon: Cpu,    accent: 'text-lcars-purple border-lcars-purple/20' },
+  'Security':           { icon: Shield, accent: 'text-lcars-red border-lcars-red/20' },
+  'Hardware & Embedded':{ icon: Box,    accent: 'text-lcars-gold border-lcars-gold/20' },
+  'Web & Apps':         { icon: Globe,  accent: 'text-lcars-cyan border-lcars-cyan/20' },
+  'UI Infrastructure':  { icon: Layers, accent: 'text-lcars-orange border-lcars-orange/20' },
+  'Browser Extensions': { icon: Puzzle, accent: 'text-lcars-green border-lcars-green/20' },
+};
+
+const statusColors: Record<string, string> = {
+  'Live':   'bg-lcars-green/10 text-lcars-green border-lcars-green/20',
+  'Active': 'bg-lcars-cyan/10 text-lcars-cyan border-lcars-cyan/20',
+  'Stable': 'bg-lcars-orange/10 text-lcars-orange border-lcars-orange/20',
+  'Early':  'bg-white/5 text-white/40 border-white/10',
 };
 
 export function CategoryGrid({ categories }: CategoryGridProps) {
+  const allProjects = Object.values(categories).flat();
+
   return (
-    <section className="space-y-12 pb-20">
-      <div className="flex items-center gap-6">
-        <h2 className="text-3xl font-black tracking-tighter uppercase flex items-center gap-4">
-          <span className="w-3 h-10 bg-lcars-cyan shadow-[0_0_15px_#00ccff] rounded-full" />
-          Active Core Modules
-        </h2>
-        <div className="flex-1 h-[1px] bg-white/10" />
-        <div className="text-[10px] font-mono text-white/20 animate-pulse">
-          STATUS: SCANNING_DATABASE...
-        </div>
+    <section className="space-y-8">
+      <div className="flex items-center gap-4">
+        <h2 className="text-2xl font-black tracking-tight uppercase text-white/90">Projects</h2>
+        <div className="flex-1 h-px bg-white/5" />
+        <span className="text-xs font-mono text-white/20">{allProjects.length} total</span>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {Object.entries(categories).map(([name, projects], idx) => {
-          const Icon = categoryIcons[name] || categoryIcons['Default'];
+      <div className="space-y-3">
+        {allProjects.map((project, idx) => {
+          const config = categoryConfig[project.category] ?? { icon: Globe, accent: 'text-white/40 border-white/10' };
+          const Icon = config.icon;
+          const statusClass = statusColors[project.status] ?? statusColors['Early'];
+
           return (
-            <motion.div 
-              key={name}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: idx * 0.1 }}
-              className="group relative"
+            <motion.div
+              key={project.slug}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: idx * 0.04 }}
             >
-              {/* Module Frame */}
-              <div className="glass rounded-3xl p-8 border-white/5 group-hover:border-lcars-cyan/50 transition-all duration-500 flex flex-col h-[400px] relative overflow-hidden">
-                {/* ID Tag */}
-                <div className="absolute top-0 right-0 px-6 py-2 bg-white/5 border-b border-l border-white/5 text-[10px] font-mono text-white/30 rounded-bl-2xl uppercase group-hover:text-lcars-cyan transition-colors">
-                  MOD_0x{idx.toString(16).toUpperCase()}
+              <Link
+                href={`/projects/${project.slug}`}
+                className="group flex items-center gap-4 p-4 rounded-2xl border border-transparent hover:border-white/8 hover:bg-white/4 transition-all duration-200"
+              >
+                <div className={cn("w-9 h-9 rounded-xl border flex items-center justify-center shrink-0", config.accent)}>
+                  <Icon className="w-4 h-4" />
                 </div>
 
-                <div className="space-y-6 flex-1">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-lcars-cyan/10 group-hover:border-lcars-cyan/30 transition-all duration-500">
-                      <Icon className="w-6 h-6 text-white/40 group-hover:text-lcars-cyan group-hover:scale-110 transition-all" />
-                    </div>
-                    <div>
-                      <div className="text-[10px] font-mono font-black text-lcars-orange tracking-widest uppercase">
-                        {projects.length} Systems Active
-                      </div>
-                      <h3 className="text-2xl font-black tracking-tight group-hover:text-white transition-colors uppercase">
-                        {name}
-                      </h3>
-                    </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-0.5">
+                    <span className="text-sm font-semibold text-white/80 group-hover:text-white transition-colors">{project.title}</span>
+                    <span className={cn("hidden sm:inline-flex px-2 py-0.5 rounded-full text-[10px] font-mono border", statusClass)}>
+                      {project.status}
+                    </span>
                   </div>
-
-                  <div className="space-y-3 pt-4">
-                    {projects.slice(0, 4).map((p) => (
-                      <Link 
-                        key={p.slug}
-                        href={`/projects/${p.slug}`}
-                        className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-transparent hover:border-white/10 hover:bg-white/10 transition-all group/item"
-                      >
-                        <span className="text-sm font-medium text-white/60 group-hover/item:text-white transition-colors">{p.title}</span>
-                        <ArrowRight className="w-4 h-4 text-white/20 group-hover/item:text-lcars-cyan group-hover/item:translate-x-1 transition-all" />
-                      </Link>
-                    ))}
-                    {projects.length > 4 && (
-                      <div className="text-[10px] font-mono text-white/20 pl-3">
-                        ++ [SECURE_NODE_ACCESS_REQUIRED_FOR_MORE]
-                      </div>
-                    )}
-                  </div>
+                  <p className="text-xs text-white/30 truncate">{project.summary}</p>
                 </div>
 
-                {/* Hardware Spec Footer */}
-                <div className="pt-6 mt-auto border-t border-white/5 flex items-center justify-between">
-                  <div className="flex gap-1">
-                     {[...Array(4)].map((_, i) => (
-                       <div key={i} className="w-1.5 h-4 bg-lcars-cyan/20 rounded-full group-hover:bg-lcars-cyan/40 transition-colors" />
-                     ))}
-                  </div>
-                  <div className="text-[8px] font-mono text-white/20 uppercase tracking-[0.2em]">
-                    Data Integrity: 100%
-                  </div>
+                <div className="flex items-center gap-3 shrink-0">
+                  <span className="hidden md:block text-[10px] font-mono text-white/20">{project.category}</span>
+                  <ArrowRight className="w-4 h-4 text-white/10 group-hover:text-white/40 group-hover:translate-x-0.5 transition-all" />
                 </div>
-              </div>
+              </Link>
             </motion.div>
           );
         })}
