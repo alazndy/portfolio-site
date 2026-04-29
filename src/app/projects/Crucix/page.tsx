@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Shield, AlertTriangle, Search, Activity, Eye, Terminal } from 'lucide-react';
+import { ArrowLeft, Shield, AlertTriangle, Search, Activity, Eye, Terminal, Database } from 'lucide-react';
 import { getProjectBySlug } from '@/lib/markdown';
 
 export default function CrucixPage() {
