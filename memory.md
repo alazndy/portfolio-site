@@ -44,6 +44,9 @@
   - GTab projesi için `/gtab` ve `/gtab/privacy-policy` özel sayfaları oluşturuldu (LCARS temalı).
   - ENV-I, UniControl, Crucix, tek-ui, AI_Trader, ve NEXUS projeleri için `/projects/[slug]` ezilerek tamamen custom, mimariyi ve donanımı anlatan devasa sayfalar yapıldı.
   - `C:\Users\turha\Desktop\Dev Ops\Portfolio\projects_metadata.json` dosyasındaki tüm veri analiz edildi ve otomatik bir Node scripti ile 35 yeni proje `src/content/projects/` klasörüne import edildi. Site artık toplam 42 projeyi sergiliyor.
+  - Tüm siteye TR/EN dil desteği ve Light/Dark mod toggle'ları eklendi. SSR mimarisiyle uyumlu çalışacak i18n altyapısı kuruldu. (Önceki oturum)
+  - Projelerin içerikleri otomatik zenginleştirildi: DevOps içindeki (`C:\Users\turha\Desktop\Dev Ops\...`) ana klasörler taranıp, içlerinde bulunan gerçek `README.md` veya `memory.md` dosyalarındaki teknik dokümantasyonlar, portföydeki proje detaylarına (markdown) dinamik olarak basıldı. Toplam 9 proje için gerçek DevOps README dosyalarından içerik entegre edildi.
+  - 7 adet özel tasarım (custom) proje sayfası, markdown dosyalarındaki `project.content` (okunan README'leri) render edecek şekilde bir Node betiğiyle topluca güncellendi.
 - **Yapılacaklar**: 
   - Vercel üzerinde DNS güncellemeleri tamamlandıktan sonra sitenin canlı kontrolleri yapılacak.
   - Gerekirse diğer yeni import edilen projeler için de özel custom sayfalar (custom routes) tasarlanacak.
@@ -84,3 +87,5 @@
 | 2026-04-29 | Claude | CyberBackground kaldırıldı | Göz yoruyor, performans düşürüyor |
 | 2026-04-29 | Claude | markdown.ts path düzeltildi | Vercel'de dışarıdaki Portfolio/ klasörü erişilemez |
 | 2026-04-30 | Claude | sitemap/robots/SEO eklendi | Arama motoru indexleme |
+| 2026-04-30 | Antigravity | i18n ve Theme eklendi | Çoklu dil ve Aydınlık/Karanlık mod |
+| 2026-04-30 | Antigravity | DevOps README.md Enjeksiyonu | Proje sayfalarının içeriğini gerçek verilerle zenginleştirmek için DevOps dizinini tarayıp içeriği markdown dosyalarına enjekte ettik |

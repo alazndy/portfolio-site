@@ -10,4 +10,5 @@ techStack: []
 
 AI destekli halkla ilişkiler ve süreç yönetim merkezi.
 
-*This project was imported from the master portfolio database.*
+
+*This project was dynamically imported and enriched from the master portfolio database.*

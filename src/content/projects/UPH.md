@@ -10,4 +10,5 @@ techStack: ["Next.js 16", "TypeScript", "EVM", "Zustand", "Recharts"]
 
 Centralized project tracking platform with Gantt charts, EVM (Earned Value Management) analysis, and multi-platform support.
 
-*This project was imported from the master portfolio database.*
+
+*This project was dynamically imported and enriched from the master portfolio database.*

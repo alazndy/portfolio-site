@@ -10,4 +10,5 @@ techStack: []
 
 Otomatik 3D görselleştirme boru hattı. (Three.js, Blender Python API).
 
-*This project was imported from the master portfolio database.*
+
+*This project was dynamically imported and enriched from the master portfolio database.*

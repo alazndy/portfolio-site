@@ -10,4 +10,5 @@ techStack: ["Python", "Pyfiglet", "Rich"]
 
 High-performance CLI tool for generating colorful and animated ASCII banners. Enhances terminal aesthetics for developers.
 
-*This project was imported from the master portfolio database.*
+
+*This project was dynamically imported and enriched from the master portfolio database.*

@@ -2,9 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Cpu, Activity, ShieldAlert, Cpu as Microchip, TableProperties, Wrench } from 'lucide-react';
 import { getProjectBySlug } from '@/lib/markdown';
+import { marked } from 'marked';
 
-export default function UniControlPage() {
+export default async function UniControlPage() {
   const project = getProjectBySlug('UniControl');
+  const contentHtml = await marked.parse(project?.content || '');
   
   return (
     <div className="min-h-screen pb-24 animate-in fade-in duration-1000 bg-[#020202]">
@@ -116,6 +118,14 @@ export default function UniControlPage() {
           </div>
         </div>
 
+      
+        {/* ── DYNAMIC PROJECT DETAILS ── */}
+        <div className="glass p-8 md:p-12 rounded-[32px] border-border mt-16 max-w-5xl mx-auto px-6 relative z-10 mb-16">
+          <div
+            className="prose prose-invert max-w-none prose-headings:font-black prose-headings:tracking-tight prose-headings:text-foreground prose-p:text-foreground/60 prose-li:text-foreground/60 prose-strong:text-foreground/90 prose-a:text-lcars-red"
+            dangerouslySetInnerHTML={{ __html: contentHtml }}
+          />
+        </div>
       </div>
     </div>
   );

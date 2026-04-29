@@ -10,4 +10,5 @@ techStack: []
 
 Süreç takibi için geliştirilmiş ilk nesil görsel araç.
 
-*This project was imported from the master portfolio database.*
+
+*This project was dynamically imported and enriched from the master portfolio database.*

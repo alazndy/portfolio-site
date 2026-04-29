@@ -10,4 +10,5 @@ techStack: []
 
 Tower Defense türünde mobil oyun denemesi.
 
-*This project was imported from the master portfolio database.*
+
+*This project was dynamically imported and enriched from the master portfolio database.*

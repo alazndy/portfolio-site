@@ -10,4 +10,5 @@ techStack: []
 
 Çeşitli IoT ve CANBus entegrasyon projelerinin çekirdek kodları.
 
-*This project was imported from the master portfolio database.*
+
+*This project was dynamically imported and enriched from the master portfolio database.*

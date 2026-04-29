@@ -10,4 +10,5 @@ techStack: ["React 19", "Spotify API", "Firebase", "Google Gemini AI", "Tailwind
 
 AI-powered music workstation with Spotify integration. Features intelligent playlist generation and real-time audio visualization.
 
-*This project was imported from the master portfolio database.*
+
+*This project was dynamically imported and enriched from the master portfolio database.*

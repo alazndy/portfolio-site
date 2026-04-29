@@ -10,4 +10,5 @@ techStack: []
 
 Eski portfolyo ve şirket sitesi. (React 19).
 
-*This project was imported from the master portfolio database.*
+
+*This project was dynamically imported and enriched from the master portfolio database.*

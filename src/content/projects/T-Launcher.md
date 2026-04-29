@@ -10,4 +10,5 @@ techStack: []
 
 Web tabanlı terminal ve uygulama başlatıcı. (Node.js, Socket.io).
 
-*This project was imported from the master portfolio database.*
+
+*This project was dynamically imported and enriched from the master portfolio database.*

@@ -10,4 +10,5 @@ techStack: []
 
 AI destekli müzik ve enstrüman çalışma asistanı.
 
-*This project was imported from the master portfolio database.*
+
+*This project was dynamically imported and enriched from the master portfolio database.*

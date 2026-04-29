@@ -10,4 +10,5 @@ techStack: ["ESP-IDF", "FreeRTOS", "C"]
 
 Intelligent power control systems firmware for heavy-duty vehicles. Built on FreeRTOS for reliable power distribution and management.
 
-*This project was imported from the master portfolio database.*
+
+*This project was dynamically imported and enriched from the master portfolio database.*

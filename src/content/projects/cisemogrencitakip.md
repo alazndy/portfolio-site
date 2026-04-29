@@ -10,4 +10,5 @@ techStack: ["Next.js 16", "Firebase Auth", "Firestore", "Zustand 5", "Twilio"]
 
 Multi-tenant management system for educational institutions. Features branch management, SMS/WhatsApp integration, and real-time student tracking.
 
-*This project was imported from the master portfolio database.*
+
+*This project was dynamically imported and enriched from the master portfolio database.*

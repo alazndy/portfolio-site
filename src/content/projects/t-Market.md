@@ -10,4 +10,5 @@ techStack: []
 
 Modern, yüksek performanslı SaaS pazaryeri. (Next.js 15, Stripe).
 
-*This project was imported from the master portfolio database.*
+
+*This project was dynamically imported and enriched from the master portfolio database.*

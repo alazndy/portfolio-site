@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const jsonPath = 'C:\\Users\\turha\\Desktop\\Dev Ops\\Portfolio\\projects_metadata.json';
+const devOpsRoot = 'C:\\Users\\turha\\Desktop\\Dev Ops';
 const outDir = path.join(__dirname, 'src', 'content', 'projects');
 
 if (!fs.existsSync(outDir)) {
@@ -24,6 +25,8 @@ const idToSlugMapping = {
 };
 
 let count = 0;
+let enrichedCount = 0;
+
 for (const p of data.projects) {
     let rawId = p.id;
     let slug = idToSlugMapping[rawId] || rawId;
@@ -45,6 +48,29 @@ for (const p of data.projects) {
     
     let desc = (p.description || '').replace(/"/g, '\\"');
     
+    let extraContent = '';
+    
+    if (p.path) {
+        const fullProjectPath = path.join(devOpsRoot, p.path);
+        const readmePath = path.join(fullProjectPath, 'README.md');
+        const memoryPath = path.join(fullProjectPath, 'memory.md');
+        
+        if (fs.existsSync(readmePath)) {
+            let readmeContent = fs.readFileSync(readmePath, 'utf8');
+            // Remove main H1 header if exists to avoid duplication
+            readmeContent = readmeContent.replace(/^#\s+.*$/m, '');
+            extraContent = `\n## Proje Detayları (README)\n\n${readmeContent}\n`;
+            enrichedCount++;
+            console.log(`Enriched ${slug} with README.md`);
+        } else if (fs.existsSync(memoryPath)) {
+            let memoryContent = fs.readFileSync(memoryPath, 'utf8');
+            memoryContent = memoryContent.replace(/^#\s+.*$/m, '');
+            extraContent = `\n## Proje Hafızası (Memory)\n\n${memoryContent}\n`;
+            enrichedCount++;
+            console.log(`Enriched ${slug} with memory.md`);
+        }
+    }
+    
     const mdContent = `---
 title: "${p.name.replace(/"/g, '\\"')}"
 category: "${p.category}"
@@ -56,12 +82,13 @@ techStack: ${techStackStr}
 ## Overview
 
 ${p.description}
+${extraContent}
 
-*This project was imported from the master portfolio database.*
+*This project was dynamically imported and enriched from the master portfolio database.*
 `;
 
     const filePath = path.join(outDir, `${slug}.md`);
     fs.writeFileSync(filePath, mdContent);
     count++;
 }
-console.log(`Successfully generated ${count} new project markdown files.`);
+console.log(`Successfully generated ${count} new project markdown files. Enriched ${enrichedCount} projects with README/Memory.`);

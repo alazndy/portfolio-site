@@ -10,4 +10,5 @@ techStack: []
 
 E-ticaret denemeleri ve ilk web projeleri.
 
-*This project was imported from the master portfolio database.*
+
+*This project was dynamically imported and enriched from the master portfolio database.*
