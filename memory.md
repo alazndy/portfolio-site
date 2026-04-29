@@ -39,9 +39,14 @@
 
 ## Antigravity
 ### Yaptıkları
-- GTab proje sayfası (/gtab) ve gizlilik politikası sayfası (/gtab/privacy-policy) oluşturuldu.
-- Ana sayfaya GTab kartı eklendi.
-- memory.md oluşturuldu.
+- **Yapılanlar**: 
+  - Projenin `alazlab.com` domaini için Vercel deployment hazırlıkları yapıldı.
+  - GTab projesi için `/gtab` ve `/gtab/privacy-policy` özel sayfaları oluşturuldu (LCARS temalı).
+  - ENV-I, UniControl, Crucix, tek-ui, AI_Trader, ve NEXUS projeleri için `/projects/[slug]` ezilerek tamamen custom, mimariyi ve donanımı anlatan devasa sayfalar yapıldı.
+  - `C:\Users\turha\Desktop\Dev Ops\Portfolio\projects_metadata.json` dosyasındaki tüm veri analiz edildi ve otomatik bir Node scripti ile 35 yeni proje `src/content/projects/` klasörüne import edildi. Site artık toplam 42 projeyi sergiliyor.
+- **Yapılacaklar**: 
+  - Vercel üzerinde DNS güncellemeleri tamamlandıktan sonra sitenin canlı kontrolleri yapılacak.
+  - Gerekirse diğer yeni import edilen projeler için de özel custom sayfalar (custom routes) tasarlanacak.
 ### Yapacakları
 - —
 ### Notlar
