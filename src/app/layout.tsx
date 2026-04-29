@@ -4,7 +4,6 @@ import "./globals.css";
 import { Providers } from "@/components/providers";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { Header } from "@/components/layout/Header";
-import { CyberBackground } from "@/components/ui/CyberBackground";
 import { CommandPalette } from "@/components/ui/CommandPalette";
 import { getAllProjects } from "@/lib/markdown";
 
@@ -35,8 +34,6 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans bg-[#030305] text-white overflow-hidden`} suppressHydrationWarning>
         <Providers>
           <div className="flex h-screen w-screen overflow-hidden">
-            <CyberBackground />
-            
             <Sidebar />
             
             <div className="flex-1 flex flex-col min-w-0 overflow-hidden relative">
