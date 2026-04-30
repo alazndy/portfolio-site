@@ -58,7 +58,7 @@ export default function GTabPage() {
               </div>
             </div>
             <div className="p-6 bg-black/60 border-t border-white/5 flex items-center justify-between">
-              <span className="font-mono text-xs text-white/40 uppercase tracking-widest">Version 1.0.0</span>
+              <span className="font-mono text-xs text-white/40 uppercase tracking-widest">Version 4.3.0</span>
               <span className="flex items-center gap-2 text-lcars-green font-mono text-xs uppercase tracking-widest">
                 <span className="w-2 h-2 rounded-full bg-lcars-green animate-pulse" />
                 Stable
