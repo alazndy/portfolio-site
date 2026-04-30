@@ -1,4 +1,5 @@
 ---
+image: "/projects/parfm-parfmsite.png"
 title: "parfüm / parfümsite"
 category: "Diğer"
 status: "Legacy"
