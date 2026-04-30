@@ -1,4 +1,5 @@
 ---
+image: "/projects/Radar-Firmware.png"
 title: "Radar Firmware"
 category: "AI & Veri"
 status: "Pending"

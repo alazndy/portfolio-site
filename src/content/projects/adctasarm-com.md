@@ -1,4 +1,5 @@
 ---
+image: "/projects/adctasarm-com.png"
 title: "adctasarım.com"
 category: "Tasarım & Geliştirici Araçları"
 status: "Legacy"

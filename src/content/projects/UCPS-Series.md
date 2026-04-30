@@ -1,4 +1,5 @@
 ---
+image: "/projects/UCPS-Series.png"
 title: "UCPS Series"
 category: "AI & Veri"
 status: "Pending"

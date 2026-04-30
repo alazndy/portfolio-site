@@ -1,4 +1,5 @@
 ---
+image: "/projects/Tekel.png"
 title: "Tekel"
 category: "Diğer"
 status: "Pending"

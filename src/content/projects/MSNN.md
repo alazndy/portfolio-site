@@ -1,4 +1,5 @@
 ---
+image: "/projects/MSNN.png"
 title: "MSNN"
 category: "Diğer"
 status: "Archived"

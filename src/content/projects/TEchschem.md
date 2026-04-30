@@ -1,4 +1,5 @@
 ---
+image: "/projects/TEchschem.png"
 title: "TEchschem"
 category: "Medya & Ses"
 status: "Legacy"

@@ -1,4 +1,5 @@
 ---
+image: "/projects/cisemogrencitakip.png"
 title: "cisem_ogrenci_takip"
 category: "Diğer"
 status: "Active"

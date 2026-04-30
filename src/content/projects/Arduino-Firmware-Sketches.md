@@ -1,4 +1,5 @@
 ---
+image: "/projects/Arduino-Firmware-Sketches.png"
 title: "Arduino Firmware Sketches"
 category: "AI & Veri"
 status: "Pending"

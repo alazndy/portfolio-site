@@ -1,4 +1,5 @@
 ---
+image: "/projects/PR-HUB.png"
 title: "PR-HUB"
 category: "Diğer"
 status: "Pending"
