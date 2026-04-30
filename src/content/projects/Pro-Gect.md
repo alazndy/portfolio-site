@@ -1,4 +1,5 @@
 ---
+image: "/projects/Pro-Gect.png"
 title: "Pro-Gect"
 category: "Diğer"
 status: "Legacy"

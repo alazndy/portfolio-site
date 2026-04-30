@@ -8,10 +8,15 @@ Object.entries(mapping).forEach(([id, imagePath]) => {
     const mdPath = path.join(contentDir, `${id}.md`);
     if (fs.existsSync(mdPath)) {
         let content = fs.readFileSync(mdPath, 'utf8');
-        if (!content.includes('image:')) {
+        if (content.includes('image:')) {
+            // Update existing
+            content = content.replace(/image: ".*"/, `image: "${imagePath}"`);
+            content = content.replace(/image: '.*'/, `image: "${imagePath}"`);
+        } else {
+            // Add new
             content = content.replace('---', `---\nimage: "${imagePath}"`);
-            fs.writeFileSync(mdPath, content);
-            console.log(`Updated ${id}.md with image: ${imagePath}`);
         }
+        fs.writeFileSync(mdPath, content);
+        console.log(`Updated ${id}.md with image: ${imagePath}`);
     }
 });

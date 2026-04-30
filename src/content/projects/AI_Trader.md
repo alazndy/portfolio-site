@@ -1,4 +1,5 @@
 ---
+image: "/projects/AI_Trader.png"
 title: AI Trader
 category: AI & Finance
 status: Live

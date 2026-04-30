@@ -13,17 +13,27 @@ if (!projectPath) {
 
 console.log(`Starting project ${projectId} at ${projectPath}...`);
 
-// Determine which package manager to use
 const hasPnpm = fs.existsSync(path.join(projectPath, 'pnpm-lock.yaml'));
 const pkgManager = hasPnpm ? 'pnpm' : 'npm';
-const installArgs = ['install'];
+
 const port = process.argv[3] || '3001';
-const devArgs = pkgManager === 'pnpm' ? ['run', 'dev', '--', '-p', port] : ['run', 'dev', '--', '-p', port];
+let devArgs;
 
-// Force port for all
-const env = { ...process.env, PORT: port };
+const pkgJson = JSON.parse(fs.readFileSync(path.join(projectPath, 'package.json'), 'utf8'));
+const devScript = pkgJson.scripts && pkgJson.scripts.dev ? pkgJson.scripts.dev : '';
 
-const install = spawn(pkgManager, installArgs, { cwd: projectPath, shell: true, stdio: 'inherit' });
+if (devScript.includes('vite')) {
+    devArgs = ['run', 'dev', '--port', port, '--host'];
+} else if (devScript.includes('next')) {
+    devArgs = ['run', 'dev', '--', '-p', port];
+} else {
+    devArgs = ['run', 'dev'];
+}
+
+const env = { ...process.env, PORT: port, CI: 'true' };
+
+console.log(`Running: ${pkgManager} install`);
+const install = spawn(pkgManager, ['install'], { cwd: projectPath, shell: true, stdio: 'inherit' });
 
 install.on('close', (code) => {
     if (code !== 0) {
@@ -31,7 +41,7 @@ install.on('close', (code) => {
         process.exit(code);
     }
     
-    console.log('Install successful. Starting dev server...');
+    console.log(`Install successful. Running: ${pkgManager} ${devArgs.join(' ')}`);
     const dev = spawn(pkgManager, devArgs, { cwd: projectPath, shell: true, stdio: 'inherit', env });
     
     dev.on('error', (err) => {
