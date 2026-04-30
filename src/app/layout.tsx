@@ -55,8 +55,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="dark">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans bg-background text-foreground overflow-hidden`} suppressHydrationWarning>
-        <Providers>
-          <div className="flex h-screen w-screen overflow-hidden">
+        <div className="flex h-screen w-screen overflow-hidden">
+          <Providers>
             <Sidebar projects={projects} />
             
             <div className="flex-1 flex flex-col min-w-0 overflow-hidden relative">
@@ -69,8 +69,8 @@ export default function RootLayout({
                 {children}
               </main>
             </div>
-          </div>
-        </Providers>
+          </Providers>
+        </div>
       </body>
     </html>
   );

@@ -1,28 +1,88 @@
 'use client';
 
-import { Terminal, Shield, Wifi, Battery, Command, Sun, Moon } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { Terminal, Shield, Wifi, Command, Sun, Moon } from 'lucide-react';
+import { useEffect, useState, useRef, memo, useCallback } from 'react';
 import { useTheme } from 'next-themes';
 import { useI18n } from '@/lib/i18n';
 
-export function Header() {
+// Isolated clock component — only this re-renders every second, not the whole header
+const Clock = memo(function Clock({ lang }: { lang: string }) {
   const [time, setTime] = useState<Date | null>(null);
-  const [mounted, setMounted] = useState(false);
-
-  const { theme, setTheme } = useTheme();
-  const { lang, setLang, t } = useI18n();
 
   useEffect(() => {
-    setMounted(true);
     setTime(new Date());
     const timer = setInterval(() => setTime(new Date()), 1000);
     return () => clearInterval(timer);
   }, []);
 
-  const openCommandPalette = () => {
+  if (!time) {
+    return <div className="text-[10px] font-mono text-foreground/10 animate-pulse uppercase">Connecting...</div>;
+  }
+
+  return (
+    <>
+      <div className="text-xs font-mono font-black text-lcars-cyan tracking-widest">
+        {time.toLocaleTimeString('en-US', { hour12: false })}
+      </div>
+      <div className="text-[8px] font-mono text-white/30 uppercase tracking-tighter">
+        {time.toLocaleDateString(lang === 'tr' ? 'tr-TR' : 'en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
+      </div>
+    </>
+  );
+});
+
+// Isolated theme toggle — only re-renders when theme changes
+const ThemeToggle = memo(function ThemeToggle() {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => { setMounted(true); }, []);
+
+  const toggle = useCallback(() => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  }, [theme, setTheme]);
+
+  return (
+    <button
+      onClick={toggle}
+      className="flex items-center justify-center w-8 h-8 rounded-lg glass border-white/5 hover:border-lcars-cyan/50 hover:bg-white/5 transition-all group cursor-pointer"
+      title="Toggle Theme"
+    >
+      {mounted && theme === 'dark' ? (
+        <Sun className="w-3.5 h-3.5 text-foreground/40 group-hover:text-lcars-cyan" />
+      ) : (
+        <Moon className="w-3.5 h-3.5 text-foreground/40 group-hover:text-lcars-cyan" />
+      )}
+    </button>
+  );
+});
+
+// Isolated lang toggle — only re-renders when lang changes
+const LangToggle = memo(function LangToggle() {
+  const { lang, setLang } = useI18n();
+
+  const toggle = useCallback(() => {
+    setLang(lang === 'tr' ? 'en' : 'tr');
+  }, [lang, setLang]);
+
+  return (
+    <button
+      onClick={toggle}
+      className="flex items-center justify-center w-8 h-8 rounded-lg glass border-white/5 hover:border-lcars-cyan/50 hover:bg-white/5 transition-all group cursor-pointer"
+      title="Toggle Language"
+    >
+      <span className="text-[10px] font-mono font-black text-foreground/40 group-hover:text-lcars-cyan uppercase">{lang}</span>
+    </button>
+  );
+});
+
+export const Header = memo(function Header() {
+  const { lang, t } = useI18n();
+
+  const openCommandPalette = useCallback(() => {
     const e = new KeyboardEvent('keydown', { key: 'k', ctrlKey: true, metaKey: true, bubbles: true });
     window.dispatchEvent(e);
-  };
+  }, []);
 
   return (
     <header className="h-16 border-b border-white/5 glass flex items-center justify-between px-6 z-10 relative shrink-0">
@@ -48,27 +108,8 @@ export function Header() {
 
       <div className="flex items-center gap-4 md:gap-8">
         <div className="flex items-center gap-2">
-          {/* Language Toggle */}
-          <button
-            onClick={() => setLang(lang === 'tr' ? 'en' : 'tr')}
-            className="flex items-center justify-center w-8 h-8 rounded-lg glass border-white/5 hover:border-lcars-cyan/50 hover:bg-white/5 transition-all group cursor-pointer"
-            title="Toggle Language"
-          >
-            <span className="text-[10px] font-mono font-black text-foreground/40 group-hover:text-lcars-cyan uppercase">{lang}</span>
-          </button>
-          
-          {/* Theme Toggle */}
-          <button
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            className="flex items-center justify-center w-8 h-8 rounded-lg glass border-white/5 hover:border-lcars-cyan/50 hover:bg-white/5 transition-all group cursor-pointer"
-            title="Toggle Theme"
-          >
-            {mounted && theme === 'dark' ? (
-              <Sun className="w-3.5 h-3.5 text-foreground/40 group-hover:text-lcars-cyan" />
-            ) : (
-              <Moon className="w-3.5 h-3.5 text-foreground/40 group-hover:text-lcars-cyan" />
-            )}
-          </button>
+          <LangToggle />
+          <ThemeToggle />
         </div>
 
         {/* Command Palette Button */}
@@ -86,20 +127,9 @@ export function Header() {
         </button>
 
         <div className="text-right min-w-[120px]">
-          {mounted && time ? (
-            <>
-              <div className="text-xs font-mono font-black text-lcars-cyan tracking-widest">
-                {time.toLocaleTimeString('en-US', { hour12: false })}
-              </div>
-              <div className="text-[8px] font-mono text-white/30 uppercase tracking-tighter">
-                {time.toLocaleDateString(lang === 'tr' ? 'tr-TR' : 'en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
-              </div>
-            </>
-          ) : (
-            <div className="text-[10px] font-mono text-foreground/10 animate-pulse uppercase">Connecting...</div>
-          )}
+          <Clock lang={lang} />
         </div>
       </div>
     </header>
   );
-}
+});

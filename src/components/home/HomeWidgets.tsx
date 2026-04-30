@@ -1,11 +1,12 @@
 'use client';
 
+import { memo } from 'react';
 import { Activity, Globe, ChevronRight, Lock } from 'lucide-react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { useI18n } from '@/lib/i18n';
 
-export function HomeWidgets() {
+export const HomeWidgets = memo(function HomeWidgets() {
   const { t } = useI18n();
   
   return (
@@ -72,8 +73,8 @@ export function HomeWidgets() {
           {[
             { name: 'GTab', cat: 'Productivity', href: '/gtab' },
             { name: 'AI Trader', cat: 'Finance', href: '/projects/AI_Trader' },
-            { name: 'Crucix', cat: 'Security', href: '/projects/Crucix' },
             { name: 'tek-ui', cat: 'Infrastructure', href: '/projects/tek-ui' },
+            { name: 'ENV-I', cat: 'Industrial', href: '/projects/ENV-I' },
           ].map((item) => (
             <Link
               key={item.name}
@@ -94,4 +95,4 @@ export function HomeWidgets() {
       </div>
     </aside>
   );
-}
+});

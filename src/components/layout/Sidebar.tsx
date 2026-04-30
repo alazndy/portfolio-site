@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { memo, useState, useMemo, useCallback } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { 
@@ -29,28 +29,102 @@ function getCategoryConfig(category: string) {
   return categoryConfig[category] || { icon: Folder, color: 'bg-white/50' };
 }
 
-export function Sidebar({ projects = [] }: { projects?: ProjectMetadata[] }) {
+// Memoized individual project link to prevent re-renders
+const ProjectLink = memo(function ProjectLink({ 
+  project, projectUrl, isActive, catColor 
+}: { 
+  project: ProjectMetadata; projectUrl: string; isActive: boolean; catColor: string;
+}) {
+  return (
+    <Link 
+      href={projectUrl}
+      className={cn(
+        "flex items-center gap-2 px-3 py-1.5 rounded-md transition-all",
+        isActive 
+          ? "bg-foreground/10 text-foreground" 
+          : "text-foreground/40 hover:text-foreground/70 hover:bg-foreground/5"
+      )}
+    >
+      <div className={cn("w-1 h-3 rounded-full shrink-0 transition-opacity", catColor, isActive ? "opacity-100" : "opacity-0")} />
+      <span className="text-[11px] font-medium truncate tracking-wide">{project.title}</span>
+    </Link>
+  );
+});
+
+// Memoized category section
+const CategorySection = memo(function CategorySection({
+  category, projects, isOpen, isActiveCategory, onToggle, pathname
+}: {
+  category: string; projects: ProjectMetadata[]; isOpen: boolean; 
+  isActiveCategory: boolean; onToggle: () => void; pathname: string;
+}) {
+  const catConfig = getCategoryConfig(category);
+
+  return (
+    <div className="flex flex-col">
+      {/* Category Header */}
+      <button 
+        onClick={onToggle}
+        className={cn(
+          "flex items-center justify-between px-3 py-2 rounded-lg transition-colors w-full",
+          isOpen || isActiveCategory ? "text-foreground" : "text-foreground/50 hover:text-foreground hover:bg-foreground/5"
+        )}
+      >
+        <div className="flex items-center gap-3">
+          <catConfig.icon className={cn("w-4 h-4", isOpen || isActiveCategory ? "text-foreground" : "opacity-60")} />
+          <span className="text-xs font-bold truncate">{category}</span>
+        </div>
+        {isOpen ? <ChevronDown className="w-3 h-3 opacity-50" /> : <ChevronRight className="w-3 h-3 opacity-50" />}
+      </button>
+
+      {/* Project Links (Collapsible) */}
+      {(isOpen || isActiveCategory) && (
+        <div className="mt-1 mb-2 ml-4 border-l border-border pl-2 space-y-0.5">
+          {projects.map(project => {
+            const projectUrl = project.slug === 'GTab' ? '/gtab' : `/projects/${project.slug}`;
+            const isActive = pathname === projectUrl;
+            
+            return (
+              <ProjectLink
+                key={project.slug}
+                project={project}
+                projectUrl={projectUrl}
+                isActive={isActive}
+                catColor={catConfig.color}
+              />
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+});
+
+export const Sidebar = memo(function Sidebar({ projects = [] }: { projects?: ProjectMetadata[] }) {
   const pathname = usePathname();
   const { t } = useI18n();
   const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({});
 
-  // Group projects by category
-  const groupedProjects = projects.reduce((acc, project) => {
-    if (!acc[project.category]) acc[project.category] = [];
-    acc[project.category].push(project);
-    return acc;
-  }, {} as Record<string, ProjectMetadata[]>);
+  // Memoize expensive grouping/sorting
+  const { groupedProjects, sortedCategories } = useMemo(() => {
+    const grouped = projects.reduce((acc, project) => {
+      if (!acc[project.category]) acc[project.category] = [];
+      acc[project.category].push(project);
+      return acc;
+    }, {} as Record<string, ProjectMetadata[]>);
 
-  // Sort categories alphabetically, put "Diğer" at the bottom
-  const sortedCategories = Object.keys(groupedProjects).sort((a, b) => {
-    if (a === 'Diğer') return 1;
-    if (b === 'Diğer') return -1;
-    return a.localeCompare(b);
-  });
+    const sorted = Object.keys(grouped).sort((a, b) => {
+      if (a === 'Diğer') return 1;
+      if (b === 'Diğer') return -1;
+      return a.localeCompare(b);
+    });
 
-  const toggleCategory = (cat: string) => {
+    return { groupedProjects: grouped, sortedCategories: sorted };
+  }, [projects]);
+
+  const toggleCategory = useCallback((cat: string) => {
     setOpenCategories(prev => ({ ...prev, [cat]: !prev[cat] }));
-  };
+  }, []);
 
   return (
     <aside className="w-64 shrink-0 flex flex-col h-full bg-background border-r border-border relative z-30 select-none">
@@ -95,54 +169,19 @@ export function Sidebar({ projects = [] }: { projects?: ProjectMetadata[] }) {
           
           <div className="space-y-1">
             {sortedCategories.map(category => {
-              const catConfig = getCategoryConfig(category);
               const isOpen = openCategories[category];
               const isActiveCategory = groupedProjects[category].some(p => pathname === `/projects/${p.slug}` || (p.slug === 'GTab' && pathname === '/gtab'));
               
               return (
-                <div key={category} className="flex flex-col">
-                  {/* Category Header */}
-                  <button 
-                    onClick={() => toggleCategory(category)}
-                    className={cn(
-                      "flex items-center justify-between px-3 py-2 rounded-lg transition-colors w-full",
-                      isOpen || isActiveCategory ? "text-foreground" : "text-foreground/50 hover:text-foreground hover:bg-foreground/5"
-                    )}
-                  >
-                    <div className="flex items-center gap-3">
-                      <catConfig.icon className={cn("w-4 h-4", isOpen || isActiveCategory ? "text-foreground" : "opacity-60")} />
-                      <span className="text-xs font-bold truncate">{category}</span>
-                    </div>
-                    {isOpen ? <ChevronDown className="w-3 h-3 opacity-50" /> : <ChevronRight className="w-3 h-3 opacity-50" />}
-                  </button>
-
-                  {/* Project Links (Collapsible) */}
-                  {(isOpen || isActiveCategory) && (
-                    <div className="mt-1 mb-2 ml-4 border-l border-border pl-2 space-y-0.5">
-                      {groupedProjects[category].map(project => {
-                        // Handle special redirects/routes like GTab
-                        const projectUrl = project.slug === 'GTab' ? '/gtab' : `/projects/${project.slug}`;
-                        const isActive = pathname === projectUrl;
-                        
-                        return (
-                          <Link 
-                            key={project.slug} 
-                            href={projectUrl}
-                            className={cn(
-                              "flex items-center gap-2 px-3 py-1.5 rounded-md transition-all",
-                              isActive 
-                                ? "bg-foreground/10 text-foreground" 
-                                : "text-foreground/40 hover:text-foreground/70 hover:bg-foreground/5"
-                            )}
-                          >
-                            <div className={cn("w-1 h-3 rounded-full shrink-0 transition-opacity", catConfig.color, isActive ? "opacity-100" : "opacity-0")} />
-                            <span className="text-[11px] font-medium truncate tracking-wide">{project.title}</span>
-                          </Link>
-                        );
-                      })}
-                    </div>
-                  )}
-                </div>
+                <CategorySection
+                  key={category}
+                  category={category}
+                  projects={groupedProjects[category]}
+                  isOpen={!!isOpen}
+                  isActiveCategory={isActiveCategory}
+                  onToggle={() => toggleCategory(category)}
+                  pathname={pathname}
+                />
               );
             })}
           </div>
@@ -158,4 +197,4 @@ export function Sidebar({ projects = [] }: { projects?: ProjectMetadata[] }) {
       </div>
     </aside>
   );
-}
+});

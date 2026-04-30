@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState, useMemo, useCallback } from 'react';
 
 type Language = 'tr' | 'en';
 
@@ -59,30 +59,34 @@ const I18nContext = createContext<I18nContextType | undefined>(undefined);
 
 export function I18nProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLang] = useState<Language>('tr');
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const saved = localStorage.getItem('lang') as Language;
     if (saved === 'tr' || saved === 'en') {
       setLang(saved);
     }
-    setMounted(true);
   }, []);
 
-  const handleSetLang = (newLang: Language) => {
+  const handleSetLang = useCallback((newLang: Language) => {
     setLang(newLang);
     localStorage.setItem('lang', newLang);
-  };
+  }, []);
 
-  const t = (key: string) => {
+  // Memoize the t function so it only changes when lang changes
+  const t = useCallback((key: string): string => {
     return dictionaries[lang][key] || key;
-  };
+  }, [lang]);
+
+  // Memoize the context value to prevent unnecessary re-renders of consumers
+  const value = useMemo(() => ({
+    lang,
+    setLang: handleSetLang,
+    t,
+  }), [lang, handleSetLang, t]);
 
   return (
-    <I18nContext.Provider value={{ lang, setLang: handleSetLang, t }}>
-      <div style={{ visibility: mounted ? 'visible' : 'hidden' }}>
-        {children}
-      </div>
+    <I18nContext.Provider value={value}>
+      {children}
     </I18nContext.Provider>
   );
 }

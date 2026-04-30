@@ -4,23 +4,21 @@ import { ThemeProvider } from 'next-themes';
 import { I18nProvider } from '@/lib/i18n';
 import { ReactNode, useEffect, useState } from 'react';
 
+// Filter out the React 19 script tag warning in development (false positive for next-themes)
+if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+  const orig = console.error;
+  console.error = (...args: unknown[]) => {
+    if (typeof args[0] === 'string' && args[0].includes('Encountered a script tag')) return;
+    orig.apply(console, args);
+  };
+}
+
 export function Providers({ children }: { children: ReactNode }) {
-  const [mounted, setMounted] = useState(false);
-
-  // Hidrasyon hatasını önlemek için bileşen monte edilene kadar render'ı bekletiyoruz
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <I18nProvider>
-      {mounted ? (
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-          {children}
-        </ThemeProvider>
-      ) : (
-        <div style={{ visibility: 'hidden' }}>{children}</div>
-      )}
+      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+        {children}
+      </ThemeProvider>
     </I18nProvider>
   );
 }

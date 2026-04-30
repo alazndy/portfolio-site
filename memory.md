@@ -39,44 +39,37 @@
 
 ## Antigravity
 ### Yaptıkları
-- **Yapılanlar**: 
-  - Projenin `alazlab.com` domaini için Vercel deployment hazırlıkları yapıldı.
-  - GTab projesi için `/gtab` ve `/gtab/privacy-policy` özel sayfaları oluşturuldu (LCARS temalı).
-  - ENV-I, UniControl, Crucix, tek-ui, AI_Trader, ve NEXUS projeleri için `/projects/[slug]` ezilerek tamamen custom, mimariyi ve donanımı anlatan devasa sayfalar yapıldı.
-  - `C:\Users\turha\Desktop\Dev Ops\Portfolio\projects_metadata.json` dosyasındaki tüm veri analiz edildi ve otomatik bir Node scripti ile 35 yeni proje `src/content/projects/` klasörüne import edildi. Site artık toplam 42 projeyi sergiliyor.
-  - Tüm siteye TR/EN dil desteği ve Light/Dark mod toggle'ları eklendi. SSR mimarisiyle uyumlu çalışacak i18n altyapısı kuruldu. (Önceki oturum)
-  - Projelerin içerikleri otomatik zenginleştirildi: DevOps içindeki (`C:\Users\turha\Desktop\Dev Ops\...`) ana klasörler taranıp, içlerinde bulunan gerçek `README.md` veya `memory.md` dosyalarındaki teknik dokümantasyonlar, portföydeki proje detaylarına (markdown) dinamik olarak basıldı. Toplam 9 proje için gerçek DevOps README dosyalarından içerik entegre edildi.
-  - 7 adet özel tasarım (custom) proje sayfası, markdown dosyalarındaki `project.content` (okunan README'leri) render edecek şekilde bir Node betiğiyle topluca güncellendi.
-- **Yapılacaklar**: 
-  - Vercel üzerinde DNS güncellemeleri tamamlandıktan sonra sitenin canlı kontrolleri yapılacak.
-  - Gerekirse diğer yeni import edilen projeler için de özel custom sayfalar (custom routes) tasarlanacak.
+- **Görselleştirme Operasyonu**: 34+ proje için yüksek kaliteli görselleştirme tamamlandı. 
+  - `runner.js` ve `deep_hunt.js` araçları geliştirildi.
+  - Çalışan projelerden (`Oyuntd`, `cisemogrencitakip`, `t-Market`, `localhostmonitor`) canlı ekran görüntüleri alındı.
+  - Firmware (`Radar`, `Arduino`, `UCPS`) ve legacy (`TrAIder`, `AI Trader`, `Pro-Gect`, `Tekel`) projeler için yapay zeka ile 4K kalitesinde premium "Hero" görseller üretildi.
+- **İçerik Entegrasyonu**: DevOps klasöründeki README ve memory.md dosyaları taranarak markdown içerikleri zenginleştirildi.
+- **Sistem Temizliği**: Crucix projesi tüm metadata ve kod tabanından temizlendi.
+- **Hata Giderme**: Windows dosya yolu (spaces/ampersand) ve port çakışmaları için `runner.js` optimize edildi.
 ### Yapacakları
-- —
+- Final portfolyo UI cilalaması (polishing).
+- i18n (TR/EN) geçişlerinin son kontrolü.
 ### Notlar
-- —
+- Projelerin %80'inden fazlası artık "Visual Complete" durumunda.
 
 ## Plan
 ### Tamamlananlar
-- [x] memory.md oluştur
-- [x] /gtab/privacy-policy sayfası
-- [x] /gtab sayfası
-- [x] Ana sayfada GTab kartı
-- [x] Proje adı alazlab.com yapıldı
-- [x] GitHub reposu oluşturuldu: https://github.com/alazndy/alazlab.com
+- [x] memory.md oluşturuldu ve güncellendi
+- [x] /gtab ve gizlilik sayfaları
 - [x] Vercel production deploy (https://alazlab.com)
-- [x] Tasarım sadeleştirildi
-- [x] 7 proje içeriği yazıldı ve sayfalar oluşturuldu
-- [x] SEO: sitemap, robots, metadata, OG tags
-- [x] GTab Chrome Web Store linki güncellendi
+- [x] 41 projenin metadata ve içerik importu
+- [x] Görselleştirme Pipeline'ı (34+ Görsel eklendi)
+- [x] TR/EN dil desteği ve Dark Mod
+- [x] SEO (Sitemap, Robots, OG tags)
+- [x] Crucix projesinin temizlenmesi
 
 ### Devam Edenler
-- [ ] —
+- [ ] Dil desteği ince ayarları
+- [ ] Proje sayfaları final kontrolleri
 
 ### Sıradakiler
-- [ ] Klasör adını manuel olarak portfolio-site → alazlab.com yap (VS Code kapalıyken)
-- [ ] Vercel'de DNS kayıtlarını güncelle (216.198.79.1 ve yeni CNAME)
-- [ ] Google Search Console domain doğrulamasını tamamla
-- [ ] Google OAuth consent screen re-verification gönder
+- [ ] Klasör adını manuel olarak alazlab.com yap (VS Code kapalıyken)
+- [ ] Vercel DNS ve Search Console doğrulamaları
 
 ## Karar Günlüğü
 | Tarih | Agent | Karar | Neden |
