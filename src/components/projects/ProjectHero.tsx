@@ -133,7 +133,7 @@ export function ProjectHero({
     <header className={cn("relative mb-10 rounded-3xl overflow-hidden", isLegacy ? "opacity-85" : "")}>
 
       {/* ── BACKGROUND ── */}
-      <div className="relative min-h-[380px] md:min-h-[480px]">
+      <div className="relative min-h-[280px] sm:min-h-[360px] md:min-h-[460px]">
 
         {/* Category-specific decorative background */}
         {variant === 'data' && <DataGrid accentBg={accentBg} />}
@@ -154,7 +154,7 @@ export function ProjectHero({
 
         {/* ── CONTENT ── */}
         <div className={cn(
-          "relative z-10 grid gap-8 p-8 md:p-12",
+          "relative z-10 grid gap-6 p-5 sm:p-8 md:p-12",
           (variant === 'browser' || variant === 'mobile') && hasImage
             ? "grid-cols-1 lg:grid-cols-2 items-center"
             : "grid-cols-1 max-w-3xl"
@@ -183,7 +183,7 @@ export function ProjectHero({
             {/* Title */}
             <h1 className={cn(
               "font-black tracking-tight text-white uppercase leading-[0.9]",
-              title.length > 15 ? "text-4xl md:text-6xl" : "text-5xl md:text-7xl"
+              title.length > 15 ? "text-3xl sm:text-4xl md:text-6xl" : "text-4xl sm:text-5xl md:text-7xl"
             )}>
               {title}
             </h1>

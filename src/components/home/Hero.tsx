@@ -19,7 +19,7 @@ export function Hero() {
           <span className="text-[10px] font-mono text-lcars-orange uppercase tracking-widest">Available for work</span>
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] uppercase text-foreground">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] uppercase text-foreground">
           {t('home.title').split(' ').slice(0, 2).join(' ')}<br />
           <span className="text-transparent bg-clip-text bg-linear-to-r from-lcars-orange to-lcars-cyan">
             {t('home.title').split(' ').slice(2).join(' ')}
