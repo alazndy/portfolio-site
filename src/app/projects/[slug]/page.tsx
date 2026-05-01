@@ -1,11 +1,12 @@
 import { getProjectBySlug, getAllProjects } from '@/lib/markdown';
-import { categoryConfig, defaultConfig, statusConfig } from '@/lib/project-config';
+import { categoryConfig, defaultConfig, statusConfig, statusDot } from '@/lib/project-config';
 import { notFound } from 'next/navigation';
 import { marked } from 'marked';
-import { ChevronLeft, ExternalLink, Code2, Calendar, Tag } from 'lucide-react';
+import { ChevronLeft, Tag, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
+import { ProjectHero } from '@/components/projects/ProjectHero';
 
 interface Props { params: Promise<{ slug: string }> }
 
@@ -18,25 +19,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const project = getProjectBySlug(slug);
   if (!project) return {};
 
-  const { title, summary, category, techStack } = project.metadata;
+  const { title, summary, category, techStack, image } = project.metadata;
   const description = summary || `${title} — ${category} project by Göktuğ Turhan.`;
-  const keywords = [title, category, ...(techStack ?? []), 'Göktuğ Turhan', 'alazlab'].join(', ');
 
   return {
     title: `${title} — Göktuğ Turhan`,
     description,
-    keywords,
+    keywords: [title, category, ...(techStack ?? []), 'Göktuğ Turhan', 'alazlab'].join(', '),
     openGraph: {
       title: `${title} — Göktuğ Turhan`,
       description,
       url: `https://alazlab.com/projects/${slug}`,
       siteName: 'alazlab.com',
       type: 'article',
+      ...(image ? { images: [{ url: `https://alazlab.com${image}` }] } : {}),
     },
     twitter: {
       card: 'summary_large_image',
       title: `${title} — Göktuğ Turhan`,
       description,
+      ...(image ? { images: [`https://alazlab.com${image}`] } : {}),
     },
     alternates: { canonical: `https://alazlab.com/projects/${slug}` },
   };
@@ -51,136 +53,91 @@ export default async function ProjectPage({ params }: Props) {
   const contentHtml = await marked.parse(content);
   const cat = categoryConfig[metadata.category] ?? defaultConfig;
   const Icon = cat.icon;
-  const statusClass = statusConfig[metadata.status] ?? statusConfig['Early'];
+  const sc = statusConfig[metadata.status] ?? statusConfig['Early'];
+  const sd = statusDot[metadata.status] ?? statusDot['Early'];
+
+  // Related projects (same category, different slug)
+  const allProjects = getAllProjects();
+  const related = allProjects
+    .filter(p => p.category === metadata.category && p.slug !== slug)
+    .slice(0, 3);
 
   return (
     <article className="max-w-5xl mx-auto pb-24">
 
-      {/* ── BACK ── */}
-      <div className="py-6">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-1.5 text-xs font-mono text-foreground/25 hover:text-foreground/60 transition-colors group"
-        >
+      {/* Back */}
+      <div className="py-4">
+        <Link href="/" className="inline-flex items-center gap-1.5 text-xs font-mono text-white/25 hover:text-white/60 transition-colors group">
           <ChevronLeft className="w-3.5 h-3.5 group-hover:-translate-x-0.5 transition-transform" />
           All projects
         </Link>
       </div>
 
-      {/* ── HERO ── */}
-      <header className="relative mb-12 pb-12 border-b border-border">
-        {/* Glow */}
-        <div className={cn("absolute -top-20 -right-20 w-80 h-80 rounded-full blur-[120px] opacity-30 pointer-events-none", cat.glow)} />
+      {/* Hero */}
+      <ProjectHero
+        title={metadata.title}
+        summary={metadata.summary}
+        image={metadata.image}
+        status={metadata.status}
+        category={metadata.category}
+        date={metadata.date}
+        live={metadata.live}
+        github={metadata.github}
+        accent={cat.accent}
+        accentBg={cat.accentBg}
+        glow={cat.glow}
+        badge={cat.badge}
+        statusClass={sc}
+        statusDot={sd}
+        variant={cat.hero}
+        gradient={cat.gradient}
+        Icon={Icon}
+      />
 
-        <div className="relative space-y-5">
-          {/* Category + Status */}
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className={cn("inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-mono border", cat.badge)}>
-              <Icon className="w-3 h-3" />
-              {metadata.category}
-            </span>
-            <span className={cn("px-2.5 py-1 rounded-full text-[10px] font-mono border", statusClass)}>
-              {metadata.status}
-            </span>
-            {metadata.date && (
-              <span className="inline-flex items-center gap-1 text-[10px] font-mono text-foreground/20">
-                <Calendar className="w-3 h-3" />
-                {new Date(metadata.date).getFullYear()}
-              </span>
-            )}
-          </div>
-
-          {/* Project Image */}
-          {metadata.image && (
-            <div className="relative w-full aspect-[21/9] rounded-[32px] overflow-hidden border border-border mb-8 group">
-              <img 
-                src={metadata.image} 
-                alt={metadata.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
-            </div>
-          )}
-
-          {/* Title */}
-          <h1 className="text-5xl md:text-7xl font-black tracking-tight text-foreground uppercase leading-[0.9]">
-            {metadata.title}
-          </h1>
-
-          {/* Summary */}
-          <p className="text-base md:text-lg text-foreground/50 leading-relaxed max-w-2xl">
-            {metadata.summary}
-          </p>
-
-          {/* CTAs */}
-          <div className="flex items-center gap-3 pt-1 flex-wrap">
-            {metadata.live && (
-              <a
-                href={metadata.live}
-                target="_blank"
-                rel="noreferrer"
-                className={cn(
-                  "inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all",
-                  "bg-foreground/10 hover:bg-foreground/15 border border-border hover:border-border text-foreground"
-                )}
-              >
-                <ExternalLink className="w-4 h-4" />
-                Live
-              </a>
-            )}
-            {metadata.github && (
-              <a
-                href={metadata.github}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-foreground/50 hover:text-foreground/70 bg-foreground/5 hover:bg-foreground/8 border border-border transition-all"
-              >
-                <Code2 className="w-4 h-4" />
-                Source
-              </a>
-            )}
-          </div>
-        </div>
-      </header>
-
-      {/* ── BODY ── */}
+      {/* Body */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
 
-        {/* Main content */}
+        {/* ── MAIN CONTENT ── */}
         <div className="lg:col-span-8 order-2 lg:order-1">
-          <div
-            className={cn(
-              "prose prose-invert max-w-none",
-              "prose-headings:font-black prose-headings:tracking-tight prose-headings:text-foreground",
-              "prose-h2:text-xl prose-h2:uppercase prose-h2:mt-10 prose-h2:mb-4 prose-h2:flex prose-h2:items-center prose-h2:gap-3",
-              "prose-h2:before:content-[''] prose-h2:before:block prose-h2:before:w-1 prose-h2:before:h-5 prose-h2:before:rounded-full",
-              cat.accent.replace('text-', 'prose-h2:before:bg-'),
-              "prose-h3:text-base prose-h3:text-foreground/70 prose-h3:mt-6 prose-h3:mb-2",
-              "prose-p:text-foreground/50 prose-p:leading-relaxed prose-p:mb-4 prose-p:text-sm",
-              "prose-li:text-foreground/45 prose-li:text-sm prose-li:marker:text-lcars-cyan",
-              "prose-strong:text-foreground/75 prose-strong:font-semibold",
-              "prose-code:text-lcars-gold prose-code:bg-foreground/5 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none prose-code:text-xs",
-              "prose-blockquote:border-l-2 prose-blockquote:border-lcars-orange prose-blockquote:text-foreground/40 prose-blockquote:not-italic prose-blockquote:pl-4"
-            )}
-            dangerouslySetInnerHTML={{ __html: contentHtml }}
-          />
+          {content.trim() ? (
+            <div
+              className={cn(
+                "prose prose-invert max-w-none",
+                "prose-headings:font-black prose-headings:tracking-tight prose-headings:text-white",
+                "prose-h2:text-lg prose-h2:uppercase prose-h2:mt-10 prose-h2:mb-3",
+                "prose-h2:flex prose-h2:items-center prose-h2:gap-2",
+                `prose-h2:before:content-[''] prose-h2:before:block prose-h2:before:w-1 prose-h2:before:h-4 prose-h2:before:rounded-full prose-h2:before:${cat.accentBg}`,
+                "prose-h3:text-base prose-h3:text-white/65 prose-h3:mt-6 prose-h3:mb-2",
+                "prose-p:text-white/50 prose-p:leading-relaxed prose-p:mb-4 prose-p:text-sm",
+                "prose-li:text-white/45 prose-li:text-sm",
+                `prose-li:marker:${cat.accent}`,
+                "prose-strong:text-white/75 prose-strong:font-semibold",
+                "prose-code:text-amber-400 prose-code:bg-white/5 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none prose-code:text-xs",
+                "prose-blockquote:border-l-2 prose-blockquote:border-white/20 prose-blockquote:text-white/40 prose-blockquote:not-italic prose-blockquote:pl-4 prose-blockquote:my-6"
+              )}
+              dangerouslySetInnerHTML={{ __html: contentHtml }}
+            />
+          ) : (
+            <div className="py-12 text-center text-white/20 text-sm font-mono">
+              More details coming soon.
+            </div>
+          )}
         </div>
 
-        {/* Sidebar */}
-        <aside className="lg:col-span-4 order-1 lg:order-2 space-y-6 lg:sticky lg:top-10">
+        {/* ── SIDEBAR ── */}
+        <aside className="lg:col-span-4 order-1 lg:order-2 space-y-5 lg:sticky lg:top-10">
 
-          {/* Tech stack */}
+          {/* Tech Stack */}
           {metadata.techStack && metadata.techStack.length > 0 && (
-            <div className="glass rounded-2xl p-5 border-border space-y-4">
-              <div className="flex items-center gap-2 text-[10px] font-mono text-foreground/30 uppercase tracking-widest">
+            <div className="rounded-2xl border border-white/8 bg-white/2 p-5 space-y-3">
+              <div className="flex items-center gap-2 text-[10px] font-mono text-white/30 uppercase tracking-widest">
                 <Tag className="w-3.5 h-3.5" />
-                Tech Stack
+                Stack
               </div>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5">
                 {metadata.techStack.map(tech => (
-                  <span
-                    key={tech}
-                    className="px-2.5 py-1 bg-foreground/5 border border-border rounded-lg text-[11px] font-mono text-foreground/50 hover:text-foreground/70 transition-colors cursor-default"
+                  <span key={tech}
+                    className="px-2 py-1 bg-white/5 border border-white/8 rounded-lg text-[11px] font-mono text-white/50 hover:text-white/70 transition-colors cursor-default"
                   >
                     {tech}
                   </span>
@@ -189,41 +146,49 @@ export default async function ProjectPage({ params }: Props) {
             </div>
           )}
 
-          {/* Quick info */}
-          <div className="glass rounded-2xl p-5 border-border space-y-3">
-            <div className="text-[10px] font-mono text-foreground/30 uppercase tracking-widest mb-3">Details</div>
-            <div className="space-y-3 text-xs">
-              <div className="flex justify-between">
-                <span className="text-foreground/30 font-mono">Category</span>
-                <span className="text-foreground/60 font-medium">{metadata.category}</span>
+          {/* Details */}
+          <div className="rounded-2xl border border-white/8 bg-white/2 p-5 space-y-3">
+            <div className="text-[10px] font-mono text-white/30 uppercase tracking-widest mb-3">Details</div>
+            <dl className="space-y-2.5 text-xs">
+              <div className="flex justify-between gap-2">
+                <dt className="text-white/30 font-mono shrink-0">Category</dt>
+                <dd className={cn("font-medium text-right", cat.accent)}>{metadata.category}</dd>
               </div>
-              <div className="flex justify-between">
-                <span className="text-foreground/30 font-mono">Status</span>
-                <span className={cn("px-2 py-0.5 rounded-full text-[10px] font-mono border", statusClass)}>{metadata.status}</span>
+              <div className="flex justify-between gap-2">
+                <dt className="text-white/30 font-mono">Status</dt>
+                <dd><span className={cn("px-2 py-0.5 rounded text-[10px] font-mono border", sc)}>{metadata.status}</span></dd>
               </div>
               {metadata.date && (
-                <div className="flex justify-between">
-                  <span className="text-foreground/30 font-mono">Year</span>
-                  <span className="text-foreground/60">{new Date(metadata.date).getFullYear()}</span>
+                <div className="flex justify-between gap-2">
+                  <dt className="text-white/30 font-mono">Year</dt>
+                  <dd className="text-white/60">{new Date(metadata.date).getFullYear()}</dd>
                 </div>
               )}
-              {metadata.techStack && (
-                <div className="flex justify-between">
-                  <span className="text-foreground/30 font-mono">Stack size</span>
-                  <span className="text-foreground/60">{metadata.techStack.length} technologies</span>
+              {metadata.techStack && metadata.techStack.length > 0 && (
+                <div className="flex justify-between gap-2">
+                  <dt className="text-white/30 font-mono">Technologies</dt>
+                  <dd className="text-white/60">{metadata.techStack.length}</dd>
                 </div>
               )}
-            </div>
+            </dl>
           </div>
 
-          {/* Other projects */}
-          <div className="glass rounded-2xl p-5 border-border space-y-3">
-            <div className="text-[10px] font-mono text-foreground/30 uppercase tracking-widest">All Projects</div>
-            <Link href="/" className="flex items-center gap-2 text-xs text-foreground/40 hover:text-foreground/70 transition-colors group">
-              <ChevronLeft className="w-3.5 h-3.5 group-hover:-translate-x-0.5 transition-transform" />
-              Back to overview
-            </Link>
-          </div>
+          {/* Related */}
+          {related.length > 0 && (
+            <div className="rounded-2xl border border-white/8 bg-white/2 p-5 space-y-3">
+              <div className="text-[10px] font-mono text-white/30 uppercase tracking-widest">Related</div>
+              <div className="space-y-1">
+                {related.map(r => (
+                  <Link key={r.slug} href={`/projects/${r.slug}`}
+                    className="flex items-center justify-between py-2 px-2 rounded-xl hover:bg-white/5 transition-colors group"
+                  >
+                    <span className="text-xs text-white/50 group-hover:text-white/70 transition-colors">{r.title}</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-white/15 group-hover:text-white/40 group-hover:translate-x-0.5 transition-all" />
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
 
         </aside>
       </div>

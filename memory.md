@@ -44,7 +44,10 @@
   - Çalışan projelerden (`Oyuntd`, `cisemogrencitakip`, `t-Market`, `localhostmonitor`) canlı ekran görüntüleri alındı.
   - Firmware (`Radar`, `Arduino`, `UCPS`) ve legacy (`TrAIder`, `AI Trader`, `Pro-Gect`, `Tekel`) projeler için yapay zeka ile 4K kalitesinde premium "Hero" görseller üretildi.
 - **İçerik Entegrasyonu**: DevOps klasöründeki README ve memory.md dosyaları taranarak markdown içerikleri zenginleştirildi.
-- **Sistem Temizliği**: Crucix projesi tüm metadata ve kod tabanından temizlendi.
+- **Sistem Temizliği**: Crucix ve AG-Manager projeleri tüm metadata ve kod tabanından temizlendi.
+  - `src/content/projects/AG-Manager.md` silindi.
+  - `public/projects/AG-Manager.png` silindi.
+  - `project_inventory.json`, `project_inventory_refined.json` ve `project_paths.json` dosyalarından kaldırıldı.
 - **Hata Giderme**: Windows dosya yolu (spaces/ampersand) ve port çakışmaları için `runner.js` optimize edildi.
 ### Yapacakları
 - Final portfolyo UI cilalaması (polishing).
@@ -61,7 +64,7 @@
 - [x] Görselleştirme Pipeline'ı (34+ Görsel eklendi)
 - [x] TR/EN dil desteği ve Dark Mod
 - [x] SEO (Sitemap, Robots, OG tags)
-- [x] Crucix projesinin temizlenmesi
+- [x] Crucix ve AG-Manager projelerinin temizlenmesi
 
 ### Devam Edenler
 - [ ] Dil desteği ince ayarları
@@ -82,3 +85,4 @@
 | 2026-04-30 | Claude | sitemap/robots/SEO eklendi | Arama motoru indexleme |
 | 2026-04-30 | Antigravity | i18n ve Theme eklendi | Çoklu dil ve Aydınlık/Karanlık mod |
 | 2026-04-30 | Antigravity | DevOps README.md Enjeksiyonu | Proje sayfalarının içeriğini gerçek verilerle zenginleştirmek için DevOps dizinini tarayıp içeriği markdown dosyalarına enjekte ettik |
+| 2026-05-01 | Antigravity | Crucix & AG-Manager Kaldırıldı | Kullanıcıya ait olmayan projeler sistemden tamamen temizlendi |

@@ -126,17 +126,7 @@
       "images": [],
       "devScript": "dev"
     },
-    {
-      "id": "Crucix",
-      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Crucix",
-      "images": [
-        "C:\\Users\\turha\\Desktop\\Dev Ops\\Crucix\\docs\\boot.png",
-        "C:\\Users\\turha\\Desktop\\Dev Ops\\Crucix\\docs\\dashboard.png",
-        "C:\\Users\\turha\\Desktop\\Dev Ops\\Crucix\\docs\\globe.png",
-        "C:\\Users\\turha\\Desktop\\Dev Ops\\Crucix\\docs\\map.png"
-      ],
-      "devScript": "dev"
-    },
+
     {
       "id": "adctasarm-com",
       "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\_eski\\Web & Apps\\adctasarım.com",
@@ -247,23 +237,7 @@
       ],
       "devScript": null
     },
-    {
-      "id": "AG-Manager",
-      "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager",
-      "images": [
-        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\docs\\assets\\logo.png",
-        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\docs\\assets\\screenshot-main.png",
-        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\docs\\assets\\screenshot-proxy.png",
-        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\docs\\assets\\screenshot-setting.png",
-        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\images\\128x128.png",
-        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\images\\128x128@2x.png",
-        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\images\\32x32.png",
-        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\images\\64x64.png",
-        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\images\\favicon-120.png",
-        "C:\\Users\\turha\\Desktop\\Dev Ops\\Kişisel Üretkenlik\\AG Manager\\AntigravityManager\\images\\favicon-128.png"
-      ],
-      "devScript": null
-    },
+
     {
       "id": "Android-LCARS-Launcher",
       "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Android LCARS Launcher",
