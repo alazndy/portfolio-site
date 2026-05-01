@@ -1,27 +1,21 @@
-import { getProjectsByCategory } from '@/lib/markdown';
-import { Hero } from '@/components/home/Hero';
-import { CategoryGrid } from '@/components/home/CategoryGrid';
-import { HomeWidgets } from '@/components/home/HomeWidgets';
+import { getAllProjects } from '@/lib/markdown';
+import { HomeHero } from '@/components/home/HomeHero';
+import { ProjectGrid } from '@/components/home/ProjectGrid';
 
 export default function Home() {
-  const categories = getProjectsByCategory();
+  const projects = getAllProjects();
+
+  const liveCount = projects.filter(p => p.status === 'Live' || p.status === 'Active').length;
+  const categoryCount = new Set(projects.map(p => p.category)).size;
 
   return (
-    <div className="max-w-[1400px] mx-auto pb-16">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-
-        {/* Left: Hero + Projects */}
-        <div className="lg:col-span-8 space-y-8">
-          <Hero />
-          <CategoryGrid categories={categories} />
-        </div>
-
-        {/* Right: Widgets — below content on mobile, sticky on desktop */}
-        <aside className="lg:col-span-4 lg:sticky lg:top-6">
-          <HomeWidgets />
-        </aside>
-
-      </div>
+    <div className="max-w-5xl mx-auto pb-20">
+      <HomeHero
+        projectCount={projects.length}
+        liveCount={liveCount}
+        categoryCount={categoryCount}
+      />
+      <ProjectGrid projects={projects} />
     </div>
   );
 }
