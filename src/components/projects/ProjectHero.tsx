@@ -1,8 +1,8 @@
 'use client';
 
-import { ExternalLink, Code2, Calendar, type LucideIcon } from 'lucide-react';
+import { ExternalLink, Code2, Calendar } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import type { HeroVariant } from '@/lib/project-config';
+import { categoryConfig, defaultConfig, type HeroVariant } from '@/lib/project-config';
 
 interface ProjectHeroProps {
   title: string;
@@ -21,7 +21,6 @@ interface ProjectHeroProps {
   statusDot: string;
   variant: HeroVariant;
   gradient: string;
-  Icon: LucideIcon;
 }
 
 function BrowserFrame({ image, title }: { image: string; title: string }) {
@@ -122,8 +121,10 @@ function DesignGrid({ accentBg }: { accentBg: string }) {
 export function ProjectHero({
   title, summary, image, status, category, date, live, github,
   accent, accentBg, glow, badge, statusClass, statusDot: dot,
-  variant, gradient, Icon,
+  variant, gradient,
 }: ProjectHeroProps) {
+  const cat = categoryConfig[category] ?? defaultConfig;
+  const Icon = cat.icon;
 
   const hasImage = !!image;
   const isLegacy = status === 'Legacy' || status === 'Pending';

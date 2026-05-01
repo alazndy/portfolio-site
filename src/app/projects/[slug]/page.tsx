@@ -52,7 +52,6 @@ export default async function ProjectPage({ params }: Props) {
   const { metadata, content } = project;
   const contentHtml = await marked.parse(content);
   const cat = categoryConfig[metadata.category] ?? defaultConfig;
-  const Icon = cat.icon;
   const sc = statusConfig[metadata.status] ?? statusConfig['Early'];
   const sd = statusDot[metadata.status] ?? statusDot['Early'];
 
@@ -91,7 +90,6 @@ export default async function ProjectPage({ params }: Props) {
         statusDot={sd}
         variant={cat.hero}
         gradient={cat.gradient}
-        Icon={Icon}
       />
 
       {/* Body */}
