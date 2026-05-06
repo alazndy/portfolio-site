@@ -118,7 +118,7 @@ Yeni işe başlamadan önce Vault'taki `Projeler/Proje Atlası.md` dosyasını o
 
 ### Yeni Proje Kuralları
 Her yeni projede otomatik:
-1. Dev Ops'a klasör aç (yapı: /code, /reference, /public)
+1. Dev_Ops_New klasörü içine klasör aç (yapı: /code, /reference, /public)
 2. `gitrepo.md` oluştur: repo URL, açıklama, tarih
 3. `README.md` oluştur (detaylı, gerçek dosya yapısını yansıtsın)
 4. GitHub'da repo oluştur, ilk commit at
