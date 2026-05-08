@@ -1,6 +1,6 @@
 'use client';
 
-import { ExternalLink, Code2, Calendar } from 'lucide-react';
+import { ExternalLink, Code2, Calendar, Smartphone } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { categoryConfig, defaultConfig, type HeroVariant } from '@/lib/project-config';
 
@@ -199,31 +199,36 @@ export function ProjectHero({
 
             {/* CTAs */}
             {(live || github || download) && (
-              <div className="flex items-center gap-3 flex-wrap pt-2">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
                 {download && (
                   <a href={download}
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl text-sm font-black transition-all bg-orange-500 hover:bg-orange-400 text-white shadow-[0_0_20px_rgba(249,115,22,0.3)] hover:shadow-[0_0_30px_rgba(249,115,22,0.5)] hover:-translate-y-0.5 active:translate-y-0"
+                    className="relative group/dl overflow-hidden inline-flex items-center justify-center gap-3 px-10 py-5 rounded-2xl text-base font-black transition-all bg-orange-500 text-white shadow-[0_0_30px_rgba(249,115,22,0.4)] hover:shadow-[0_0_60px_rgba(249,115,22,0.7)] hover:-translate-y-1 active:translate-y-0 uppercase tracking-tighter"
                   >
-                    <Smartphone className="w-4 h-4" />
-                    DOWNLOAD APK
+                    {/* Glossy overlay effect */}
+                    <div className="absolute inset-0 bg-gradient-to-tr from-white/20 via-transparent to-transparent opacity-0 group-hover/dl:opacity-100 transition-opacity" />
+                    
+                    <Smartphone className="w-6 h-6 animate-pulse" />
+                    <span>DOWNLOAD APK v3.0.1</span>
                   </a>
                 )}
-                {live && (
-                  <a href={live} target="_blank" rel="noreferrer"
-                    className={cn("inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all text-white border border-white/15 hover:border-white/25", accentBg.replace('bg-', 'bg-opacity-10 bg-'))}
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    Live
-                  </a>
-                )}
-                {github && (
-                  <a href={github} target="_blank" rel="noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white/50 hover:text-white/70 bg-white/5 hover:bg-white/8 border border-white/8 transition-all"
-                  >
-                    <Code2 className="w-4 h-4" />
-                    Source
-                  </a>
-                )}
+                <div className="flex items-center gap-3">
+                  {live && (
+                    <a href={live} target="_blank" rel="noreferrer"
+                      className={cn("flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all text-white border border-white/10 hover:border-white/20 bg-white/5 hover:bg-white/10")}
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Canlı Demo
+                    </a>
+                  )}
+                  {github && (
+                    <a href={github} target="_blank" rel="noreferrer"
+                      className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-white/40 hover:text-white/70 bg-white/5 hover:bg-white/8 border border-white/5 transition-all"
+                    >
+                      <Code2 className="w-4 h-4" />
+                      Kaynak Kod
+                    </a>
+                  )}
+                </div>
               </div>
             )}
           </div>

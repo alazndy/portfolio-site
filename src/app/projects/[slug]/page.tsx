@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
 import { ProjectHero } from '@/components/projects/ProjectHero';
+import { ProjectDashboard } from '@/components/projects/ProjectDashboard';
 
 interface Props { params: Promise<{ slug: string }> }
 
@@ -68,7 +69,7 @@ export default async function ProjectPage({ params }: Props) {
       <div className="py-4">
         <Link href="/" className="inline-flex items-center gap-1.5 text-xs font-mono text-white/25 hover:text-white/60 transition-colors group">
           <ChevronLeft className="w-3.5 h-3.5 group-hover:-translate-x-0.5 transition-transform" />
-          All projects
+          Tüm Projeler
         </Link>
       </div>
 
@@ -92,6 +93,11 @@ export default async function ProjectPage({ params }: Props) {
         variant={cat.hero}
         gradient={cat.gradient}
       />
+
+      {/* Dashboard (Visual System Metrics) */}
+      <div className="mb-16">
+        <ProjectDashboard slug={slug} category={metadata.category} />
+      </div>
 
       {/* Body */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
@@ -147,42 +153,45 @@ export default async function ProjectPage({ params }: Props) {
 
           {/* Details */}
           <div className="rounded-2xl border border-white/8 bg-white/2 p-5 space-y-3">
-            <div className="text-[10px] font-mono text-white/30 uppercase tracking-widest mb-3">Details</div>
+            <div className="text-[10px] font-mono text-white/30 uppercase tracking-widest mb-3">Sistem Bilgileri</div>
             <dl className="space-y-2.5 text-xs">
               <div className="flex justify-between gap-2">
-                <dt className="text-white/30 font-mono shrink-0">Category</dt>
+                <dt className="text-white/30 font-mono shrink-0">Kategori</dt>
                 <dd className={cn("font-medium text-right", cat.accent)}>{metadata.category}</dd>
               </div>
               <div className="flex justify-between gap-2">
-                <dt className="text-white/30 font-mono">Status</dt>
+                <dt className="text-white/30 font-mono">Durum</dt>
                 <dd><span className={cn("px-2 py-0.5 rounded text-[10px] font-mono border", sc)}>{metadata.status}</span></dd>
               </div>
               {metadata.date && (
                 <div className="flex justify-between gap-2">
-                  <dt className="text-white/30 font-mono">Year</dt>
+                  <dt className="text-white/30 font-mono">Yıl</dt>
                   <dd className="text-white/60">{new Date(metadata.date).getFullYear()}</dd>
                 </div>
               )}
               {metadata.techStack && metadata.techStack.length > 0 && (
                 <div className="flex justify-between gap-2">
-                  <dt className="text-white/30 font-mono">Technologies</dt>
+                  <dt className="text-white/30 font-mono">Teknolojiler</dt>
                   <dd className="text-white/60">{metadata.techStack.length}</dd>
                 </div>
               )}
             </dl>
           </div>
 
-          {/* Related */}
+      {/* Related */}
           {related.length > 0 && (
-            <div className="rounded-2xl border border-white/8 bg-white/2 p-5 space-y-3">
-              <div className="text-[10px] font-mono text-white/30 uppercase tracking-widest">Related</div>
-              <div className="space-y-1">
+            <div className="rounded-2xl border border-white/8 bg-white/2 p-5 space-y-4">
+              <div className="flex items-center gap-2 text-[10px] font-mono text-white/30 uppercase tracking-widest">
+                <ArrowRight className="w-3.5 h-3.5" />
+                İlgili Projeler
+              </div>
+              <div className="space-y-2">
                 {related.map(r => (
                   <Link key={r.slug} href={`/projects/${r.slug}`}
-                    className="flex items-center justify-between py-2 px-2 rounded-xl hover:bg-white/5 transition-colors group"
+                    className="flex items-center justify-between py-3 px-3 rounded-xl hover:bg-white/5 transition-colors group border border-transparent hover:border-white/5"
                   >
-                    <span className="text-xs text-white/50 group-hover:text-white/70 transition-colors">{r.title}</span>
-                    <ArrowRight className="w-3.5 h-3.5 text-white/15 group-hover:text-white/40 group-hover:translate-x-0.5 transition-all" />
+                    <span className="text-xs font-semibold text-white/50 group-hover:text-white/80 transition-colors">{r.title}</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-white/10 group-hover:text-white/40 group-hover:translate-x-0.5 transition-all" />
                   </Link>
                 ))}
               </div>

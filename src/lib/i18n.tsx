@@ -27,6 +27,7 @@ const dictionaries: Record<Language, Dictionary> = {
     'project.stack': 'Teknoloji',
     'project.live': 'Canlı Bağlantı',
     'project.github': 'Kaynak Kod',
+    'project.download': 'APK İndir',
   },
   en: {
     'nav.home': 'Hub / Ana Sayfa',
@@ -46,6 +47,7 @@ const dictionaries: Record<Language, Dictionary> = {
     'project.stack': 'Teknoloji',
     'project.live': 'Canlı Bağlantı',
     'project.github': 'Kaynak Kod',
+    'project.download': 'APK İndir',
   }
 };
 
