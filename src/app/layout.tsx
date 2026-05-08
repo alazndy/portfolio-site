@@ -50,14 +50,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="antialiased" suppressHydrationWarning>
         <Providers>
           <MobileNavProvider>
-            {/* Full-height flex container — overflow-hidden only on md+ */}
-            <div className="flex h-svh md:h-screen w-full overflow-hidden">
+            {/* Full-height flex container — overflow-hidden only on lg+ */}
+            <div className="flex h-svh lg:h-screen w-full overflow-hidden">
               <Sidebar projects={projects} />
 
               <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
                 <Header />
                 <CommandPalette projects={projects} />
-                <main className="flex-1 overflow-y-auto p-4 sm:p-6 md:p-10 scroll-smooth custom-scrollbar">
+                <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-10 scroll-smooth custom-scrollbar">
                   {children}
                 </main>
               </div>

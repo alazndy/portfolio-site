@@ -61,12 +61,12 @@ export const Header = memo(function Header() {
       <div className="flex items-center gap-3">
         <button
           onClick={toggle}
-          className="md:hidden flex items-center justify-center w-8 h-8 rounded-lg hover:bg-foreground/8 transition-colors"
+          className="lg:hidden flex items-center justify-center w-8 h-8 rounded-lg hover:bg-foreground/8 transition-colors"
           aria-label="Open menu"
         >
           <Menu className="w-5 h-5 text-foreground/60" />
         </button>
-        <span className="md:hidden text-sm font-black text-foreground uppercase tracking-widest">alazlab</span>
+        <span className="lg:hidden text-sm font-black text-foreground uppercase tracking-widest">alazlab</span>
       </div>
 
       {/* Right: toggles + clock + cmd palette */}
@@ -76,7 +76,7 @@ export const Header = memo(function Header() {
 
         <button
           onClick={openCommandPalette}
-          className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-xl border border-border hover:border-foreground/20 hover:bg-foreground/5 transition-all group"
+          className="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-xl border border-border hover:border-foreground/20 hover:bg-foreground/5 transition-all group"
         >
           <Command className="w-3.5 h-3.5 text-foreground/30 group-hover:text-foreground/60" />
           <span className="text-[10px] font-mono text-foreground/25 group-hover:text-foreground/50 uppercase">ARA</span>
