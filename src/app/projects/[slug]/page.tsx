@@ -82,6 +82,7 @@ export default async function ProjectPage({ params }: Props) {
         date={metadata.date}
         live={metadata.live}
         github={metadata.github}
+        download={metadata.download}
         accent={cat.accent}
         accentBg={cat.accentBg}
         glow={cat.glow}

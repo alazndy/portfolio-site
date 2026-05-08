@@ -13,6 +13,7 @@ interface ProjectHeroProps {
   date?: string;
   live?: string;
   github?: string;
+  download?: string;
   accent: string;
   accentBg: string;
   glow: string;
@@ -119,7 +120,7 @@ function DesignGrid({ accentBg }: { accentBg: string }) {
 }
 
 export function ProjectHero({
-  title, summary, image, status, category, date, live, github,
+  title, summary, image, status, category, date, live, github, download,
   accent, accentBg, glow, badge, statusClass, statusDot: dot,
   variant, gradient,
 }: ProjectHeroProps) {
@@ -197,8 +198,16 @@ export function ProjectHero({
             </p>
 
             {/* CTAs */}
-            {(live || github) && (
-              <div className="flex items-center gap-3 flex-wrap pt-1">
+            {(live || github || download) && (
+              <div className="flex items-center gap-3 flex-wrap pt-2">
+                {download && (
+                  <a href={download}
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl text-sm font-black transition-all bg-orange-500 hover:bg-orange-400 text-white shadow-[0_0_20px_rgba(249,115,22,0.3)] hover:shadow-[0_0_30px_rgba(249,115,22,0.5)] hover:-translate-y-0.5 active:translate-y-0"
+                  >
+                    <Smartphone className="w-4 h-4" />
+                    DOWNLOAD APK
+                  </a>
+                )}
                 {live && (
                   <a href={live} target="_blank" rel="noreferrer"
                     className={cn("inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all text-white border border-white/15 hover:border-white/25", accentBg.replace('bg-', 'bg-opacity-10 bg-'))}
