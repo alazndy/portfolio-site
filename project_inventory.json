@@ -31,9 +31,9 @@
     },
 
     {
-      "id": "Android-LCARS-Launcher",
-      "name": "Android LCARS Launcher",
-      "path": "Mobil & Oyun/Android LCARS Launcher",
+      "id": "GT-Launcher",
+      "name": "GT-Launcher",
+      "path": "Mobil & Oyun/GT-Launcher",
       "fullPath": "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Android LCARS Launcher",
       "images": [
         "C:\\Users\\turha\\Desktop\\Dev Ops\\Mobil & Oyun\\Android LCARS Launcher\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\drawable\\ic_launcher_foreground.png",

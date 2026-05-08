@@ -1,6 +1,6 @@
 ---
-image: "/projects/Android-LCARS-Launcher.png"
-title: "Android LCARS Launcher"
+image: "/projects/GT-Launcher.png"
+title: "GT-Launcher"
 category: "Diğer"
 status: "Active"
 summary: "Fully functional, highly customizable Android home screen launcher with Star Trek LCARS aesthetics and OBD-II/OCR integrations."
@@ -23,7 +23,7 @@ Fully functional, highly customizable Android home screen launcher with Star Tre
 ![Platform](https://img.shields.io/badge/Platform-Android_10%2B-3DDC84?style=flat-square&logo=android)
 ![Kotlin](https://img.shields.io/badge/Language-Kotlin_1.9-7F52FF?style=flat-square&logo=kotlin)
 ![Compose](https://img.shields.io/badge/UI-Jetpack_Compose-4285F4?style=flat-square&logo=android)
-![Version](https://img.shields.io/badge/Version-2.6.4-blue?style=flat-square)
+![Version](https://img.shields.io/badge/Version-3.0.1-blue?style=flat-square)
 
 ---
 
@@ -74,6 +74,13 @@ Yakıt fiyatını elle girmek zorunda değilsiniz.
 - **Türkçe Label Desteği:** "TL/L", "Birim Fiyat", "Litre Fiyatı" vb. ifadeleri otomatik algılar.
 - **Field Discovery:** Fiyat, miktar ve toplam alanlarını fişin formatından bağımsız olarak çıkarır.
 - **Otomatik Güncelleme:** Okunan litre fiyatı maliyet hesaplamasına anında yansır.
+
+---
+
+### 🧾 Güvenlik ve Gizlilik (V3.0.1+)
+- **Proprietary License:** Kaynak kodları koruma altında, izinsiz derleme ve dağıtım yasaktır.
+- **Signature Verification:** Uygulama sadece orijinal yapımcı imzasıyla tam fonksiyonel çalışır.
+- **Alaz Protocol:** Kodun derinliklerinde ve arayüzde rastgele beliren kişisel "Alaz" imzaları.
 
 ---
 
@@ -150,12 +157,11 @@ Tüm launcher ayarları tek panel altında gruplu, profesyonel layout ile.
 
 ## Sürüm Notları (Changelog)
 
-### v2.6.4 - Communications & OmniSearch Update
-- **Doğrudan Arama (Direct Calling):** OmniSearch ve 'DIAL' kartı üzerinden gerçekleştirilen aramalarda, kişiler için varsayılan yöntem `ACTION_DIAL` (numara çevirici) yerine `ACTION_CALL` ile tamamen otomatik direkt aramaya yükseltildi. Güvenlik izinleri (SecurityException) nedeniyle başarısız olan durumlar için numara çevirici fallback sistemi eklendi.
-- **Tıklanabilir İletişim Kartları:** `ContactResultCard` yapısındaki arama panelleri, yalnızca küçük alt butonlardan ibaret olmayacak şekilde tam yatay tıklanabilir yapıldı.
-- **Derleme Çözümleri:** Kapt dosya kilitlemeleri giderilerek build stabilitesi artırıldı. Clean architecture deployment yöntemleri uygulandı. 
-- **Codebase Clean-Up:** Log kayıtları ve gereksiz ithalat paketleri temizlenerek kod satırları hafifletildi.
-- **App List Cleanup Bug Fix:** Uygulama çekmecesinde çökme yapan `fetchApps` paketi eşdeğer `packageName`'lerle ilgili kopya hatalarından arındırıldı (`distinctBy`).
+### v3.0.1 - Security & Alaz Signature
+- **Signature Lock:** Uygulama sadece orijinal yapımcı imzasıyla tam fonksiyonel çalışır hale getirildi. Yetkisiz build'ler kilitlendi.
+- **Easter Egg:** Ana ekranda %5 ihtimalle beliren rastgele "Alaz" temalı gizli mesaj sistemi eklendi.
+- **Kod İçi İmzalar:** Codebase genelinde gizli geliştirici yorumları ve imzalar eklendi.
+- **Proprietary License:** Lisans modeli daha kısıtlayıcı olan özel mülkiyet modeline geçirildi.
 
 ---
 

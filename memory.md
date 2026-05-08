@@ -31,7 +31,9 @@
 
 ## Gemini
 ### Yaptıkları
-- —
+- **APK Dağıtım Merkezi:** GT-Launcher projesi için resmi APK dağıtım kanalı kuruldu. 
+- `public/gt-launcher.apk` (v3.0.1) eklendi ve GitHub'a push edildi.
+- Artık alazlab.com/gt-launcher.apk üzerinden güncel build'ler indirilebilir.
 ### Yapacakları
 - —
 ### Notlar
