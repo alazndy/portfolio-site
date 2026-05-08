@@ -15,13 +15,13 @@ const score = (p: ProjectMetadata) => (S[p.status] ?? 2) + Math.min(p.techStack?
 type Size = 'hero' | 'large' | 'medium' | 'small' | 'xs';
 const getSize = (s: number): Size => s >= 16 ? 'hero' : s >= 11 ? 'large' : s >= 7 ? 'medium' : s >= 3 ? 'small' : 'xs';
 
-// col-spans in a 12-col grid
+// col-spans in a 6-col (mobile) and 12-col (desktop) grid
 const SPAN: Record<Size, string> = {
-  hero:   'col-span-12 sm:col-span-8',
-  large:  'col-span-12 sm:col-span-4',
-  medium: 'col-span-6 sm:col-span-4',
-  small:  'col-span-6 sm:col-span-3',
-  xs:     'col-span-6 sm:col-span-3',
+  hero:   'col-span-6 sm:col-span-12 lg:col-span-8',
+  large:  'col-span-6 sm:col-span-12 lg:col-span-4',
+  medium: 'col-span-3 sm:col-span-6 lg:col-span-4',
+  small:  'col-span-3 sm:col-span-6 lg:col-span-3',
+  xs:     'col-span-2 sm:col-span-4 lg:col-span-3',
 };
 
 // row-span classes (use grid-rows-[repeat(auto,80px)])
@@ -203,9 +203,9 @@ export function ProjectGrid({ projects }: { projects: ProjectMetadata[] }) {
         </div>
       </div>
 
-      {/* Bento grid: 12 columns, auto rows of 80px */}
+      {/* Bento grid: 6 columns (mobile) / 12 columns (desktop), auto rows of 80px */}
       <motion.div layout
-        className="grid grid-cols-12 auto-rows-[80px] gap-3"
+        className="grid grid-cols-6 lg:grid-cols-12 auto-rows-[80px] gap-3"
       >
         <AnimatePresence mode="popLayout">
           {sorted.map((p, i) => (

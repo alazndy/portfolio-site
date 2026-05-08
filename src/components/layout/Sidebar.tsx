@@ -36,7 +36,7 @@ const ProjectLink = memo(function ProjectLink({ project, url, isActive, color }:
   return (
     <Link href={url} onClick={close}
       className={cn(
-        "flex items-center gap-2 px-3 py-1.5 rounded-md transition-all",
+        "flex items-center gap-2 px-3 py-2 md:py-1.5 rounded-md transition-all",
         isActive ? "bg-foreground/10 text-foreground" : "text-foreground/40 hover:text-foreground/70 hover:bg-foreground/5"
       )}
     >
@@ -177,7 +177,7 @@ export const Sidebar = memo(function Sidebar({ projects = [] }: { projects?: Pro
       <aside className={cn(
         "flex flex-col h-full bg-background border-r border-border z-50 select-none transition-transform duration-300 ease-in-out",
         // Mobile: fixed drawer
-        "fixed top-0 left-0 w-72 md:w-64",
+        "fixed top-0 left-0 w-[80vw] max-w-72 md:w-64",
         isOpen ? "translate-x-0" : "-translate-x-full",
         // Desktop: static, always visible
         "md:relative md:translate-x-0 md:shrink-0"

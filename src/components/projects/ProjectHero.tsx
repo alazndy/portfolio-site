@@ -147,8 +147,8 @@ export function ProjectHero({
         {hasImage && (variant === 'default' || variant === 'data' || variant === 'hardware' || variant === 'design') && (
           <div className="absolute inset-0">
             <img src={image} alt={title} className="w-full h-full object-cover opacity-30" loading="eager" />
-            <div className={cn("absolute inset-0 bg-linear-to-r", gradient)} />
-            <div className="absolute inset-0 bg-linear-to-t from-background via-background/70 to-transparent" />
+            <div className={cn("absolute inset-0 bg-gradient-to-r", gradient)} />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent" />
           </div>
         )}
 
@@ -156,7 +156,7 @@ export function ProjectHero({
         <div className={cn(
           "relative z-10 grid gap-6 p-5 sm:p-8 md:p-12",
           (variant === 'browser' || variant === 'mobile') && hasImage
-            ? "grid-cols-1 lg:grid-cols-2 items-center"
+            ? "grid-cols-1 md:grid-cols-2 items-center"
             : "grid-cols-1 max-w-3xl"
         )}>
 
@@ -183,7 +183,7 @@ export function ProjectHero({
             {/* Title */}
             <h1 className={cn(
               "font-black tracking-tight text-white uppercase leading-[0.9]",
-              title.length > 15 ? "text-3xl sm:text-4xl md:text-6xl" : "text-4xl sm:text-5xl md:text-7xl"
+              title.length > 15 ? "text-3xl sm:text-4xl md:text-5xl lg:text-6xl" : "text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
             )}>
               {title}
             </h1>
@@ -221,12 +221,12 @@ export function ProjectHero({
 
           {/* Right: Visual (browser/mobile only) */}
           {hasImage && variant === 'browser' && (
-            <div className="hidden lg:block">
+            <div className="block">
               <BrowserFrame image={image!} title={title} />
             </div>
           )}
           {hasImage && variant === 'mobile' && (
-            <div className="hidden lg:block">
+            <div className="block">
               <MobileFrame image={image!} title={title} />
             </div>
           )}
