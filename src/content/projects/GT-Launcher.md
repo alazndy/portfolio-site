@@ -24,6 +24,16 @@ Fully functional, highly customizable Android home screen launcher with Star Tre
 ![Kotlin](https://img.shields.io/badge/Language-Kotlin_1.9-7F52FF?style=flat-square&logo=kotlin)
 ![Compose](https://img.shields.io/badge/UI-Jetpack_Compose-4285F4?style=flat-square&logo=android)
 ![Version](https://img.shields.io/badge/Version-3.0.1-blue?style=flat-square)
+[![Download APK](https://img.shields.io/badge/Download-APK-orange?style=flat-square&logo=android)](/gt-launcher.apk)
+
+---
+
+## 📥 Download
+
+**GT-Launcher'ın en son sürümünü (v3.0.1) doğrudan cihazınıza indirip yükleyebilirsiniz:**
+
+> [!IMPORTANT]
+> **[GT-Launcher v3.0.1 APK İndir](/gt-launcher.apk)**
 
 ---
 
