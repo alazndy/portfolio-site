@@ -161,7 +161,7 @@ const ProjectCard = memo(function ProjectCard({ project, size, idx }: {
 });
 
 // ── MAIN ──────────────────────────────────────────────────────────────────────
-const ALL = 'All';
+const ALL = 'Hepsi';
 
 export function ProjectGrid({ projects }: { projects: ProjectMetadata[] }) {
   const categories = useMemo(() =>
@@ -182,7 +182,7 @@ export function ProjectGrid({ projects }: { projects: ProjectMetadata[] }) {
       {/* Header + filter */}
       <div className="space-y-4">
         <div className="flex items-center gap-4">
-          <h2 className="text-[10px] font-black font-mono uppercase tracking-[0.25em] text-muted-foreground">Work</h2>
+          <h2 className="text-[10px] font-black font-mono uppercase tracking-[0.25em] text-muted-foreground">Projeler</h2>
           <div className="flex-1 h-px bg-border" />
           <span className="text-[10px] font-mono text-muted-foreground/60">{sorted.length}</span>
         </div>
@@ -197,7 +197,7 @@ export function ProjectGrid({ projects }: { projects: ProjectMetadata[] }) {
                   : "text-muted-foreground hover:text-foreground hover:bg-foreground/5 border border-transparent hover:border-border"
               )}
             >
-              {cat === ALL ? 'All' : cat.length > 22 ? cat.slice(0, 20) + '…' : cat}
+              {cat === ALL ? 'Hepsi' : cat.length > 22 ? cat.slice(0, 20) + '…' : cat}
             </button>
           ))}
         </div>

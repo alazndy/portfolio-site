@@ -148,7 +148,7 @@ function SidebarContent({ projects, pathname }: { projects: ProjectMetadata[]; p
       <div className="px-5 py-3 border-t border-border shrink-0">
         <div className="flex items-center gap-2">
           <div className="w-1.5 h-1.5 rounded-full bg-lcars-green animate-pulse" />
-          <span className="text-[10px] font-mono text-foreground/25 uppercase tracking-wider">{projects.length} systems online</span>
+          <span className="text-[10px] font-mono text-foreground/25 uppercase tracking-wider">{projects.length} sistem aktif</span>
         </div>
       </div>
     </>

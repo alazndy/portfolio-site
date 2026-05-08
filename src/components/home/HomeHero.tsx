@@ -11,10 +11,10 @@ interface HomeHeroProps {
 }
 
 const stats = (p: number, l: number, c: number) => [
-  { value: p,       suffix: '',  label: 'Projects'  },
-  { value: l,       suffix: '',  label: 'Live'      },
-  { value: c,       suffix: '',  label: 'Domains'   },
-  { value: 5,       suffix: '+', label: 'Years'     },
+  { value: p,       suffix: '',  label: 'Proje'     },
+  { value: l,       suffix: '',  label: 'Aktif'     },
+  { value: c,       suffix: '',  label: 'Alan'      },
+  { value: 5,       suffix: '+', label: 'Yıl'       },
 ];
 
 export function HomeHero({ projectCount, liveCount, categoryCount }: HomeHeroProps) {
@@ -131,14 +131,14 @@ export function HomeHero({ projectCount, liveCount, categoryCount }: HomeHeroPro
             className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm transition-all"
             style={{ background: 'var(--accent-primary)', color: '#fff' }}
           >
-            View Work
+            Çalışmaları Gör
             <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
           </a>
           <a
             href="mailto:goktugturhan74@gmail.com"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm border border-border text-foreground/70 hover:text-foreground hover:border-foreground/20 transition-all"
           >
-            Contact
+            İletişim
           </a>
         </motion.div>
 

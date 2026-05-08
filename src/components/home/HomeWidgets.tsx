@@ -18,7 +18,7 @@ export const HomeWidgets = memo(function HomeWidgets() {
             <Lock className="w-5 h-5 text-lcars-orange" />
           </div>
           <div>
-            <div className="text-[10px] font-mono text-lcars-orange tracking-widest uppercase">Verified</div>
+            <div className="text-[10px] font-mono text-lcars-orange tracking-widest uppercase">Doğrulanmış</div>
             <h3 className="text-base font-black text-foreground uppercase tracking-tight">Göktuğ Turhan</h3>
           </div>
         </div>
@@ -27,12 +27,12 @@ export const HomeWidgets = memo(function HomeWidgets() {
         </p>
         <div className="grid grid-cols-2 gap-2 mt-4">
           <div className="p-2.5 bg-foreground/5 rounded-lg text-center">
-            <div className="text-[9px] font-mono text-foreground/40 uppercase mb-1">Clearance</div>
-            <div className="text-xs font-black text-lcars-cyan">Level 5</div>
+            <div className="text-[9px] font-mono text-foreground/40 uppercase mb-1">Yetki</div>
+            <div className="text-xs font-black text-lcars-cyan">Seviye 5</div>
           </div>
           <div className="p-2.5 bg-foreground/5 rounded-lg text-center">
-            <div className="text-[9px] font-mono text-foreground/40 uppercase mb-1">Rank</div>
-            <div className="text-xs font-black text-lcars-orange">Architect</div>
+            <div className="text-[9px] font-mono text-foreground/40 uppercase mb-1">Rütbe</div>
+            <div className="text-xs font-black text-lcars-orange">Mimar</div>
           </div>
         </div>
       </div>
@@ -45,9 +45,9 @@ export const HomeWidgets = memo(function HomeWidgets() {
         </div>
         <div className="space-y-4">
           {[
-            { label: 'Cloud & Infrastructure', val: 94, color: 'text-lcars-cyan', bar: 'bg-lcars-cyan' },
-            { label: 'Security', val: 100, color: 'text-lcars-green', bar: 'bg-lcars-green' },
-            { label: 'Hardware & Embedded', val: 88, color: 'text-lcars-orange', bar: 'bg-lcars-orange' },
+            { label: 'Cloud & Altyapı', val: 94, color: 'text-lcars-cyan', bar: 'bg-lcars-cyan' },
+            { label: 'Güvenlik', val: 100, color: 'text-lcars-green', bar: 'bg-lcars-green' },
+            { label: 'Donanım & Gömülü', val: 88, color: 'text-lcars-orange', bar: 'bg-lcars-orange' },
             { label: 'AI & ML', val: 92, color: 'text-lcars-purple', bar: 'bg-lcars-purple' },
           ].map(m => (
             <div key={m.label} className="space-y-1.5">
@@ -67,7 +67,7 @@ export const HomeWidgets = memo(function HomeWidgets() {
       <div className="glass rounded-2xl p-6 border-border">
         <div className="flex items-center gap-2 mb-4">
           <Globe className="w-4 h-4 text-lcars-gold" />
-          <span className="text-xs font-black text-foreground/50 uppercase tracking-widest">Featured</span>
+          <span className="text-xs font-black text-foreground/50 uppercase tracking-widest">Öne Çıkanlar</span>
         </div>
         <div className="space-y-2">
           {[

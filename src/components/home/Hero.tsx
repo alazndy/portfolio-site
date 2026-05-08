@@ -16,7 +16,7 @@ export function Hero() {
       >
         <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-lcars-orange/10 border border-lcars-orange/20 rounded-full">
           <div className="w-1.5 h-1.5 rounded-full bg-lcars-orange animate-pulse" />
-          <span className="text-[10px] font-mono text-lcars-orange uppercase tracking-widest">Available for work</span>
+          <span className="text-[10px] font-mono text-lcars-orange uppercase tracking-widest">Yeni projelere açık</span>
         </div>
 
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] uppercase text-foreground">

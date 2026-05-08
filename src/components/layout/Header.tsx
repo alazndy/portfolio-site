@@ -79,7 +79,7 @@ export const Header = memo(function Header() {
           className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-xl border border-border hover:border-foreground/20 hover:bg-foreground/5 transition-all group"
         >
           <Command className="w-3.5 h-3.5 text-foreground/30 group-hover:text-foreground/60" />
-          <span className="text-[10px] font-mono text-foreground/25 group-hover:text-foreground/50 uppercase">Search</span>
+          <span className="text-[10px] font-mono text-foreground/25 group-hover:text-foreground/50 uppercase">ARA</span>
           <span className="text-[9px] font-mono text-foreground/15 border border-foreground/10 rounded px-1.5 py-0.5">⌘K</span>
         </button>
 

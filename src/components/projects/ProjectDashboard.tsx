@@ -121,7 +121,7 @@ export function ProjectDashboard({ slug, category }: { slug: string; category: s
            </div>
            <div className="flex items-center gap-3 mb-6 md:mb-8">
              <div className="w-2.5 h-6 md:w-3 md:h-8 bg-lcars-cyan rounded-full shadow-[0_0_15px_#00ccff]" />
-             <h3 className="text-lg md:text-xl font-black tracking-widest uppercase text-white/90">Technical_Visualization</h3>
+             <h3 className="text-lg md:text-xl font-black tracking-widest uppercase text-white/90">Teknik_Görselleştirme</h3>
            </div>
            
            <div className="h-[250px] md:h-[300px]">
@@ -141,21 +141,22 @@ export function ProjectDashboard({ slug, category }: { slug: string; category: s
                  />
                  <div className="text-center">
                     <div className="text-4xl font-black text-white leading-none">98</div>
-                    <div className="text-[10px] font-mono text-lcars-orange font-black mt-1">PERF_INDEX</div>
+                    <div className="text-[10px] font-mono text-lcars-orange font-black mt-1">PERF_İNDEXİ</div>
                  </div>
               </div>
-              <p className="text-[10px] font-mono text-white/30 text-center uppercase tracking-[0.2em]">Optimized_for_Scale</p>
+              <p className="text-[10px] font-mono text-white/30 text-center uppercase tracking-[0.2em]">Ölçeklenebilir_Mimari</p>
            </div>
 
            {/* Security Module */}
-           <div className="glass rounded-[32px] p-8 border-white/5 flex-1 relative overflow-hidden group">
+           <div className="glass rounded-[24px] md:rounded-[32px] p-6 md:p-8 border-white/5 flex-1 relative overflow-hidden group">
               <div className="flex items-center gap-3 mb-6">
                  <Shield className="w-5 h-5 text-lcars-green" />
-                 <span className="text-xs font-black font-mono tracking-widest text-white/60 uppercase">Defense_Grid</span>
+                 <span className="text-xs font-black font-mono tracking-widest text-white/60 uppercase">Güvenlik_Katmanı</span>
               </div>
+
               <div className="space-y-4">
                  {[
-                   { label: 'Integrity', val: 100, color: 'bg-lcars-green' },
+                   { label: 'Bütünlük', val: 100, color: 'bg-lcars-green' },
                    { label: 'Uptime', val: 99, color: 'bg-lcars-cyan' }
                  ].map(item => (
                    <div key={item.label} className="space-y-2">
@@ -180,12 +181,12 @@ export function ProjectDashboard({ slug, category }: { slug: string; category: s
       {/* Terminal Access Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
          {[
-           { icon: Cpu, label: 'CPU_ALLOC' },
-           { icon: Database, label: 'DB_SYNC' },
-           { icon: Radio, label: 'OTA_TX' },
-           { icon: Smartphone, label: 'MOB_UI' },
-           { icon: Monitor, label: 'SYS_OS' },
-           { icon: Zap, label: 'PWR_GRID' }
+           { icon: Cpu, label: 'İŞLEMCİ_TAHSİSİ' },
+           { icon: Database, label: 'VERİ_SENK' },
+           { icon: Radio, label: 'SİNYAL_TX' },
+           { icon: Smartphone, label: 'MOBİL_UI' },
+           { icon: Monitor, label: 'SİSTEM_OS' },
+           { icon: Zap, label: 'GÜÇ_SİSTEMİ' }
          ].map((node) => (
            <div key={node.label} className="glass p-4 rounded-2xl border-white/5 flex flex-col items-center gap-3 hover:border-lcars-cyan/30 transition-all group cursor-default">
               <node.icon className="w-5 h-5 text-white/20 group-hover:text-lcars-cyan transition-colors" />
