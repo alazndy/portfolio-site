@@ -4,7 +4,7 @@ title: "GT-Launcher"
 category: "Diğer"
 status: "Active"
 download: "/gt-launcher.apk"
-version: "v3.2.0"
+version: "v3.2.1"
 summary: "Fully functional, highly customizable Android home screen launcher with Star Trek LCARS aesthetics and OBD-II/OCR integrations."
 techStack: ["Kotlin", "Jetpack Compose", "OBD-II BLE", "ML Kit OCR", "Room"]
 ---
