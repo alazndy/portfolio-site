@@ -14,6 +14,7 @@ export interface ProjectMetadata {
   github?: string;
   live?: string;
   download?: string;
+  version?: string;
   image?: string;
   slug: string;
 }

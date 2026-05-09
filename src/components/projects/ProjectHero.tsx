@@ -14,6 +14,7 @@ interface ProjectHeroProps {
   live?: string;
   github?: string;
   download?: string;
+  version?: string;
   accent: string;
   accentBg: string;
   glow: string;
@@ -120,7 +121,7 @@ function DesignGrid({ accentBg }: { accentBg: string }) {
 }
 
 export function ProjectHero({
-  title, summary, image, status, category, date, live, github, download,
+  title, summary, image, status, category, date, live, github, download, version,
   accent, accentBg, glow, badge, statusClass, statusDot: dot,
   variant, gradient,
 }: ProjectHeroProps) {
@@ -208,7 +209,7 @@ export function ProjectHero({
                     <div className="absolute inset-0 bg-gradient-to-tr from-white/20 via-transparent to-transparent opacity-0 group-hover/dl:opacity-100 transition-opacity" />
                     
                     <Smartphone className="w-6 h-6 animate-pulse" />
-                    <span>DOWNLOAD APK v3.0.1</span>
+                    <span>DOWNLOAD APK {version || ''}</span>
                   </a>
                 )}
                 <div className="flex items-center gap-3">
