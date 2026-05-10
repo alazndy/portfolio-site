@@ -32,8 +32,8 @@
 ## Gemini
 ### Yaptıkları
 - **APK Dağıtım Merkezi:** GT-Launcher projesi için resmi APK dağıtım kanalı kuruldu. 
-- `public/gt-launcher-v4.1.3.apk` güncellendi ve siteye entegre edildi.
-- Tarayıcı önbelleği (cache) sorunlarını önlemek için APK dosya adı versiyon bazlı (`gt-launcher-v4.1.3.apk`) hale getirildi.
+- `public/gt-launcher-v4.1.4.apk` güncellendi ve siteye entegre edildi.
+- Tarayıcı önbelleği (cache) sorunlarını önlemek için APK dosya adı versiyon bazlı (`gt-launcher-v4.1.4.apk`) hale getirildi.
 - Reaktif Icon Pack ve Dinamik Mühendislik Güvertesi (v4.0) içeren yeni build yayına alındı.
 ### Yapacakları
 - —
