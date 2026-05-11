@@ -35,7 +35,7 @@
 - `public/gt-launcher-v4.1.5.apk` eklendi ve `src/content/projects/GT-Launcher.md` üzerinden siteye entegre edildi.
 - İzin hataları giderilmiş ve stabilize edilmiş yeni build yayına alındı.
 ### Yapacakları
-- —
+- GT-Launcher: Müzik kartı albüm kapağı ve medya kontrollerinin çalışmama sorunu düzeltilecek.
 ### Notlar
 - —
 
@@ -72,6 +72,7 @@
 ### Devam Edenler
 - [ ] Dil desteği ince ayarları
 - [ ] Proje sayfaları final kontrolleri
+- [ ] GT-Launcher: Müzik kartı/medya kontrolü hatası fix
 
 ### Sıradakiler
 - [ ] Klasör adını manuel olarak alazlab.com yap (VS Code kapalıyken)
