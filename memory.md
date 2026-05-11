@@ -1,8 +1,8 @@
 # alazlab.com Memory
 
 ## Son Durum
-- Tarih: 2026-04-30
-- Aktif agent: Claude
+- Tarih: 2026-05-11
+- Aktif agent: Gemini
 
 ## Claude
 ### Yaptıkları
@@ -31,10 +31,9 @@
 
 ## Gemini
 ### Yaptıkları
-- **APK Dağıtım Merkezi:** GT-Launcher projesi için resmi APK dağıtım kanalı kuruldu. 
-- `public/gt-launcher-v4.1.4.apk` güncellendi ve siteye entegre edildi.
-- Tarayıcı önbelleği (cache) sorunlarını önlemek için APK dosya adı versiyon bazlı (`gt-launcher-v4.1.4.apk`) hale getirildi.
-- Reaktif Icon Pack ve Dinamik Mühendislik Güvertesi (v4.0) içeren yeni build yayına alındı.
+- **APK Dağıtım Merkezi:** GT-Launcher projesi için resmi APK dağıtım kanalı v4.1.5 sürümü ile güncellendi.
+- `public/gt-launcher-v4.1.5.apk` eklendi ve `src/content/projects/GT-Launcher.md` üzerinden siteye entegre edildi.
+- İzin hataları giderilmiş ve stabilize edilmiş yeni build yayına alındı.
 ### Yapacakları
 - —
 ### Notlar
@@ -68,6 +67,7 @@
 - [x] TR/EN dil desteği ve Dark Mod
 - [x] SEO (Sitemap, Robots, OG tags)
 - [x] Crucix ve AG-Manager projelerinin temizlenmesi
+- [x] GT-Launcher v4.1.5 Release
 
 ### Devam Edenler
 - [ ] Dil desteği ince ayarları
@@ -89,3 +89,4 @@
 | 2026-04-30 | Antigravity | i18n ve Theme eklendi | Çoklu dil ve Aydınlık/Karanlık mod |
 | 2026-04-30 | Antigravity | DevOps README.md Enjeksiyonu | Proje sayfalarının içeriğini gerçek verilerle zenginleştirmek için DevOps dizinini tarayıp içeriği markdown dosyalarına enjekte ettik |
 | 2026-05-01 | Antigravity | Crucix & AG-Manager Kaldırıldı | Kullanıcıya ait olmayan projeler sistemden tamamen temizlendi |
+| 2026-05-11 | Gemini | GT-Launcher v4.1.5 Yayınlandı | İzin hatalarının giderilmesi ve yeni build entegrasyonu |
