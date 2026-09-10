@@ -8,15 +8,18 @@ GT-Launcher is built with a **"Secure by Design"** philosophy: zero data collect
 | --- | --- |
 | **Location** | GPS speedometer, weather, and Park Assistant's saved location. |
 | **Bluetooth** | Connecting to OBD-II adapters and detecting your car's Bluetooth for Drive Mode. |
-| **Record Audio** | **Only** the Music Visualizer (FFT spectrum) — audio is analyzed on-device in real time, never recorded or stored. |
-| **Contacts** | Contact search and Fast Dial results in Omni-Terminal. |
+| **Record Audio** | Music Visualizer analysis and the Voice Memo card. Visualizer audio is analyzed on-device; Voice Memos are recorded only after you choose to start one and stay in the app's private storage. |
+| **Contacts** | Contact search/Fast Dial in Omni-Terminal and manually curated Favorite Contacts cards. |
 | **Calendar** | Surfacing upcoming events in Omni-Terminal search results. |
 | **Phone Call** | Only when you trigger a call directly from a Fast Dial result. |
 | **Notification Access** | Notification badges on GT cards, and controlling media playback from a Media card. |
 | **Accessibility Service** | Lets the sidebar's Back and Recents buttons perform real system navigation actions. |
 | **Storage/Media** | Setting a custom wallpaper, card background, or sidebar logo from your gallery. |
+| **Notification Policy Access** | Lets the Quick Toggles card change Do Not Disturb when you explicitly use that control. |
 
 Every permission's live grant status is visible in **Engineering → ABOUT**, and you can jump to its exact system settings screen from there.
+
+The Settings permission controls were consolidated in the v4.15–v4.18.1 declarative catalog: quick controls remain under **SYSTEM**, while **ABOUT** is the complete catalog. Tasker/MacroDroid actions use the apps' explicit integration interfaces; they do not grant the launcher access to their private task or macro data.
 
 ![Permissions catalog — tap any row to jump to its system settings screen](assets/permissions/runtime-grant-flow.gif)
 

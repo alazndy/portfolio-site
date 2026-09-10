@@ -14,24 +14,14 @@ Each card's minimum size is enforced per capability (e.g. a Gallery card can't s
 
 ---
 
-##  Capability-Based Card Builder (v4.7+)
+## Capability-Based Card Builder
 
 GT-Launcher uses a **Unified Card Capability System (UCCS)**. Cards are not a fixed type — they're a surface that can host one or more capabilities simultaneously.
 
 ### Creating a Card
-Triple-tap an empty grid cell to enter **Edit Mode**, then tap **ADD** in the edit toolbar. The builder opens with 5 tabs:
+Enter **Edit Mode**, then tap **ADD**. The current builder is a searchable, group-filterable list with a live preview of the actual card; selecting **Add** places it immediately with sensible defaults. Configure its icon, color, bindings, dimensions, visual style, and modules later in Card Settings, which provides Appearance, Layout, Modules, and Module Settings tabs plus a live card preview.
 
-![Card builder walkthrough — FUNCTION, BEHAVIOR, APPEARANCE, LAYOUT, VISUAL](assets/customization/card-builder-5-tabs.gif)
-
-| Tab | What you configure |
-|---|---|
-| **FUNCTION** | Pick one or more capabilities for this card |
-| **BEHAVIOR** | Tap/swipe actions, camera mode, gallery album, notification filter |
-| **APPEARANCE** | Palette color, custom accent HEX, text color, live mini-preview |
-| **LAYOUT** | Grid position (col/row) and span (width × height) |
-| **VISUAL** | Visual style override (inherits the global style by default) |
-
-### All 19 Capabilities
+### Capability Catalog
 
 The FUNCTION tab's module picker lists every capability the launcher supports — nothing is hidden, though incompatible combinations are greyed out with an on-screen reason instead of blocked silently.
 
@@ -41,6 +31,8 @@ The FUNCTION tab's module picker lists every capability the launcher supports �
 | **COMMUNICATION** | Notifications · Comms |
 | **ACTION** | App Launch · Camera · Flashlight |
 | **UTILITY** | System Stats · Spacer · Deck · Calendar · Timer · Note · Step Counter |
+
+The current catalog also includes **Calculator**, **Water Intake**, **Focus Timer**, **Voice Memo**, **Quick Toggles**, **Favorite Contacts**, and **Gesture Input**. Water Intake supports editable serving presets. The Add Module catalog follows the same searchable/filterable, live-preview flow as Add Card.
 
 **Compatibility rules:** capabilities within the same conflict set can't stack on one card — e.g. two `PRIMARY` capabilities that both claim the card's main surface (Widget + Gallery, say) will grey each other out. Stacking a *second* capability onto any card (e.g. App Launch + Notifications badge) and the **Finance** capability are both Premium features.
 
@@ -202,3 +194,17 @@ Set a full launcher wallpaper or custom background overlay behind your card grid
 ##  Performance Tip
 
 On older devices, a larger cell size or fewer columns means fewer Compose nodes on screen and smoother animations — try dropping to 4-5 columns or bumping the cell size before reaching for a lower-end theme. GT-Launcher also auto-requests the device's highest supported refresh rate (90/120/144 Hz) via `preferredDisplayModeId`.
+
+---
+
+## Current Builder, Gestures, and Style Controls (v4.15–v4.18.1)
+
+The current **Add Card** flow is a single searchable, group-filterable catalog with a live preview of the actual card. Choosing **Add** places a sensibly configured card immediately; detailed icon, color, action, size, and module changes belong in Card Settings rather than a second setup form. The equivalent Add Module catalog uses the same searchable/filterable pattern and previews cards at their natural grid geometry.
+
+New standalone card choices are **Calculator**, **Water Intake**, **Focus Timer**, **Voice Memo**, **Quick Toggles**, and **Favorite Contacts**. Water Intake's preset amounts are editable. Content-heavy cards now have enforced minimum dimensions, including on layouts created before the rule existed.
+
+**Gesture Input** is available as a card capability. Press, hold, and draw one of ten supported single-stroke shapes to run its bound action; it can be the only content on a card or an add-on to another compatible card. The test toast reports the recognized shape and confidence, and the stroke defaults to the card's readable text color unless you choose one.
+
+Card Settings now has clearer Appearance, Layout, Modules, and Module Settings tabs plus a live preview of the real card. A card can override the global visual style in its own settings. Style Studio is no longer a separate dialog: it lives in Settings, and dragging a color, shadow, or corner slider reveals the live home screen underneath. The radial long-press menu can be either a circle or an independent 3–12-sided regular polygon; its side count does not depend on the number of actions.
+
+Saved profiles are now managed in one always-visible Settings block: enter a name and save, then tap any listed saved profile to load it. This replaces the separate save dialog and profile-browser flow.

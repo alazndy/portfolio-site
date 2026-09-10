@@ -42,3 +42,9 @@ You don't have to manually move apps.
 ---
 ##  Technical Note
 The drawer loads apps through an asynchronous, reactive data stream, so even a 500+ app library stays scrollable and searchable without a hitch — and it live-updates the moment you install, uninstall, or update anything, no manual refresh needed.
+
+## v4.15–v4.18.1 Drawer Updates
+
+The safe-area-aware header is now a single focused row: search, a one-tap list/grid switch, and **Apps** settings. System Back dismisses the drawer, and flinging past the top of either the grid or list closes it as well.
+
+Create a department directly from the end of the department collection without leaving the drawer. The quick flow validates duplicate names and supports optional keywords plus color presets. Package lookups and grouped results are cached while the persisted department list stays live, so filtering and department changes need fewer rescans; pinned apps still lead list view. The alphabet index dock no longer flickers when a finger rests at a letter-bucket boundary.

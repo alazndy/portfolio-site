@@ -33,3 +33,11 @@ Results, category labels, and calendar-date formatting all follow your app's sel
 
 ---
 *Tip: dragging on any result dismisses the keyboard, so scrolling through a long result list never fights with the IME.*
+
+---
+
+## v4.15–v4.18.1 Search and Automation Updates
+
+All OmniSearch sources run concurrently and return as soon as each source finishes instead of waiting for the slowest source. Settings results expanded from section-level matches to individual destinations; Settings search is also available from every Settings sub-page and now reaches more than 55 controls. Results take the user directly to the relevant nested row and briefly highlight it.
+
+Tasker and MacroDroid integrate with the same action system: a card or Gesture Input binding can launch an external task or macro, and an external remote-command intent can drive GT-Launcher itself (including opening the App Drawer, switching theme, loading a profile, toggling Drive Mode/Edit Mode/sidebar, or launching an App Launch card by title).

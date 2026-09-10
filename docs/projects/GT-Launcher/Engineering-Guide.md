@@ -166,3 +166,13 @@ Manage your subscription or lifetime unlock, or restore a previous purchase.
 | `heightSpan` | Height in rows |
 
 Drag handles snap automatically. Fine-tune exact coordinates in **Card Settings → LAYOUT**.
+
+---
+
+## v4.15–v4.18.1 Settings Updates
+
+Settings now use one declarative, typed catalog across all ten sections. It provides a shared renderer, premium gate, stable anchors, responsive layouts, and consistent accessibility treatment; Style Studio was folded into this Settings experience rather than kept as a separate screen.
+
+Search is available from every Settings sub-page and can open individual destinations, not merely section tiles. Coverage now exceeds 55 destinations, including Optimize Now, Restore Purchases, Edit Layout, grid side padding, card/text opacity, sidebar branding and behavior, and Slide List placement/recent-app controls. A selected result scrolls to its nested row and highlights it briefly. Recently visited sections remain available as a five-item quick-access row.
+
+Under **SYSTEM → LAYOUT PRESETS & PROFILE BACKUP**, the save name, Save action, and complete saved-profile list are now shown together; tap a profile in the list to load it. Under **ABOUT**, the build version follows the actual build and Discord, Reddit, and contact-email links are available. External automation is also supported: cards and gestures can invoke Tasker tasks or MacroDroid macros, while either automation app can send GT-Launcher a remote command to load a preset, toggle Drive Mode/Edit Mode/sidebar, switch theme, open the App Drawer, or launch an App Launch card by title.

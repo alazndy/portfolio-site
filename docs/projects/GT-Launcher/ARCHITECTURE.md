@@ -8,7 +8,7 @@ GT-Launcher is a **single-Activity app with no Jetpack Navigation-Compose**. `Ma
 
 ## The Card / Capability System (UCCS)
 
-The core abstraction is the **Unified Card Capability System**. A `CardItem` (`data/CardItem.kt`) is the single source of truth for one home-screen card: its grid position, size, styling, and — critically — a `capabilities: List<CardCapability>`. `CardCapability` (`data/CardCapability.kt`) is a sealed interface with one data class per capability (App Launch, Notifications, Finance, Note, and so on — 19 in total), so a card isn't "a Finance card" or "a Notes card," it's a surface that *hosts* one or more capabilities at once.
+The core abstraction is the **Unified Card Capability System**. A `CardItem` (`data/CardItem.kt`) is the single source of truth for one home-screen card: its grid position, size, styling, and — critically — a `capabilities: List<CardCapability>`. `CardCapability` (`data/CardCapability.kt`) is a sealed interface with one data class per capability (App Launch, Notifications, Finance, Note, Gesture Input, and more), so a card isn't "a Finance card" or "a Notes card," it's a surface that *hosts* one or more capabilities at once.
 
 Rendering follows a plugin pattern: `CardRegistry.kt` maps each legacy `CardType` to a `CardDescriptor` (used by the "Add Card" grid), and `CardPlugins.kt` defines one `object XxxPlugin : CardPlugin(...)` per type, each implementing a single `Content(ctx: CardRenderContext)` composable. `DynamicCardRenderer.kt` resolves a card's capability list at render time and dispatches into the right plugin(s) — this is how capability *stacking* (e.g. App Launch + Notifications on one card) actually renders: the primary capability's plugin draws the surface, secondary capabilities layer on top. `CardCapabilityRegistry` enforces which capabilities can legally coexist, grouped by `CapabilityGroup` (PRIMARY/COMMUNICATION/ACTION/UTILITY) with explicit conflict sets.
 
@@ -67,3 +67,11 @@ A card can override either system independently at the per-card level.
 A few internal names don't match the public "GT Launcher" branding — this is intentional debt, not an oversight:
 - `lcars_prefs`, `lcars_layout.db`, `lcarsLeftGuideWidth` — survive from the app's earlier LCARS-themed identity. The user-facing brand fully moved to "GT Launcher" (with a deliberately-retained Star Trek voice in copy and flavor text), but renaming these internal keys would require a data migration for zero user-visible benefit.
 - Engineering Panel section keys `TERMINAL`, `DATA`, `HARDWARE`, and `INTERFACE` are legacy aliases that route to the current `SYSTEM` and `VISUAL` sections respectively (`EngineeringSectionProvider`) — old saved section-order preferences and deep links using the old keys still resolve correctly.
+
+## v4.15–v4.18.1 Architecture Updates
+
+The capability layer now also covers Calculator, Water Intake, Focus Timer, Voice Memo, Quick Toggles, Favorite Contacts, and Gesture Input. Water Intake accepts editable serving presets; content-heavy cards enforce type-specific minimum spans and existing layouts are backfilled on the next launch so a card cannot be resized into a broken internal layout.
+
+Gesture Input is a `$1 Unistroke Recognizer` capability: it can stand alone as a ten-shape reference card or be attached to a compatible card. The recognizer accepts circle, triangle, rectangle, checkmark, caret, zigzag, and four directional-arrow strokes; closed shapes support both winding directions. It owns its drag stream so drawing cannot leak into the sidebar-reveal or drawer gestures.
+
+Battery state is event-driven rather than sampled: cards began updating from the system battery broadcast in v4.17, and the header follows the same live path in v4.18. This replaces the former five-second poll. Settings likewise now render from one typed, declarative catalog across Adaptive, About, Premium, System, Style, Visual, Home, Apps, Vehicle, and Sidebar; that catalog supplies the renderer, premium gate, and stable search anchors.

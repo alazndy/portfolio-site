@@ -57,3 +57,9 @@ Every Drive Mode session is logged as a trip.
 
 ---
 *Drive Mode, OBD-II telemetry, and the Fuel/Trip system are Premium features.*
+
+---
+
+## v4.15–v4.18.1 Integration Note
+
+Drive Mode's existing triggers and HUD workflow are unchanged in this release window. It can now also be toggled through GT-Launcher's Tasker/MacroDroid remote-command intent, so an external automation may coordinate it with a vehicle Bluetooth routine or another device event. The Settings search can jump directly to Drive Mode controls.

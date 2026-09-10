@@ -46,7 +46,16 @@ Welcome to the technical and user manual for **GT-Launcher** — a fully modular
 
 ---
 
-##  What's New in v4.10.0
+## What's New in v4.15–v4.18.1
+
+- **Gesture Input and Combo Link Gesture:** draw one of ten `$1 Unistroke` shapes on a card, or hold one linked card and swipe another to fire an action. Both can invoke Tasker or MacroDroid actions.
+- **Six new card choices:** Calculator, Water Intake (with editable presets), Focus Timer, Voice Memo, Quick Toggles, and Favorite Contacts; content-heavy cards now enforce safe minimum sizes.
+- **Selection-first Edit Mode:** card and sidebar editing use a floating, style-aware move/size/settings/delete dock, protected free-cell placement, collision feedback, and shared Undo.
+- **Declarative Settings and live Style Studio:** Settings is one typed catalog with 55+ individual search destinations; Style Studio moved inside Settings and previews the live home screen under its controls.
+- **App Drawer refresh:** unified search/list-grid/settings header, direct department creation, overscroll-to-close, cached data flow, and a stable alphabet dock.
+- **Live battery updates:** card and header battery values now update directly from the system broadcast rather than five-second polling.
+
+### Earlier highlights
 
 - **Unified Interactive Tutorial** — a single, spotlighted, live-UI walkthrough replaces the old three-mode system.
 - **Quick/Guided First-Run Setup** — new users either tick preset cards or build their first card themselves in the real Card Builder during onboarding.
@@ -54,7 +63,6 @@ Welcome to the technical and user manual for **GT-Launcher** — a fully modular
 - **Widget reliability fixes** — resolved blank-on-sidebar-open, leaked widget IDs, and dead retry logic.
 - **AppDrawer fixes** — custom department colors and stale grouping issues resolved.
 
-### Earlier highlights
 - **v4.7 — Capability-Based Card Builder:** cards can stack multiple capabilities (e.g. App Launch + Notifications) on one surface, built through the 5-tab FUNCTION → BEHAVIOR → APPEARANCE → LAYOUT → VISUAL flow.
 - **v4.4 — Theme Creator:** HSV color wheel with a harmony engine and live preview, plus independent per-card color overrides.
 

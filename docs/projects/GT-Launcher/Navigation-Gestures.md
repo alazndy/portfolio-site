@@ -89,3 +89,15 @@ Enable it in **Engineering → SIDEBAR → SYSTEM CONTROLS**.
 ---
 
 *Pro Tip: tune tactile feedback strength for every gesture from **Engineering → SYSTEM**.*
+
+---
+
+## Current Gesture and Edit Model (v4.15–v4.18.1)
+
+**Gesture Input** adds a press-hold-drag recognizer to compatible cards. It recognizes ten `$1 Unistroke` templates — circle, triangle, rectangle, checkmark, caret, zigzag, and up/down/left/right arrows — with clockwise and counter-clockwise forms for closed shapes. Bind a resulting gesture to a normal action, a Tasker task, or a MacroDroid macro. The capability also works on its own as a reference grid when no other card content is present.
+
+**Combo Link Gesture** binds two cards: hold the source card, then swipe the linked card to run its action. The hold is tracked by the first finger's pointer ID, so a second card consuming its own swipe cannot cancel the link. This is separate from the single-card Gesture Input recognizer.
+
+Edit Mode is now selection-first. Tap a card to select it, then use the floating dock for move, resize, −45° to +45° rotation, settings, or delete. Only the selected card exposes resize handles; collision feedback is dashed gold for a free placement and red for an overlap. Two-finger input is scroll-only — pinch-to-resize was removed to prevent accidental resizing or sidebar reveals. The movable dock can be dragged vertically and moves to the opposite screen half if a dragged item passes underneath it; its surfaces inherit the active Style Studio recipe.
+
+Sidebar editing uses the same model: select a button, then use its dock to move, size, open settings, or delete. Buttons occupy a real free-cell grid, can leave intentional gaps, and cannot overlap; legacy overlapping layouts self-repair on load. The App Settings gear is a protected, movable sidebar button, and one shared Undo action covers both card and sidebar edits.
