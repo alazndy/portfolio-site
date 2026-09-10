@@ -301,7 +301,7 @@ export function UniControlClient() {
                     reverseGear ? "bg-orange-500 text-white border-orange-600" : "bg-card text-muted-foreground border-border"
                   )}
                 >
-                  {reverseGear ? 'ACTIVE (24V)' : 'OFF (0V)'}
+                  {reverseGear ? 'HIGH (24V)' : 'LOW (0V)'}
                 </button>
               </div>
 

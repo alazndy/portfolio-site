@@ -33,22 +33,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${title} — Göktuğ Turhan`,
     description,
-    keywords: [title, category, ...(techStack ?? []), 'Göktuğ Turhan', 'alazlab'].join(', '),
+    keywords: [title, category, ...(techStack ?? []), 'Göktuğ Turhan', 'alazlabs', 'alazlab'].join(', '),
     openGraph: {
       title: `${title} — Göktuğ Turhan`,
       description,
-      url: `https://alazlab.com/${lang}/proje/${slug}`,
-      siteName: 'alazlab.com',
+      url: `https://alazlabs.com/${lang}/proje/${slug}`,
+      siteName: 'alazlabs.com',
       type: 'article',
-      ...(image ? { images: [{ url: `https://alazlab.com${image}` }] } : {}),
+      ...(image ? { images: [{ url: `https://alazlabs.com${image}` }] } : {}),
     },
     twitter: {
       card: 'summary_large_image',
       title: `${title} — Göktuğ Turhan`,
       description,
-      ...(image ? { images: [`https://alazlab.com${image}`] } : {}),
+      ...(image ? { images: [`https://alazlabs.com${image}`] } : {}),
     },
-    alternates: { canonical: `https://alazlab.com/${lang}/proje/${slug}` },
+    alternates: { canonical: `https://alazlabs.com/${lang}/proje/${slug}` },
   };
 }
 

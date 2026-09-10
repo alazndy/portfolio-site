@@ -1,4 +1,4 @@
-# alazlab.com
+# alazlabs.com
 
 Göktuğ Turhan'ın kişisel portföyü ve proje arşivi. Site, Next.js App Router üzerinde çalışır ve her projeyi kendi detay, dokümantasyon, medya ve indirme kaynaklarıyla yayınlar.
 
@@ -31,7 +31,7 @@ The shared route at `/proje/[slug]` renders these sections only when real data e
 
 ### GT Launcher release history
 
-`/tr/proje/GT-Launcher` and `/en/proje/GT-Launcher` fetch the private GT Launcher `CHANGELOG.md` on the server with the Vercel-only `GT_LAUNCHER_CHANGELOG_TOKEN` secret, cache it for one hour, and render parsed text-only release entries on alazlab.com. Visitors do not need to open GitHub, the token never reaches the browser, and source Markdown/HTML is never rendered directly.
+`/tr/proje/GT-Launcher` and `/en/proje/GT-Launcher` fetch the private GT Launcher `CHANGELOG.md` on the server with the Vercel-only `GT_LAUNCHER_CHANGELOG_TOKEN` secret, cache it for one hour, and render parsed text-only release entries on alazlabs.com. Visitors do not need to open GitHub, the token never reaches the browser, and source Markdown/HTML is never rendered directly.
 
 ## Getting Started
 

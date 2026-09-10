@@ -1,4 +1,4 @@
-# alazlab.com v0.1.0 — Architecture Wiki
+# alazlabs.com v0.1.0 — Architecture Wiki
 
 _Deterministically generated from signatures + dependency graph by SigMap v8.18.0 — no LLM. Regenerate: `sigmap wiki`._
 

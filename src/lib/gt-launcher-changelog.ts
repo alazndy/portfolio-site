@@ -48,7 +48,7 @@ async function fetchChangelog(url: string): Promise<GtLauncherChangelog> {
       headers: {
         Accept: 'application/vnd.github.raw+json',
         Authorization: `Bearer ${accessToken}`,
-        'User-Agent': 'alazlab.com GT Launcher changelog reader',
+        'User-Agent': 'alazlabs.com GT Launcher changelog reader',
         'X-GitHub-Api-Version': '2022-11-28',
       },
       next: {

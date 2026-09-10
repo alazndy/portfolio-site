@@ -38,18 +38,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${title} — Göktuğ Turhan`,
       description,
-      url: `https://alazlab.com/${lang}/proje/GT-Launcher`,
-      siteName: 'alazlab.com',
+      url: `https://alazlabs.com/${lang}/proje/GT-Launcher`,
+      siteName: 'alazlabs.com',
       type: 'article',
-      ...(image ? { images: [{ url: `https://alazlab.com${image}` }] } : {}),
+      ...(image ? { images: [{ url: `https://alazlabs.com${image}` }] } : {}),
     },
     twitter: {
       card: 'summary_large_image',
       title: `${title} — Göktuğ Turhan`,
       description,
-      ...(image ? { images: [`https://alazlab.com${image}`] } : {}),
+      ...(image ? { images: [`https://alazlabs.com${image}`] } : {}),
     },
-    alternates: { canonical: `https://alazlab.com/${lang}/proje/GT-Launcher` },
+    alternates: { canonical: `https://alazlabs.com/${lang}/proje/GT-Launcher` },
   };
 }
 

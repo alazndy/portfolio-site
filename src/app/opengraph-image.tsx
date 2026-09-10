@@ -31,7 +31,7 @@ export default async function Image() {
               style={{ borderRadius: '10px' }}
             />
             <span style={{ fontSize: '24px', fontWeight: 800, letterSpacing: '-0.5px' }}>
-              alazlab.com
+              alazlabs.com
             </span>
           </div>
 
