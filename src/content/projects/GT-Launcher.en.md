@@ -29,8 +29,8 @@ gallery:
   - src: "/projects/GT-Launcher/search-mixed-results.gif"
     alt: "Omni-Terminal karma arama motoru"
     caption: "OmniSearch — Web, Play Store, uygulamalar ve sistem ayarları tek komuta kutusunda."
-version: "v4.13.0"
-summary: "Modular Android home screen launcher inspired by Star Trek LCARS, built with Kotlin and Jetpack Compose featuring customizable widget cards and local app indexing."
+version: "v4.18.1"
+summary: "A fully modular Android home screen with a Star Trek-inspired aesthetic: a capability-based card builder, an OmniSearch command deck, the Slide List app drawer, and an OBD-II-powered Drive Mode."
 techStack: ["Kotlin", "Jetpack Compose", "Room", "OBD-II BLE", "ML Kit OCR", "Gson", "Material3"]
 ---
 
@@ -41,12 +41,25 @@ GT-Launcher is an open-source Android home screen application built entirely wit
 ### Core Architecture
 
 - **UI Framework:** 100% Jetpack Compose with reactive state management
-- **Theme Engine:** Dynamic LCARS color palette switching with custom contrast curves
-- **App Indexer:** Asynchronous local package discovery and category clustering
-- **Widget Builder:** Extensible modular card framework for calendar, system telemetry, media controls, and quick shortcuts
+- **Card System (UCCS):** Every card is built from composable capabilities rather than a fixed type, with conflict protection between incompatible modules in the editor
+- **Theme Engine:** 6 visual styles (Flat, Glass, Neobrutalism, Claymorphism, Minimalism, Neon), 12 LCARS palettes, and live theme automation by clock/battery/weather
+- **OmniSearch:** Web, Play Store, installed apps, contacts, and system settings, all running concurrently from one command bar
+- **Drive Mode:** OBD-II BLE live telemetry, GPS speedometer, audio spectrum, and OCR fuel-receipt scanning in a landscape cockpit HUD
 
 ### Performance Benchmarks
 
 - **Cold Startup:** < 180 ms on modern Android 14+ devices
 - **Memory Footprint:** < 45 MB resident memory in background idle
 - **Frame Rate:** Consistent 120 FPS scrolling across app drawers and widget grids
+
+---
+
+## Recent Updates (v4.15 → v4.18.1)
+
+- **Gesture Input & Combo Link:** turn a shape drawn on a card (circle, triangle, checkmark, four arrows) into an action via a from-scratch $1 Unistroke recognizer, or hold one card and swipe a second, linked card to fire a bound action.
+- **Tasker & MacroDroid, Both Directions:** trigger a Tasker task or MacroDroid macro from a card or gesture — or drive GT-Launcher itself from an external automation (load a preset, toggle Drive Mode/sidebar, launch a specific app).
+- **Redesigned Edit Mode:** tap a card or sidebar button to select it, then use a floating dock for move/resize/rotate/settings/delete. Sidebar buttons now sit on a real free-cell grid with overlap protection.
+- **Declarative Settings Engine:** all 10 settings tabs were rebuilt on one typed catalog; search now reaches 55+ individual destinations instead of just section names, and Style Studio moved into Settings with a live preview of the real home screen underneath every slider.
+- **New Cards:** Calculator, Water Intake, Focus Timer, Voice Memo, Quick Toggles (Wi-Fi/Bluetooth/DND), and Favorite Contacts.
+- **Instant Battery Status:** battery percentage now updates the moment it changes via a system broadcast, replacing the old 5-second polling loop.
+- **Per-Card Visual Style Override:** any card can now break from the global visual style independently.

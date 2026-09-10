@@ -1,11 +1,12 @@
 # alazlab.com Memory
 
 ## Son Durum
-- Tarih: 2026-05-11
-- Aktif agent: Gemini
+- Tarih: 2026-09-10
+- Aktif agent: Claude Kaira
 
 ## Claude
 ### Yaptıkları
+- **GT-Launcher İçerik Senkronu (2026-09-10):** İçerik dosyaları v4.13.0'da donmuş kalmıştı, GT-Launcher gerçekte v4.18.1'deydi — 4 sürümlük özellik (Gesture Input Module, Combo Link Gesture, Tasker/MacroDroid iki yönlü otomasyon, yeniden tasarlanan Edit Mode, Deklaratif Ayarlar Motoru + Style Studio birleşimi, 6 yeni kart) sitede hiç görünmüyordu. `src/content/projects/GT-Launcher.md` ve `.en.md` version alanı ve yeni "Son Güncellemeler" bölümüyle güncellendi. Not: `docs/projects/GT-Launcher/` altındaki derin wiki kılavuzları (ARCHITECTURE, Customization, vb.) hâlâ 2026-08-24 seviyesinde donuk — ayrı bir geçiş gerekiyor.
 - Proje adı portfolio-site → alazlab.com olarak güncellendi
 - package.json name güncellendi
 - gitrepo.md oluşturuldu

@@ -35,7 +35,7 @@ gallery:
   - src: "/projects/GT-Launcher/search-mixed-results.gif"
     alt: "Omni-Terminal karma arama motoru"
     caption: "OmniSearch — Web, Play Store, uygulamalar ve sistem ayarları tek komuta kutusunda."
-version: "v4.13.0"
+version: "v4.18.1"
 summary: "Star Trek esintili bir estetikte, tamamen modüler kart sistemine sahip bir Android ana ekranı: kapasite tabanlı kart üretici, OmniSearch komuta güvertesi, Slide List uygulama çekmecesi ve OBD-II destekli Drive Mode ile."
 techStack: ["Kotlin", "Jetpack Compose", "Room", "OBD-II BLE", "ML Kit OCR", "Gson", "Material3"]
 ---
@@ -69,6 +69,38 @@ Android cihazınızı 24. Yüzyıl teknolojisine yükseltin: Star Trek "The Next
     <p class="text-xs text-white/50 leading-relaxed">OBD-II BLE canlı telemetrisi, GPS hız göstergesi, ses spektrumu ve OCR yakıt fişi taramasıyla sürüşü yıldız gemisi kokpitine çeviren yatay mod.</p>
   </div>
 </div>
+
+---
+
+##  Son Güncellemeler (v4.15 → v4.18.1)
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-10 not-prose">
+  <div class="p-6 rounded-2xl bg-white/[0.025] border border-white/8 hover:bg-white/[0.04] transition-colors">
+    <div class="inline-flex px-2.5 py-1 rounded-full bg-purple-500/10 items-center justify-center border border-purple-500/20 mb-4 text-purple-400 font-mono text-[11px] font-bold tracking-widest">GESTURE</div>
+    <h3 class="text-base font-bold text-white uppercase tracking-wide mb-2">Jest Girişi & Combo Link</h3>
+    <p class="text-xs text-white/50 leading-relaxed">Kart üzerine çizilen bir şekli (daire, üçgen, onay işareti, dört ok) sıfırdan yazılmış bir $1 Unistroke tanıyıcı ile eyleme dönüştürün; ya da bir kartı basılı tutup bağlı ikinci bir kartı kaydırarak Combo Link eylemini tetikleyin.</p>
+  </div>
+
+  <div class="p-6 rounded-2xl bg-white/[0.025] border border-white/8 hover:bg-white/[0.04] transition-colors">
+    <div class="inline-flex px-2.5 py-1 rounded-full bg-emerald-500/10 items-center justify-center border border-emerald-500/20 mb-4 text-emerald-400 font-mono text-[11px] font-bold tracking-widest">AUTO</div>
+    <h3 class="text-base font-bold text-white uppercase tracking-wide mb-2">Tasker & MacroDroid, İki Yönlü</h3>
+    <p class="text-xs text-white/50 leading-relaxed">Bir karttan veya jestten Tasker görevi ya da MacroDroid makrosu tetikleyin; tersine, dış otomasyonlar GT-Launcher'ı preset yükleme, Drive Mode/sidebar açma veya belirli bir uygulamayı başlatma komutlarıyla uzaktan sürebilir.</p>
+  </div>
+
+  <div class="p-6 rounded-2xl bg-white/[0.025] border border-white/8 hover:bg-white/[0.04] transition-colors">
+    <div class="inline-flex px-2.5 py-1 rounded-full bg-blue-500/10 items-center justify-center border border-blue-500/20 mb-4 text-blue-400 font-mono text-[11px] font-bold tracking-widest">EDIT</div>
+    <h3 class="text-base font-bold text-white uppercase tracking-wide mb-2">Yeniden Tasarlanan Edit Mode</h3>
+    <p class="text-xs text-white/50 leading-relaxed">Kart veya sidebar butonuna dokunup seçin, ardından taşıma/boyutlandırma/döndürme/ayarlar/silme sunan yüzen bir dock kullanın — sidebar butonları artık gerçek bir boş-hücre ızgarasında, çakışma koruması ile yerleşiyor.</p>
+  </div>
+
+  <div class="p-6 rounded-2xl bg-white/[0.025] border border-white/8 hover:bg-white/[0.04] transition-colors">
+    <div class="inline-flex px-2.5 py-1 rounded-full bg-yellow-500/10 items-center justify-center border border-yellow-500/20 mb-4 text-yellow-400 font-mono text-[11px] font-bold tracking-widest">SETTINGS</div>
+    <h3 class="text-base font-bold text-white uppercase tracking-wide mb-2">Deklaratif Ayarlar Motoru</h3>
+    <p class="text-xs text-white/50 leading-relaxed">10 ayar sekmesi tek bir tipli katalog üzerinde yeniden inşa edildi; arama artık 55'ten fazla tekil ayara (grid sütunları, sidebar konumu, OBD eşleştirme...) iniyor ve Style Studio, gerçek ana ekranı canlı önizleyen bir ayar bölümüne taşındı.</p>
+  </div>
+</div>
+
+**Ayrıca bu döngüde:** Calculator, Water Intake, Focus Timer ve Voice Memo kartları; Quick Toggles (Wi-Fi/Bluetooth/DND) ve Favorite Contacts kartları; anlık pil yüzdesi (broadcast tabanlı, artık 5 saniyelik polling yok); ve kart başına bağımsız görsel stil override'ı.
 
 ---
 
