@@ -40,7 +40,7 @@ const COMMANDS: Record<string, CommandOutput> = {
     output: [
       '⚡ [R-AI-OS] Workspace Reflection Snapshot',
       '├── Active Projects Scanned: 41',
-      '├── Clean Git Trees: 40/41 (1 dirty on portfolio-site)',
+      '├── Clean Git Trees: 41/41 (0 dirty)',
       '├── Secret Scans: 0 detected (AgentShield hard-enforced)',
       '├── Memory Subsystem: 41/41 synchronized with Cortex HNSW',
       '└── Overall Workspace Quality: 99.2% (Grade: A+)',

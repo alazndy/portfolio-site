@@ -25,8 +25,7 @@
 - lucide-react v1.8 ikon uyumsuzlukları (Chrome, Github) düzeltildi
 ### Yapacakları
 - —
-### Notlar
-- Klasör adı hâlâ portfolio-site (VS Code kilidi nedeniyle). VS Code kapatılıp Windows Explorer'dan alazlab.com olarak yeniden adlandırılmalı.
+- Klasör adı dev/web altında alazlabs.com olarak güncellendi.
 - Google OAuth Search Console domain doğrulaması yapılıyor (TXT kaydı Squarespace'e eklendi)
 - Vercel domain ayarlarında DNS Change Recommended uyarısı var (216.198.79.1 ve yeni CNAME)
 
@@ -109,8 +108,8 @@
 - [ ] Proje sayfaları final kontrolleri
 - [ ] Her proje için detaylı açıklama, kılavuz, indirme, galeri ve video içeriklerini gerçek kaynaklarla doldurmak
 
-### Sıradakiler
-- [ ] Klasör adını manuel olarak alazlab.com yap (VS Code kapalıyken)
+### Tamamlananlar / Güncellemeler
+- [x] Klasör adını dev/web altında alazlabs.com yap
 - [ ] Vercel DNS ve Search Console doğrulamaları
 - [ ] Öncelikli projelerin içerik kaynaklarını tek tek doğrulayıp detay sayfalarına eklemek
 
@@ -148,3 +147,4 @@
 - [2026-09-10] Codex Kaira: Cleared the high/critical dependency-audit gate before documentation delivery: upgraded Next.js and eslint-config-next to 16.3.4, pinned patched browserslist, fast-uri, and js-yaml transitive versions, and explicitly disabled the unrs-resolver build script. `pnpm audit --audit-level=high` now has no high/critical findings; production build passes.
 - [2026-09-10] Codex Kaira: Synced all ten GT-Launcher deep-wiki guides with v4.15.0–v4.18.1: gesture and combo controls, new card capabilities, selection-first card/sidebar editing, declarative Settings and search, style/profile workflow, App Drawer behavior, automation, battery updates, permissions, troubleshooting, and index links. Kept the existing single-file wiki convention; no `.en.md` variants were created.
 - [2026-09-10] Antigravity Kaira: Updated site branding, package.json, openGraph, metadataBase, canonical URLs, Schema.org json-ld, sitemap, robots, User-Agent, and navigation logos to alazlabs.com.
+- [2026-09-11] Antigravity Kaira: Cleaned up workspace reflection references and prepared folder rename from portfolio-site to alazlabs.com.
