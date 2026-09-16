@@ -17,15 +17,15 @@ export const metadata: Metadata = {
   },
   description: 'Personal portfolio of Göktuğ Turhan. Embedded hardware, CAN-bus radar systems, Android applications, and developer tools.',
   keywords: ['Göktuğ Turhan', 'Embedded Systems', 'ESP32', 'STM32', 'CAN-bus', 'Kotlin', 'Rust', 'Next.js', 'alazlabs', 'alazlab'],
-  authors: [{ name: 'Göktuğ Turhan', url: 'https://alazlabs.com' }],
+  authors: [{ name: 'Göktuğ Turhan', url: 'https://alazlab.com' }],
   creator: 'Göktuğ Turhan',
-  metadataBase: new URL('https://alazlabs.com'),
+  metadataBase: new URL('https://alazlab.com'),
   openGraph: {
     type: 'website',
     locale: 'tr_TR',
     alternateLocale: ['en_US'],
-    url: 'https://alazlabs.com',
-    siteName: 'alazlabs.com',
+    url: 'https://alazlab.com',
+    siteName: 'alazlab.com',
     title: 'Göktuğ Turhan | Embedded Hardware & Software Engineer',
     description: 'Personal portfolio of Göktuğ Turhan. Embedded hardware, CAN-bus radar systems, Android applications, and developer tools.',
   },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     creator: '@alazndy',
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
-  alternates: { canonical: 'https://alazlabs.com' },
+  alternates: { canonical: 'https://alazlab.com' },
 };
 
 export const viewport = {
@@ -50,9 +50,9 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Person',
-      '@id': 'https://alazlabs.com/#person',
+      '@id': 'https://alazlab.com/#person',
       name: 'Göktuğ Turhan',
-      url: 'https://alazlabs.com',
+      url: 'https://alazlab.com',
       jobTitle: 'Embedded Hardware & Software Engineer',
       sameAs: [
         'https://github.com/alazndy',
@@ -62,10 +62,10 @@ const jsonLd = {
     },
     {
       '@type': 'WebSite',
-      '@id': 'https://alazlabs.com/#website',
-      url: 'https://alazlabs.com',
-      name: 'alazlabs.com',
-      publisher: { '@id': 'https://alazlabs.com/#person' },
+      '@id': 'https://alazlab.com/#website',
+      url: 'https://alazlab.com',
+      name: 'alazlab.com',
+      publisher: { '@id': 'https://alazlab.com/#person' },
       inLanguage: ['tr-TR', 'en-US'],
     },
   ],

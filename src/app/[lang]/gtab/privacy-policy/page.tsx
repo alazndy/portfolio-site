@@ -104,7 +104,7 @@ export default async function PrivacyPolicy({ params }: { params: Promise<{ lang
           <section className="space-y-3 pt-4 border-t border-border">
             <h2 className="text-lg font-bold text-foreground uppercase">Contact & Developer</h2>
             <p className="text-sm text-muted-foreground">
-              Developer: Göktuğ Turhan · Email: <a href="mailto:goktugturhan74@gmail.com" className="text-lcars-cyan hover:underline">goktugturhan74@gmail.com</a> · Website: <a href="https://alazlabs.com" className="text-lcars-cyan hover:underline">alazlabs.com</a>
+              Developer: Göktuğ Turhan · Email: <a href="mailto:goktugturhan74@gmail.com" className="text-lcars-cyan hover:underline">goktugturhan74@gmail.com</a> · Website: <a href="https://alazlab.com" className="text-lcars-cyan hover:underline">alazlab.com</a>
             </p>
           </section>
 

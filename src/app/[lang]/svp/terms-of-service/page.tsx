@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
-    alternates: { canonical: `https://alazlabs.com/${lang}/svp/terms-of-service` },
+    alternates: { canonical: `https://alazlab.com/${lang}/svp/terms-of-service` },
     robots: { index: true, follow: true },
   };
 }
@@ -123,7 +123,7 @@ export default async function SvpTermsOfService({ params }: Props) {
           <section className="space-y-3 pt-4 border-t border-border">
             <h2 className="text-lg font-bold text-foreground uppercase">{isEn ? 'Contact & Developer' : 'İletişim & Geliştirici'}</h2>
             <p className="text-sm text-muted-foreground">
-              {isEn ? 'Developer' : 'Geliştirici'}: Göktuğ Turhan · Email: <a href="mailto:goktugturhan74@gmail.com" className="text-lcars-cyan hover:underline">goktugturhan74@gmail.com</a> · {isEn ? 'Website' : 'Web sitesi'}: <a href="https://alazlabs.com" className="text-lcars-cyan hover:underline">alazlabs.com</a>
+              {isEn ? 'Developer' : 'Geliştirici'}: Göktuğ Turhan · Email: <a href="mailto:goktugturhan74@gmail.com" className="text-lcars-cyan hover:underline">goktugturhan74@gmail.com</a> · {isEn ? 'Website' : 'Web sitesi'}: <a href="https://alazlab.com" className="text-lcars-cyan hover:underline">alazlab.com</a>
             </p>
           </section>
 

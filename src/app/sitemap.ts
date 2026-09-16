@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { getAllProjects } from '@/lib/markdown';
 
-const BASE_URL = 'https://alazlabs.com';
+const BASE_URL = 'https://alazlab.com';
 const locales = ['tr', 'en'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
