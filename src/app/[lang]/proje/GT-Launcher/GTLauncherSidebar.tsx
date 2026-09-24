@@ -86,8 +86,8 @@ export function GTLauncherSidebar() {
           href="https://play.google.com/store/apps/details?id=com.alazndy.gtlauncher"
           target="_blank"
           rel="noreferrer"
-          aria-label={isEn ? 'Get on Google Play' : "Google Play'den İndir"}
-          title={isEn ? 'Get on Google Play' : "Google Play'den İndir"}
+          aria-label={isEn ? 'Open in Google Play' : "Google Play'de Aç"}
+          title={isEn ? 'Open in Google Play' : "Google Play'de Aç"}
           className="flex-1 sm:flex-initial h-11 sm:h-14 md:h-16 sm:w-14 md:w-16 rounded-[10px] border border-black/40 flex items-center justify-center bg-[#AA4444] text-black opacity-85 hover:opacity-100 transition-all"
         >
           <Play className="w-4.5 h-4.5 sm:w-5 sm:h-5 md:w-6 md:h-6" />

@@ -4,7 +4,6 @@ title: "GT-Launcher"
 category: "Diğer"
 area: "lab"
 status: "Active"
-download: "https://play.google.com/store/apps/details?id=com.alazndy.gtlauncher"
 downloads:
   - title: "Google Play Store"
     href: "https://play.google.com/store/apps/details?id=com.alazndy.gtlauncher"

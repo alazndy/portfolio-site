@@ -607,7 +607,7 @@ export function GTLauncherClient({ version }: GTLauncherClientProps) {
             className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider bg-lcars-orange text-black hover:opacity-90 active:scale-95 transition-all shadow-lg shadow-orange-500/25"
           >
             <Smartphone className="w-4 h-4" />
-            <span>{isEn ? 'Get on Google Play' : "Google Play'den İndir"}</span>
+            <span>{isEn ? 'Open in Google Play' : "Google Play'de Aç"}</span>
             <ExternalLink className="w-3.5 h-3.5 opacity-80" />
           </a>
         </div>
