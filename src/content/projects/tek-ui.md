@@ -29,7 +29,7 @@ tek-ui, repository içinde **GT-UI: Retro-Industrial Glass OS** adıyla gelişti
 
 ## Tasarım Sistemi
 
-- **Temalar:** Default, LCARS, Aperture, TVA, eDEX, Vitruvian, JazzNoir, Archer ve Cyber.
+- **Temalar:** Sekiz seçilebilir görsel tema.
 - **Varyantlar:** Solid, outline, ghost, glass ve neon görsel varyantları.
 - **Provider katmanı:** `GTProvider` ile tema, ses efektleri ve CRT overlay ayarları.
 - **Bileşen grupları:** Layout, form, navigation, feedback, overlay, data display ve chart bileşenleri.

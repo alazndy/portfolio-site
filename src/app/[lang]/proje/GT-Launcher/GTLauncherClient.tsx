@@ -367,7 +367,7 @@ export function GTLauncherClient({ version }: GTLauncherClientProps) {
     },
     {
       id: 'themes',
-      title: isEn ? 'Dynamic LCARS Theme Engine' : 'Dinamik LCARS Tema Motoru',
+      title: isEn ? 'Dynamic Color Theme Engine' : 'Dinamik Renk Tema Motoru',
       badge: isEn ? 'Real-Time Shader Pipeline' : 'Gerçek Zamanlı Renk Motoru',
       desc: isEn
         ? 'Create and fine-tune dynamic color palettes with contrast curve computation. Features wallpaper pinch-to-crop and GPU-accelerated background blur synthesis.'
@@ -380,7 +380,7 @@ export function GTLauncherClient({ version }: GTLauncherClientProps) {
       solid: 'bg-[#FFCC66] text-black border border-black/40',
       iconBg: 'bg-black/10',
       specs: [
-        { label: isEn ? 'Color Channels' : 'Renk Kanalları', val: '7 LCARS Hues' },
+        { label: isEn ? 'Color Channels' : 'Renk Kanalları', val: '7 Color Hues' },
         { label: isEn ? 'Wallpaper Slicer' : 'Duvar Kağıdı Dilimleme', val: 'Pinch-to-Crop UV' },
         { label: isEn ? 'Presets' : 'Hazır Temalar', val: '12 Official Presets' },
       ],
@@ -593,8 +593,8 @@ export function GTLauncherClient({ version }: GTLauncherClientProps) {
 
           <p className="text-base sm:text-xl text-muted-foreground leading-relaxed font-normal max-w-2xl">
             {isEn
-              ? 'Star Trek LCARS-inspired modular Android home screen ecosystem. Features capability-based card builder, sub-millisecond OmniSearch, and OBD-II vehicle HUD telemetry.'
-              : 'Star Trek LCARS estetiğinde, tamamen modüler kart sistemine sahip Android ana ekran ekosistemi: 5 sekmeli kart üretici, anlık OmniSearch ve OBD-II araç HUD telemetrisi.'}
+              ? 'A modular Android home screen ecosystem with a capability-based card builder, sub-millisecond OmniSearch, and OBD-II vehicle HUD telemetry.'
+              : 'Tamamen modüler kart sistemine sahip Android ana ekran ekosistemi: 5 sekmeli kart üretici, anlık OmniSearch ve OBD-II araç HUD telemetrisi.'}
           </p>
         </div>
 

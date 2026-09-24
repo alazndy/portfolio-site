@@ -12,7 +12,7 @@ downloads:
 gallery:
   - src: "/projects/GT-Launcher/home.jpg"
     alt: "GT-Launcher retro-fütüristik ana ekranı"
-    caption: "Ana Ekran — Modüler LCARS kartları, finans, medya ve telemetri widget'ları."
+    caption: "Home screen — modular cards, finance, media, and telemetry widgets."
   - src: "/projects/GT-Launcher/card-builder-5-tabs.gif"
     alt: "5 Sekmeli Card Builder canlı üretici akışı"
     caption: "Card Builder — İşlev, davranış, görünüm, boyut ve görsel katman sihirbazı."
@@ -29,19 +29,19 @@ gallery:
     alt: "Omni-Terminal karma arama motoru"
     caption: "OmniSearch — Web, Play Store, uygulamalar ve sistem ayarları tek komuta kutusunda."
 version: "v4.18.1"
-summary: "A fully modular Android home screen with a Star Trek-inspired aesthetic: a capability-based card builder, an OmniSearch command deck, the Slide List app drawer, and an OBD-II-powered Drive Mode."
+summary: "A fully modular Android home screen with a capability-based card builder, an OmniSearch command deck, the Slide List app drawer, and an OBD-II-powered Drive Mode."
 techStack: ["Kotlin", "Jetpack Compose", "Room", "OBD-II BLE", "ML Kit OCR", "Gson", "Material3"]
 ---
 
 ## Overview
 
-GT-Launcher is an open-source Android home screen application built entirely with Kotlin and Jetpack Compose. It reimagines the Star Trek LCARS design philosophy into an ergonomic, ultra-fast mobile productivity workspace.
+GT-Launcher is an open-source Android home screen application built entirely with Kotlin and Jetpack Compose, designed as an ergonomic, ultra-fast mobile productivity workspace.
 
 ### Core Architecture
 
 - **UI Framework:** 100% Jetpack Compose with reactive state management
 - **Card System (UCCS):** Every card is built from composable capabilities rather than a fixed type, with conflict protection between incompatible modules in the editor
-- **Theme Engine:** 6 visual styles (Flat, Glass, Neobrutalism, Claymorphism, Minimalism, Neon), 12 LCARS palettes, and live theme automation by clock/battery/weather
+- **Theme Engine:** 6 visual styles (Flat, Glass, Neobrutalism, Claymorphism, Minimalism, Neon), 12 color palettes, and live theme automation by clock/battery/weather
 - **OmniSearch:** Web, Play Store, installed apps, contacts, and system settings, all running concurrently from one command bar
 - **Drive Mode:** OBD-II BLE live telemetry, GPS speedometer, audio spectrum, and OCR fuel-receipt scanning in a landscape cockpit HUD
 

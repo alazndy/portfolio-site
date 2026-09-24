@@ -32,13 +32,13 @@ Column count is user-configurable (2–12, default 6); there is no separate row 
 
 There is no single unified persistence layer — storage is split by domain, and that split is itself a piece of the app's history:
 
-- **`LayoutDatabase`** (Room, `lcars_layout.db`, schema v17, 14 hand-written migrations) — the card layout itself. On first load, if the table is empty, it migrates forward from an older raw-SharedPreferences JSON blob, or falls back to a hardcoded default layout.
-- **`TripDatabase`** (Room, `lcars_trips.db`) — Drive Mode trips and fuel fill-ups.
+- **`LayoutDatabase`** (Room, schema v17, 14 hand-written migrations) — the card layout itself. On first load, if the table is empty, it migrates forward from an older raw-SharedPreferences JSON blob, or falls back to a hardcoded default layout.
+- **`TripDatabase`** (Room) — Drive Mode trips and fuel fill-ups.
 - **Five separate Jetpack DataStore files** (theme, sidebar, drawer, adaptive, premium prefs) — each with its own `migrateFromSharedPrefs()` run once at construction to pull forward values from the pre-DataStore era.
-- **Raw `SharedPreferences`** (`lcars_prefs`) — still backs settings that haven't been migrated to DataStore yet, including onboarding-seen flags and Gson-serialized Layout Presets.
+- **Raw `SharedPreferences`** — still backs settings that haven't been migrated to DataStore yet, including onboarding-seen flags and Gson-serialized Layout Presets.
 - **Full profile export/import** (`data/ProfileData.kt`'s `GtProfile`, 150+ fields) — a flat snapshot of nearly every setting plus the card layout, serialized to a user-picked JSON file via the Storage Access Framework. This is the actual "backup my launcher" mechanism, distinct from per-layout Presets.
 
-The `lcars_*` naming throughout the persistence layer is a legacy holdover from the app's earlier branding — internal identifiers only, invisible to users, left as-is because renaming them would mean writing yet another migration for a purely cosmetic win.
+Several persistence identifiers are legacy holdovers from the app's earlier branding. They remain internal because renaming them would require a data migration with no user-facing benefit.
 
 ## Theming
 
@@ -65,7 +65,7 @@ A card can override either system independently at the per-card level.
 ## Why Not X
 
 A few internal names don't match the public "GT Launcher" branding — this is intentional debt, not an oversight:
-- `lcars_prefs`, `lcars_layout.db`, `lcarsLeftGuideWidth` — survive from the app's earlier LCARS-themed identity. The user-facing brand fully moved to "GT Launcher" (with a deliberately-retained Star Trek voice in copy and flavor text), but renaming these internal keys would require a data migration for zero user-visible benefit.
+- Several persistence and layout keys survive from an earlier internal identity. The public brand is GT Launcher; renaming those keys would require a data migration for zero user-visible benefit.
 - Engineering Panel section keys `TERMINAL`, `DATA`, `HARDWARE`, and `INTERFACE` are legacy aliases that route to the current `SYSTEM` and `VISUAL` sections respectively (`EngineeringSectionProvider`) — old saved section-order preferences and deep links using the old keys still resolve correctly.
 
 ## v4.15–v4.18.1 Architecture Updates

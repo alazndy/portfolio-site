@@ -12,7 +12,7 @@ downloads:
 gallery:
   - src: "/projects/GT-Launcher/home.jpg"
     alt: "GT-Launcher retro-fütüristik ana ekranı"
-    caption: "Ana Ekran — Modüler LCARS kartları, finans, medya ve telemetri widget'ları."
+    caption: "Ana Ekran — Modüler kartlar, finans, medya ve telemetri widget'ları."
   - src: "/projects/GT-Launcher/card-builder-5-tabs.gif"
     alt: "5 Sekmeli Card Builder canlı üretici akışı"
     caption: "Card Builder — İşlev, davranış, görünüm, boyut ve görsel katman sihirbazı."
@@ -35,13 +35,13 @@ gallery:
     alt: "Omni-Terminal karma arama motoru"
     caption: "OmniSearch — Web, Play Store, uygulamalar ve sistem ayarları tek komuta kutusunda."
 version: "v4.18.1"
-summary: "Star Trek esintili bir estetikte, tamamen modüler kart sistemine sahip bir Android ana ekranı: kapasite tabanlı kart üretici, OmniSearch komuta güvertesi, Slide List uygulama çekmecesi ve OBD-II destekli Drive Mode ile."
+summary: "Tamamen modüler kart sistemine sahip bir Android ana ekranı: kapasite tabanlı kart üretici, OmniSearch komuta güvertesi, Slide List uygulama çekmecesi ve OBD-II destekli Drive Mode ile."
 techStack: ["Kotlin", "Jetpack Compose", "Room", "OBD-II BLE", "ML Kit OCR", "Gson", "Material3"]
 ---
 
 ##  Sistem Özeti
 
-Android cihazınızı 24. Yüzyıl teknolojisine yükseltin: Star Trek "The Next Generation" estetiğine sadık, "Secure by Design" felsefesiyle geliştirilmiş, tamamen modüler bir ana ekran deneyimi.
+"Secure by Design" felsefesiyle geliştirilmiş, tamamen modüler bir Android ana ekran deneyimi.
 
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-10 not-prose">
   <div class="p-6 rounded-2xl bg-white/[0.025] border border-white/8 hover:bg-white/[0.04] transition-colors">
@@ -53,19 +53,19 @@ Android cihazınızı 24. Yüzyıl teknolojisine yükseltin: Star Trek "The Next
   <div class="p-6 rounded-2xl bg-white/[0.025] border border-white/8 hover:bg-white/[0.04] transition-colors">
     <div class="inline-flex px-2.5 py-1 rounded-full bg-cyan-500/10 items-center justify-center border border-cyan-500/20 mb-4 text-cyan-400 font-mono text-[11px] font-bold tracking-widest">OMNI</div>
     <h3 class="text-base font-bold text-white uppercase tracking-wide mb-2">OmniSearch Komutası</h3>
-    <p class="text-xs text-white/50 leading-relaxed">Web araması, Google Play, kurulu uygulamalar, rehber kişileri ve sistem ayarları tek komuta arama alanından canlı LCARS kartları olarak listelenir.</p>
+    <p class="text-xs text-white/50 leading-relaxed">Web araması, Google Play, kurulu uygulamalar, rehber kişileri ve sistem ayarları tek komuta arama alanında canlı kartlar olarak listelenir.</p>
   </div>
 
   <div class="p-6 rounded-2xl bg-white/[0.025] border border-white/8 hover:bg-white/[0.04] transition-colors">
     <div class="inline-flex px-2.5 py-1 rounded-full bg-amber-500/10 items-center justify-center border border-amber-500/20 mb-4 text-amber-400 font-mono text-[11px] font-bold tracking-widest">SKIN</div>
     <h3 class="text-base font-bold text-white uppercase tracking-wide mb-2">6 Görsel Stil & Temalar</h3>
-    <p class="text-xs text-white/50 leading-relaxed">Flat, Glass, Neo, Clay, Minimal ve Neon sözleşmeleri; 12 Starfleet paleti, HSV renk çarkı ve saat/pil/hava durumuna göre canlı tema otomasyonu.</p>
+    <p class="text-xs text-white/50 leading-relaxed">Flat, Glass, Neo, Clay, Minimal ve Neon sözleşmeleri; 12 renk paleti, HSV renk çarkı ve saat/pil/hava durumuna göre canlı tema otomasyonu.</p>
   </div>
 
   <div class="p-6 rounded-2xl bg-white/[0.025] border border-white/8 hover:bg-white/[0.04] transition-colors">
     <div class="inline-flex px-2.5 py-1 rounded-full bg-red-500/10 items-center justify-center border border-red-500/20 mb-4 text-red-400 font-mono text-[11px] font-bold tracking-widest">DRV</div>
     <h3 class="text-base font-bold text-white uppercase tracking-wide mb-2">Drive Mode Interceptor</h3>
-    <p class="text-xs text-white/50 leading-relaxed">OBD-II BLE canlı telemetrisi, GPS hız göstergesi, ses spektrumu ve OCR yakıt fişi taramasıyla sürüşü yıldız gemisi kokpitine çeviren yatay mod.</p>
+    <p class="text-xs text-white/50 leading-relaxed">OBD-II BLE canlı telemetrisi, GPS hız göstergesi, ses spektrumu ve OCR yakıt fişi taramasıyla sürüş odaklı yatay mod.</p>
   </div>
 </div>
 
@@ -108,7 +108,7 @@ Android cihazınızı 24. Yüzyıl teknolojisine yükseltin: Star Trek "The Next
 UCCS kart mimarisi, 6 görsel stil motoru, dinamik ızgara, OmniSearch komuta güvertesi, Drive Mode telemetrisi ve Engineering Panel güvenlik mimarisinin tam teknik dökümü — canlı GIF kayıtları ve parametre tablolarıyla — **Wiki & Kılavuzlar** sekmesinde, 9 ayrı kılavuz halinde:
 
 - `ARCHITECTURE` — UCCS kart sistemi, 5 sekmeli Card Builder ve 19 modüllük yetenek havuzu
-- `CUSTOMIZATION` — 6 görsel stil, 12 LCARS renk paleti ve dinamik tema otomasyonu
+- `CUSTOMIZATION` — 6 görsel stil, 12 renk paleti ve dinamik tema otomasyonu
 - `OMNI-TERMINAL` — Hibrit arama ve Slide List departman çekmecesi
 - `DRIVE-MODE` — OBD-II telemetri, DTC arıza teşhisi ve kokpit HUD'ı
 - `ENGINEERING-GUIDE` — 9 güverte, izin kataloğu ve profil yedekleme
