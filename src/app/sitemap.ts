@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       { url: `${BASE_URL}/${lang}/lab`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
       { url: `${BASE_URL}/${lang}/gtab`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
       { url: `${BASE_URL}/${lang}/gtab/privacy-policy`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
+      { url: `${BASE_URL}/${lang}/gt-launcher/privacy-policy`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
       { url: `${BASE_URL}/${lang}/svp`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
       { url: `${BASE_URL}/${lang}/svp/privacy-policy`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
       { url: `${BASE_URL}/${lang}/svp/terms-of-service`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 }
