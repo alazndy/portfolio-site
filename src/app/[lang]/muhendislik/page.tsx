@@ -20,39 +20,20 @@ export default async function MuhendislikPage({ params }: { params: Promise<{ la
         <div className="space-y-3">
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-apple-orange">
             <Wrench className="w-4 h-4" />
-            <span>ADC Tasarım · 2021-2026</span>
+            <span>{isEn ? 'AlazLab · Engineering tools' : 'AlazLab · Mühendislik araçları'}</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-foreground">
-            {isEn ? 'Hardware & Embedded Engineering' : 'Gömülü Donanım ve Saha Sistemleri'}
+            {isEn ? 'Tools for engineering workflows' : 'Mühendislik iş akışları için araçlar'}
           </h1>
 
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl font-normal">
             {isEn
-              ? 'Real-world embedded hardware, automotive CAN-bus radar architectures, isolated 24V I/O control units, and operator HMI dashboards deployed in mines and heavy vehicles.'
-              : 'Maden sahalarında, ağır vasıtalarda ve endüstriyel tesislerde doğrudan çalışan gömülü donanımlar, CAN-bus radar telemetrileri, izole I/O kontrol üniteleri ve operatör HMI ekranları.'}
+              ? 'A selection of independent software tools for technical diagrams, project workflows, and connected systems. Product pages describe the available features and current status.'
+              : 'Teknik çizimler, proje akışları ve bağlantılı sistemler için geliştirilen bağımsız yazılım araçları. Mevcut özellikler ve durum, ürün sayfalarında açıklanır.'}
           </p>
         </div>
 
-        {/* Technical Specs Strip */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-border text-xs">
-          <div>
-            <div className="text-2xl font-extrabold text-apple-orange">{projects.length}</div>
-            <div className="text-muted-foreground">{isEn ? 'Field Projects' : 'Saha Projesi'}</div>
-          </div>
-          <div>
-            <div className="text-2xl font-extrabold text-foreground">CAN 2.0B / FD</div>
-            <div className="text-muted-foreground">{isEn ? 'Bus Telemetry' : 'Veri Yolu Telemetrisi'}</div>
-          </div>
-          <div>
-            <div className="text-2xl font-extrabold text-apple-blue">ESP32 & STM32</div>
-            <div className="text-muted-foreground">{isEn ? 'MCU Family' : 'Mikrodenetleyiciler'}</div>
-          </div>
-          <div>
-            <div className="text-2xl font-extrabold text-apple-green">ISO 16750</div>
-            <div className="text-muted-foreground">{isEn ? 'Validation Standard' : 'Dayanım Standardı'}</div>
-          </div>
-        </div>
       </div>
 
       {/* PROJECT MATRIX */}

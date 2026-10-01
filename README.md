@@ -1,6 +1,6 @@
 # alazlab.com
 
-Göktuğ Turhan'ın kişisel portföyü ve proje arşivi. Site, Next.js App Router üzerinde çalışır ve her projeyi kendi detay, dokümantasyon, medya ve indirme kaynaklarıyla yayınlar.
+AlazLab'ın bağımsız dijital ürünlerini ve mühendislik araçlarını tanıtan iki dilli ürün sitesi. Next.js App Router üzerinde çalışır; seçili ürünlerin detay, dokümantasyon, medya ve indirme kaynaklarını yayınlar. Ana sayfa şirket/ürün anlatımına odaklanır; tam ürün kataloğu gezinme menüsünde bulunur.
 
 ## Project content model
 

@@ -29,14 +29,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!project) return {};
 
   const { title, summary, category, techStack, image } = project.metadata;
-  const description = summary || `${title} — Android Launcher by Göktuğ Turhan.`;
+  const description = summary || `${title} — Android launcher by AlazLab.`;
 
   return {
-    title: `${title} — Göktuğ Turhan`,
+    title: `${title} — AlazLab`,
     description,
     keywords: [title, category, ...(techStack ?? []), 'GT-Launcher', 'Android', 'Kotlin', 'Compose'].join(', '),
     openGraph: {
-      title: `${title} — Göktuğ Turhan`,
+      title: `${title} — AlazLab`,
       description,
       url: `https://alazlab.com/${lang}/proje/GT-Launcher`,
       siteName: 'alazlab.com',
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${title} — Göktuğ Turhan`,
+      title: `${title} — AlazLab`,
       description,
       ...(image ? { images: [`https://alazlab.com${image}`] } : {}),
     },

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useEffect, useState, useMemo, useCallback } from 'react';
+import React, { createContext, useContext, useMemo, useCallback } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 
 export type Language = 'tr' | 'en';
@@ -13,17 +13,18 @@ export const dictionaries: Record<Language, Dictionary> = {
   tr: {
     // Nav
     'nav.home': 'Ana Sayfa',
-    'nav.about': 'Hakkımda',
-    'nav.muhendislik': 'Mühendislik',
-    'nav.lab': 'Lab',
-    'nav.portfolio': 'Proje Kataloğu',
+    'nav.about': 'AlazLab hakkında',
+    'nav.muhendislik': 'Mühendislik araçları',
+    'nav.lab': 'Yazılım ürünleri',
+    'nav.portfolio': 'Ürün kataloğu',
     'nav.systemsActive': 'proje aktif',
+    'nav.footer': 'Bağımsız dijital ürünler',
     'nav.allProjects': 'Tüm Projeler',
     'nav.close': 'Kapat',
     'nav.openMenu': 'Menüyü aç',
 
     // Header
-    'header.search': 'Projelerde ara (Ctrl+K)...',
+    'header.search': 'Ürün kataloğunda ara (Ctrl+K)...',
     'header.searchBtn': 'Ara',
     'header.docs': 'Dokümantasyon',
     'header.github': 'GitHub',
@@ -32,9 +33,9 @@ export const dictionaries: Record<Language, Dictionary> = {
     'header.available': 'İstanbul, TR',
 
     // Hero & Bio
-    'hero.role': 'Gömülü Donanım & Yazılım Mühendisi',
-    'hero.bio': 'ADC Tasarım bünyesinde ağır vasıta ve maden sahaları için ESP32 tabanlı CAN-bus radar ve kontrol donanımları geliştiriyorum. Bağımsız olarak Kotlin ile Android sistemleri ve Rust ile araçlar kodluyorum.',
-    'hero.explore': 'Projeleri İncele',
+    'hero.role': 'Yazılım ürünleri ve mühendislik araçları',
+    'hero.bio': 'AlazLab; mobil, masaüstü ve web için dijital ürünler ile teknik iş akışlarını destekleyen mühendislik araçları geliştirir.',
+    'hero.explore': 'Ürünleri keşfet',
     'hero.viewAll': 'Tümünü Gör',
 
     // Stats
@@ -44,14 +45,14 @@ export const dictionaries: Record<Language, Dictionary> = {
     'stats.years': 'Yıllık Deneyim',
 
     // Categories & Areas
-    'cat.engineering': 'Mühendislik & Donanım',
-    'cat.lab': 'Yazılım & Lab',
-    'cat.other': 'Diğer Projeler',
-    'cat.all': 'Tüm Projeler',
+    'cat.engineering': 'Mühendislik araçları',
+    'cat.lab': 'Yazılım ürünleri',
+    'cat.other': 'Diğer ürünler',
+    'cat.all': 'Tüm ürünler',
     'cat.total': 'toplam',
-    'cat.engineeringDesc': 'ESP32, STM32, CAN-bus 2.0B / FD radar telemetrisi ve endüstriyel I/O kontrol üniteleri.',
-    'cat.labDesc': 'Kotlin / Compose Android başlatıcıları, Rust CLI araçları ve Chrome uzantıları.',
-    'cat.otherDesc': 'Web servisleri, arayüz kütüphaneleri ve açık kaynaklı yazılımlar.',
+    'cat.engineeringDesc': 'Teknik çizimler, proje akışları ve bağlantılı sistemler için bağımsız araçlar.',
+    'cat.labDesc': 'Android, tarayıcı ve geliştirici iş akışları için yazılım ürünleri.',
+    'cat.otherDesc': 'Bağımsız dijital ürünler ve açık kaynaklı yazılımlar.',
 
     // Project Details
     'project.status': 'Durum',
@@ -79,33 +80,34 @@ export const dictionaries: Record<Language, Dictionary> = {
     'cmd.noResults': 'Eşleşen proje bulunamadı.',
 
     // About Page
-    'about.dayTag': 'Gündüz',
-    'about.dayCompany': 'ADC Tasarım (Saha Sistemleri)',
-    'about.name': 'Göktuğ Turhan',
-    'about.heroTitle1': 'Donanım ve Yazılım',
-    'about.heroTitle2': 'Mühendisliği.',
-    'about.typewriter': 'Gündüz sahada gerçek donanımla, gece kendi yazılım ekosistemimle çalışıyorum. Sorunu kökünden çözene kadar sistemin her katmanına müdahale ederim.',
-    'about.dayTitle': 'Gündüz: Saha & Endüstriyel Donanım',
-    'about.dayBody': 'ADC Tasarım bünyesinde ağır vasıta, maden ve liman sahaları için ESP32 ve STM32 tabanlı mikrodenetleyici kartları, izole güç üniteleri ve Brigade BS-9000 radar telemetrisi tasarlıyorum. Yazdığım kod ve tasarladığım PCB doğrudan sahada, zorlu çevre şartlarında çalışıyor.',
-    'about.nightTitle': 'Gece: Bağımsız Yazılım Mimarisi',
-    'about.nightBody': 'Masa başında kendi bağımsız yazılım projelerimi geliştiriyorum: GT-Launcher (Kotlin ve Jetpack Compose ile yazılmış modüler Android başlatıcı), R-AI-OS (Rust tabanlı yerel araç çalıştırma sistemi), GTab (Chrome uzantısı) ve web arayüz kütüphaneleri.',
+    'about.dayTag': 'Ürün yaklaşımı',
+    'about.dayCompany': 'AlazLab',
+    'about.name': 'AlazLab',
+    'about.heroTitle1': 'Dijital ürünler',
+    'about.heroTitle2': 've mühendislik araçları.',
+    'about.typewriter': 'Mobil, masaüstü ve web için bağımsız ürünler; teknik iş akışlarını sadeleştiren araçlar geliştiriyoruz.',
+    'about.dayTitle': 'Mühendislik araçları',
+    'about.dayBody': 'Teknik çizim, dokümantasyon ve proje akışlarını düzenlemeye yardımcı bağımsız mühendislik araçları geliştiriyoruz.',
+    'about.nightTitle': 'Yazılım ürünleri',
+    'about.nightBody': 'Ürünlerimiz arasında Android için GT-Launcher ve InfAssist, Chrome için GTab ve yerel geliştirici iş akışları için R-AI-OS bulunuyor.',
     'about.principleTitle': 'Çalışma Prensibi',
-    'about.principleBody': 'Şema ve PCB tasarımından firmware koduna, arayüzden performans optimizasyonuna kadar tam kontrol ve gerçek mühendislik disiplini.',
+    'about.principleBody': 'Her üründe net bir kullanım amacı, ölçülü kapsam ve sürdürülebilir bir teknik temel gözetiyoruz.',
   },
   en: {
     // Nav
     'nav.home': 'Home',
-    'nav.about': 'About',
-    'nav.muhendislik': 'Engineering',
-    'nav.lab': 'Lab',
-    'nav.portfolio': 'Project Catalog',
+    'nav.about': 'About AlazLab',
+    'nav.muhendislik': 'Engineering tools',
+    'nav.lab': 'Software products',
+    'nav.portfolio': 'Product catalog',
     'nav.systemsActive': 'projects active',
+    'nav.footer': 'Independent digital products',
     'nav.allProjects': 'All Projects',
     'nav.close': 'Close',
     'nav.openMenu': 'Open menu',
 
     // Header
-    'header.search': 'Search projects (Ctrl+K)...',
+    'header.search': 'Search product catalog (Ctrl+K)...',
     'header.searchBtn': 'Search',
     'header.docs': 'Documentation',
     'header.github': 'GitHub',
@@ -114,9 +116,9 @@ export const dictionaries: Record<Language, Dictionary> = {
     'header.available': 'Istanbul, TR',
 
     // Hero & Bio
-    'hero.role': 'Embedded Hardware & Software Engineer',
-    'hero.bio': 'Developing ESP32-based CAN-bus radar and control hardware for heavy machinery at ADC Design. Independently building Kotlin Android systems and Rust tools.',
-    'hero.explore': 'View Projects',
+    'hero.role': 'Software products & engineering tools',
+    'hero.bio': 'AlazLab builds digital products for mobile, desktop, and web, alongside tools that support technical workflows.',
+    'hero.explore': 'Explore products',
     'hero.viewAll': 'View All',
 
     // Stats
@@ -126,14 +128,14 @@ export const dictionaries: Record<Language, Dictionary> = {
     'stats.years': 'Years Experience',
 
     // Categories & Areas
-    'cat.engineering': 'Engineering & Hardware',
-    'cat.lab': 'Software & Lab',
-    'cat.other': 'Other Projects',
-    'cat.all': 'All Projects',
+    'cat.engineering': 'Engineering tools',
+    'cat.lab': 'Software products',
+    'cat.other': 'Other products',
+    'cat.all': 'All products',
     'cat.total': 'total',
-    'cat.engineeringDesc': 'ESP32, STM32, CAN-bus 2.0B / FD radar telemetry, and industrial I/O units.',
-    'cat.labDesc': 'Kotlin / Compose Android launchers, Rust CLI tools, and Chrome extensions.',
-    'cat.otherDesc': 'Web platforms, UI component libraries, and open-source software.',
+    'cat.engineeringDesc': 'Independent tools for technical diagrams, project workflows, and connected systems.',
+    'cat.labDesc': 'Software products for Android, browsers, and developer workflows.',
+    'cat.otherDesc': 'Independent digital products and open-source software.',
 
     // Project Details
     'project.status': 'Status',
@@ -161,18 +163,18 @@ export const dictionaries: Record<Language, Dictionary> = {
     'cmd.noResults': 'No matching projects found.',
 
     // About Page
-    'about.dayTag': 'Day',
-    'about.dayCompany': 'ADC Design (Field Systems)',
-    'about.name': 'Göktuğ Turhan',
-    'about.heroTitle1': 'Hardware and Software',
-    'about.heroTitle2': 'Engineering.',
-    'about.typewriter': 'Working on industrial hardware by day, developing independent software by night. Solving problems down to the root at every level of the system.',
-    'about.dayTitle': 'Day: Field & Industrial Hardware',
-    'about.dayBody': 'Designing ESP32 and STM32 microcontroller boards, isolated power regulators, and Brigade BS-9000 radar integration for heavy vehicles, mines, and industrial facilities at ADC Design.',
-    'about.nightTitle': 'Night: Independent Software Architecture',
-    'about.nightBody': 'Architecting independent software projects: GT-Launcher (Kotlin / Jetpack Compose Android launcher), R-AI-OS (Rust local tool runner), GTab (Chrome new-tab extension), and UI component toolkits.',
+    'about.dayTag': 'Our approach',
+    'about.dayCompany': 'AlazLab',
+    'about.name': 'AlazLab',
+    'about.heroTitle1': 'Digital products',
+    'about.heroTitle2': 'and engineering tools.',
+    'about.typewriter': 'We build independent products for mobile, desktop, and web, and tools that make technical workflows easier.',
+    'about.dayTitle': 'Engineering tools',
+    'about.dayBody': 'We develop independent engineering tools that help organize technical drawings, documentation, and project workflows.',
+    'about.nightTitle': 'Software products',
+    'about.nightBody': 'Our products include GT-Launcher and InfAssist for Android, GTab for Chrome, and R-AI-OS for local developer workflows.',
     'about.principleTitle': 'Core Principle',
-    'about.principleBody': 'End-to-end ownership: from schematic and PCB routing to firmware implementation, frontend architecture, and performance benchmarking.',
+    'about.principleBody': 'Each product is shaped around a clear use case, deliberate scope, and a maintainable technical foundation.',
   },
 };
 
@@ -196,21 +198,9 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     return (segment === 'en' || segment === 'tr') ? segment : 'tr';
   }, [pathname]);
 
-  const [lang, setLangState] = useState<Language>(initialLang);
-
-  // Sync state if pathname changes externally
-  useEffect(() => {
-    if (!pathname) return;
-    const segment = pathname.split('/')[1];
-    if (segment === 'en' || segment === 'tr') {
-      if (segment !== lang) {
-        setLangState(segment);
-      }
-    }
-  }, [pathname, lang]);
+  const lang = initialLang;
 
   const setLang = useCallback((newLang: Language) => {
-    setLangState(newLang);
     if (!pathname) return;
 
     const segments = pathname.split('/');

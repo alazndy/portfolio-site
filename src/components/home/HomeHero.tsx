@@ -1,34 +1,12 @@
 'use client';
 
-import {
-  ArrowRight,
-  Terminal,
-  Smartphone,
-  Globe2,
-  ChevronRight,
-  Code2,
-  Layers,
-  Send,
-} from 'lucide-react';
+import { ArrowRight, Terminal, Smartphone, Globe2, ChevronRight, Code2, Layers, Send } from 'lucide-react';
 import Link from 'next/link';
 import { useI18n } from '@/lib/i18n';
 
-interface HomeHeroProps {
-  projectCount: number;
-  liveCount: number;
-  categoryCount: number;
-}
-
-export function HomeHero({ projectCount, liveCount, categoryCount }: HomeHeroProps) {
+export function HomeHero() {
   const { t, lang, localizePath } = useI18n();
   const isEn = lang === 'en';
-
-  const stats = [
-    { value: projectCount,  suffix: '',  label: t('stats.projects'), color: 'text-apple-orange' },
-    { value: liveCount,     suffix: '',  label: t('stats.active'),   color: 'text-apple-blue'   },
-    { value: categoryCount, suffix: '',  label: t('stats.areas'),    color: 'text-apple-purple' },
-    { value: 5,             suffix: '+', label: t('stats.years'),    color: 'text-apple-green'  },
-  ];
 
   const flagshipProjects = [
     {
@@ -89,12 +67,12 @@ export function HomeHero({ projectCount, liveCount, categoryCount }: HomeHeroPro
     <section className="relative pt-6 pb-12">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
 
-        {/* ── LEFT: AUTHENTIC ENGINEER INTRO ── */}
+        {/* ── COMPANY INTRODUCTION ── */}
         <div className="lg:col-span-7 space-y-6">
           
           <div className="space-y-2">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-foreground">
-              Göktuğ Turhan
+              AlazLab
             </h1>
             <p className="text-lg sm:text-xl font-semibold text-apple-orange">
               {t('hero.role')}
@@ -104,39 +82,6 @@ export function HomeHero({ projectCount, liveCount, categoryCount }: HomeHeroPro
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl font-normal">
             {t('hero.bio')}
           </p>
-
-          {/* Real Tech Focus Tags */}
-          <div className="flex flex-wrap gap-2 pt-1">
-            {[
-              'ESP32-S3',
-              'CAN 2.0B / FD',
-              'ISO 16750',
-              'Kotlin & Compose',
-              'Rust & Tokio',
-              'Next.js & TypeScript',
-            ].map((tag) => (
-              <span
-                key={tag}
-                className="px-3 py-1 rounded-lg text-xs font-mono bg-muted text-foreground/80 border border-border"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-
-          {/* Genuine Stat Blocks */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 rounded-2xl border border-border bg-card">
-            {stats.map(({ value, suffix, label, color }) => (
-              <div key={label} className="space-y-0.5">
-                <div className={`text-2xl sm:text-3xl font-extrabold tracking-tight ${color}`}>
-                  {value}{suffix}
-                </div>
-                <div className="text-[11px] font-medium text-muted-foreground">
-                  {label}
-                </div>
-              </div>
-            ))}
-          </div>
 
           {/* Action Links */}
           <div className="flex flex-wrap items-center gap-3 pt-2">
@@ -169,7 +114,7 @@ export function HomeHero({ projectCount, liveCount, categoryCount }: HomeHeroPro
         {/* ── RIGHT: FLAGSHIP SYSTEMS SHOWCASE ── */}
         <div className="lg:col-span-5 space-y-3.5">
           <div className="px-1 text-xs font-bold text-muted-foreground uppercase tracking-wider">
-            {isEn ? 'Selected Flagship Projects' : 'Öne Çıkan Projeler'}
+            {isEn ? 'Products from AlazLab' : 'AlazLab ürünleri'}
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">

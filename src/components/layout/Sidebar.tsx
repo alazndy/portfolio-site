@@ -79,7 +79,7 @@ const CategorySection = memo(function CategorySection({ category, displayLabel, 
 function SidebarContent({ projects, pathname }: { projects: ProjectMetadata[]; pathname: string }) {
   const { t, localizePath } = useI18n();
   const { close } = useMobileNav();
-  const [openCats, setOpenCats] = useState<Record<string, boolean>>({ 'Mühendislik': true, 'Lab': true });
+  const [openCats, setOpenCats] = useState<Record<string, boolean>>({});
 
   const { grouped, sorted } = useMemo(() => {
     const g: Record<string, ProjectMetadata[]> = { 'Mühendislik': [], 'Lab': [], 'Diğer Çalışmalar': [] };
@@ -105,11 +105,11 @@ function SidebarContent({ projects, pathname }: { projects: ProjectMetadata[]; p
       <div className="px-5 py-4 border-b border-border/60 shrink-0 flex items-center justify-between">
         <Link href={localizePath('/')} onClick={close} className="flex items-center gap-3 group">
           <div className="w-8 h-8 rounded-xl bg-foreground/5 border border-border flex items-center justify-center group-hover:scale-105 transition-transform shadow-2xs overflow-hidden p-1">
-            <img src="/logo.png" alt="alazlabs" className="w-full h-full object-contain" />
+            <img src="/logo.png" alt="AlazLab" className="w-full h-full object-contain" />
           </div>
           <div>
-            <div className="text-sm font-bold text-foreground tracking-tight">Göktuğ Turhan</div>
-            <div className="text-[10px] font-mono text-muted-foreground uppercase tracking-wider">{t('hero.role').split('·')[0].trim()}</div>
+            <div className="text-sm font-bold text-foreground tracking-tight">AlazLab</div>
+            <div className="text-[10px] font-mono text-muted-foreground uppercase tracking-wider">{t('hero.role')}</div>
           </div>
         </Link>
         {/* Mobile close */}
@@ -162,9 +162,9 @@ function SidebarContent({ projects, pathname }: { projects: ProjectMetadata[]; p
       <div className="px-5 py-3 border-t border-border/60 shrink-0 flex items-center justify-between text-[11px] font-mono text-muted-foreground">
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-apple-green animate-pulse" />
-          <span>{projects.length} {t('nav.systemsActive')}</span>
+          <span>{t('nav.footer')}</span>
         </div>
-        <span className="text-[9px] uppercase tracking-wider text-muted-foreground/60">v5.2</span>
+        <span className="text-[9px] uppercase tracking-wider text-muted-foreground/60">AlazLab</span>
       </div>
     </>
   );

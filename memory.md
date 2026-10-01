@@ -138,6 +138,7 @@
 | 2026-08-22 | Antigravity | GT-Launcher 22 canlı GIF ve eksiksiz yetenek mimarisi vitrine işlendi | Card Builder, Stacking, Photo/Wallpaper, 6 Style, Theme Creator, Grid cascade, Sidebar, OmniSearch ve Drive Mode canlı demoları bağlandı |
 | 2026-09-10 | Antigravity | Proje adı alazlabs.com yapıldı | Kullanıcı isteği doğrultusunda tüm domain, meta, SEO ve marka referansları alazlabs.com olarak güncellendi |
 ## Current Update — 2026-10-01
+- AlazLab's public homepage, navigation, company/about page, engineering/software hubs, metadata, and social preview now use company/product language instead of the personal portfolio and ADC field-work narrative. The homepage promotes four maintained products and product areas rather than a complete project grid.
 - InfAssist is added to the localized project catalog and Spotlight search; screenshots are stored under `public/projects/InfAssist/{tr,en}/`.
 - App privacy policies are served from `/tr/infassist/privacy-policy` and `/en/infassist/privacy-policy`, sourced from `src/content/legal/infassist/` and linked in the project pages.
 - InfAssist's full marketing site is being mounted separately at `/infassist` so its own locale routes do not collide with the portfolio's `/tr` and `/en` routes. Deploy only after production build, content lint, dependency audit, and route/asset checks pass.
@@ -163,3 +164,4 @@
 - [2026-10-01] Codex Kaira: Added InfAssist project pages, bilingual app privacy-policy routes, catalog screenshots, sitemap entries, and Spotlight search; corrected app policy wording for its publication on alazlab.com. Deployment pending validation.
 - [2026-10-01] Codex Kaira: Mounted the existing 10-language InfAssist Vercel marketing site beneath `/infassist`, preserving the portfolio locale routes and keeping the Play privacy-policy URLs intact; validation and production deploy in progress.
 - [2026-10-01] Codex Kaira: Hid ADC Tasarım project pages (ADC-Web-Sitesi, legacy adctasarım.com, AI-360-VCT, UCC-APP, UniControl) from AlazLab's shared project loader and direct slug lookup; removed UniControl from homepage/Spotlight and ADC-owned work from the engineering teaser. Source content retained.
+- [2026-10-01] Codex Kaira: Repositioned alazlab.com as an AlazLab product company site: brand-first home and navigation, company/about page, product-oriented engineering/software hubs, organization metadata, and updated social preview. Removed personal portfolio stats and the homepage project grid while retaining browsable product catalog links.

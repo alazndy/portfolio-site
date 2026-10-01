@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 
-export const alt = 'Göktuğ Turhan — Embedded & Software Engineering Portfolio';
+export const alt = 'AlazLab — Software Products & Engineering Tools';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -62,7 +62,7 @@ export default async function Image() {
               color: '#ffffff',
             }}
           >
-            Göktuğ Turhan
+            AlazLab
           </div>
           <div
             style={{
@@ -73,13 +73,13 @@ export default async function Image() {
               lineHeight: 1.4,
             }}
           >
-            Embedded Hardware & Software Engineer. Automotive CAN Radar, Android Launchers, and Rust Orchestration Kernels.
+            Independent software products for mobile, desktop, and web, with tools for technical workflows.
           </div>
         </div>
 
         {/* Bottom Feature Badges */}
         <div style={{ display: 'flex', gap: '16px' }}>
-          {['ESP32-S3', 'CAN 2.0B / FD', 'Kotlin Compose', 'Rust Tokio', 'Next.js 16'].map((tag) => (
+          {['InfAssist', 'GT-Launcher', 'GTab', 'R-AI-OS'].map((tag) => (
             <div
               key={tag}
               style={{

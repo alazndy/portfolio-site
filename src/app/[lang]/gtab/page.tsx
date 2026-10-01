@@ -24,14 +24,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!project) return {};
 
   const { title, summary, category, techStack, image } = project.metadata;
-  const description = summary || `${title} — Privacy-first Chrome new tab workspace by Göktuğ Turhan.`;
+  const description = summary || `${title} — Privacy-first Chrome new tab workspace by AlazLab.`;
 
   return {
-    title: `${title} — Göktuğ Turhan`,
+    title: `${title} — AlazLab`,
     description,
     keywords: [title, category, ...(techStack ?? []), 'Chrome Extension', 'Manifest V3', 'Google Tasks'].join(', '),
     openGraph: {
-      title: `${title} — Göktuğ Turhan`,
+      title: `${title} — AlazLab`,
       description,
       url: `https://alazlab.com/${lang}/gtab`,
       siteName: 'alazlab.com',
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${title} — Göktuğ Turhan`,
+      title: `${title} — AlazLab`,
       description,
       ...(image ? { images: [`https://alazlab.com${image}`] } : {}),
     },

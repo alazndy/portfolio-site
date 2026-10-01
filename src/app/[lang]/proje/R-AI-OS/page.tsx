@@ -24,14 +24,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!project) return {};
 
   const { title, summary, category, techStack, image } = project.metadata;
-  const description = summary || `${title} — Local AI workspace orchestration kernel by Göktuğ Turhan.`;
+  const description = summary || `${title} — Local developer workflow tools by AlazLab.`;
 
   return {
-    title: `${title} — Göktuğ Turhan`,
+    title: `${title} — AlazLab`,
     description,
     keywords: [title, category, ...(techStack ?? []), 'Rust', 'Tokio', 'MCP', 'Orchestration'].join(', '),
     openGraph: {
-      title: `${title} — Göktuğ Turhan`,
+      title: `${title} — AlazLab`,
       description,
       url: `https://alazlab.com/${lang}/proje/R-AI-OS`,
       siteName: 'alazlab.com',
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${title} — Göktuğ Turhan`,
+      title: `${title} — AlazLab`,
       description,
       ...(image ? { images: [`https://alazlab.com${image}`] } : {}),
     },

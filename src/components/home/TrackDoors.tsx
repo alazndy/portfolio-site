@@ -2,24 +2,16 @@
 
 import Link from 'next/link';
 import { Wrench, Terminal, ArrowRight } from 'lucide-react';
-import type { ProjectMetadata } from '@/lib/markdown';
 import { useI18n } from '@/lib/i18n';
 
-interface TrackDoorsProps {
-  projects: ProjectMetadata[];
-}
-
-export function TrackDoors({ projects }: TrackDoorsProps) {
+export function TrackDoors() {
   const { t, lang, localizePath } = useI18n();
   const isEn = lang === 'en';
-  const muhendislikProjects = projects.filter(p => p.area === 'muhendislik');
-  const labProjects = projects.filter(p => p.area === 'lab');
-
   return (
     <section className="space-y-4">
       <div className="flex items-center justify-between">
         <h2 className="text-sm font-bold uppercase tracking-wider text-muted-foreground">
-          {isEn ? 'Two Development Tracks' : 'İki Ana Çalışma Alanı'}
+          {isEn ? 'What we build' : 'Neler geliştiriyoruz'}
         </h2>
       </div>
 
@@ -34,9 +26,6 @@ export function TrackDoors({ projects }: TrackDoorsProps) {
               <div className="w-11 h-11 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-apple-orange group-hover:scale-105 transition-transform">
                 <Wrench className="w-5 h-5" />
               </div>
-              <span className="text-xs font-mono text-muted-foreground bg-muted px-2.5 py-1 rounded-md border border-border">
-                {muhendislikProjects.length} {t('stats.projects')}
-              </span>
             </div>
 
             <div className="space-y-2">
@@ -74,9 +63,6 @@ export function TrackDoors({ projects }: TrackDoorsProps) {
               <div className="w-11 h-11 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-apple-blue group-hover:scale-105 transition-transform">
                 <Terminal className="w-5 h-5" />
               </div>
-              <span className="text-xs font-mono text-muted-foreground bg-muted px-2.5 py-1 rounded-md border border-border">
-                {labProjects.length} {t('stats.projects')}
-              </span>
             </div>
 
             <div className="space-y-2">

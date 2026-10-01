@@ -20,39 +20,20 @@ export default async function LabPage({ params }: { params: Promise<{ lang: stri
         <div className="space-y-3">
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-apple-blue">
             <Terminal className="w-4 h-4" />
-            <span>{isEn ? 'Independent Software & Lab' : 'Bağımsız Yazılım ve Laboratuvar'}</span>
+            <span>{isEn ? 'AlazLab · Software products' : 'AlazLab · Yazılım ürünleri'}</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-foreground">
-            {isEn ? 'Software Architecture & Tooling' : 'Yazılım Mimarisi ve Araçlar'}
+            {isEn ? 'Software for everyday workflows' : 'Günlük iş akışları için yazılım'}
           </h1>
 
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl font-normal">
             {isEn
-              ? 'Independent software projects spanning Android launcher architecture, Rust CLI tools, Chrome productivity extensions, and frontend component toolkits.'
-              : 'Android başlatıcı mimarisi, Rust tabanlı CLI araçları, Chrome verimlilik uzantıları ve frontend bileşen paketlerinden oluşan bağımsız yazılım projeleri.'}
+              ? 'A growing collection of products for Android, Chrome, and developer workflows, built and maintained independently by AlazLab.'
+              : 'AlazLab tarafından bağımsız olarak geliştirilen ve sürdürülen Android, Chrome ve geliştirici iş akışı ürünleri.'}
           </p>
         </div>
 
-        {/* Technical Specs Strip */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-border text-xs">
-          <div>
-            <div className="text-2xl font-extrabold text-apple-blue">{projects.length}</div>
-            <div className="text-muted-foreground">{isEn ? 'Software Projects' : 'Yazılım Projesi'}</div>
-          </div>
-          <div>
-            <div className="text-2xl font-extrabold text-foreground">Rust & Tokio</div>
-            <div className="text-muted-foreground">{isEn ? 'CLI Core' : 'Sistem Motoru'}</div>
-          </div>
-          <div>
-            <div className="text-2xl font-extrabold text-apple-purple">Compose & React</div>
-            <div className="text-muted-foreground">{isEn ? 'UI Frameworks' : 'Arayüz Katmanı'}</div>
-          </div>
-          <div>
-            <div className="text-2xl font-extrabold text-apple-green">TypeScript</div>
-            <div className="text-muted-foreground">{isEn ? 'Web & Extension' : 'Web & Uzantı'}</div>
-          </div>
-        </div>
       </div>
 
       {/* PROJECT MATRIX */}

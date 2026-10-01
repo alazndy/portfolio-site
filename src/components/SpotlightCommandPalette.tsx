@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import {
   Search,
@@ -106,30 +106,30 @@ const SEARCH_ITEMS: SearchItem[] = [
   // Core Navigation Pages
   {
     id: 'page-engineering',
-    title: 'Mühendislik Projeleri / Engineering',
-    category: 'Page Hub',
-    summaryTr: 'Donanım, gömülü sistemler, otomotiv ve çekirdek yazılım projeleri.',
-    summaryEn: 'Hardware, embedded systems, automotive, and kernel engineering projects.',
+    title: 'Mühendislik Araçları / Engineering Tools',
+    category: 'Product Area',
+    summaryTr: 'Teknik çizimler, proje akışları ve bağlantılı sistemler için araçlar.',
+    summaryEn: 'Tools for technical diagrams, project workflows, and connected systems.',
     href: '/muhendislik',
     tags: ['Engineering', 'Embedded', 'Hardware', 'Rust', 'C++'],
     icon: 'page',
   },
   {
     id: 'page-lab',
-    title: 'Yazılım Laboratuvarı / Software Lab',
-    category: 'Page Hub',
-    summaryTr: 'Web uygulamaları, AI ajan sistemleri, araçlar ve açık kaynak kütüphaneler.',
-    summaryEn: 'Web apps, AI agent pipelines, developer tools, and open-source libraries.',
+    title: 'Yazılım Ürünleri / Software Products',
+    category: 'Product Area',
+    summaryTr: 'Android, tarayıcı ve geliştirici iş akışları için yazılım ürünleri.',
+    summaryEn: 'Software products for Android, browsers, and developer workflows.',
     href: '/lab',
     tags: ['Lab', 'Web', 'React', 'AI', 'Next.js'],
     icon: 'page',
   },
   {
     id: 'page-about',
-    title: 'Hakkımda / About Göktuğ',
-    category: 'Page Hub',
-    summaryTr: 'Göktuğ Turhan biyografisi, mühendislik yaklaşımı ve iletişim kanalları.',
-    summaryEn: 'Biography of Göktuğ Turhan, engineering philosophy, and contact details.',
+    title: 'AlazLab Hakkında / About AlazLab',
+    category: 'Company',
+    summaryTr: 'AlazLab ürün yaklaşımı, ürün kataloğu ve iletişim bilgileri.',
+    summaryEn: 'AlazLab product approach, product catalog, and contact details.',
     href: '/hakkimda',
     tags: ['About', 'Contact', 'Bio', 'Philosophy'],
     icon: 'page',
@@ -154,6 +154,8 @@ export function SpotlightCommandPalette() {
       } else if (e.key === 'Escape' && isOpen) {
         e.preventDefault();
         setIsOpen(false);
+        setQuery('');
+        setSelectedIndex(0);
       }
     };
 
@@ -165,9 +167,6 @@ export function SpotlightCommandPalette() {
   useEffect(() => {
     if (isOpen) {
       setTimeout(() => inputRef.current?.focus(), 50);
-    } else {
-      setQuery('');
-      setSelectedIndex(0);
     }
   }, [isOpen]);
 
@@ -202,6 +201,8 @@ export function SpotlightCommandPalette() {
 
   const navigate = (item: SearchItem) => {
     setIsOpen(false);
+    setQuery('');
+    setSelectedIndex(0);
     if (item.isExternal) {
       window.open(item.href, '_blank');
     } else {
@@ -215,7 +216,7 @@ export function SpotlightCommandPalette() {
     <div className="fixed inset-0 z-50 flex items-start justify-center pt-20 sm:pt-28 px-4 bg-background/80 backdrop-blur-md animate-in fade-in duration-200">
       
       {/* Click outside to close */}
-      <div className="fixed inset-0" onClick={() => setIsOpen(false)} />
+      <div className="fixed inset-0" onClick={() => { setIsOpen(false); setQuery(''); setSelectedIndex(0); }} />
 
       {/* Spotlight Window */}
       <div
