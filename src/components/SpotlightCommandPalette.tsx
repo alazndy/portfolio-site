@@ -45,6 +45,16 @@ const SEARCH_ITEMS: SearchItem[] = [
     icon: 'code',
   },
   {
+    id: 'infassist',
+    title: 'InfAssist',
+    category: 'Mobile App',
+    summaryTr: 'İçerik üreticileri için cihaz içi gelen kutusu örnekleri, yanıt taslakları ve marka anlaşması takibi.',
+    summaryEn: 'Device-first sample inbox, reply drafts and brand-deal tracking for social-media creators.',
+    href: '/proje/InfAssist',
+    tags: ['Android', 'iOS', 'Capacitor', 'SQLite', 'Google Play Billing', 'Creator', 'Mobile'],
+    icon: 'code',
+  },
+  {
     id: 'unicontrol',
     title: 'UniControl',
     category: 'Flagship Embedded',

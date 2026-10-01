@@ -23,6 +23,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       { url: `${BASE_URL}/${lang}/svp/terms-of-service`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 }
     );
 
+    entries.push({
+      url: `${BASE_URL}/${lang}/infassist/privacy-policy`,
+      lastModified: new Date('2026-10-01'),
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    });
+
     for (const p of projects) {
       entries.push({
         url: `${BASE_URL}/${lang}/proje/${p.slug}`,

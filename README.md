@@ -44,6 +44,13 @@ yarn dev
 pnpm dev
 ```
 
+## InfAssist
+
+InfAssist project content is maintained in `src/content/projects/InfAssist.md` and
+`InfAssist.en.md`. Its localized app privacy policies are published at
+`/tr/infassist/privacy-policy` and `/en/infassist/privacy-policy`; the source copies
+are under `src/content/legal/infassist/`.
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
