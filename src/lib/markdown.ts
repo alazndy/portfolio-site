@@ -5,6 +5,15 @@ import matter from 'gray-matter';
 const PROJECTS_PATH = path.join(process.cwd(), 'src', 'content', 'projects');
 const DOCS_PROJECTS_PATH = path.join(process.cwd(), 'docs', 'projects');
 
+// These projects belong to ADC Tasarım and are intentionally not published on AlazLab.
+const HIDDEN_PROJECT_SLUGS = new Set([
+  'ADC-Web-Sitesi',
+  'AI-360-VCT',
+  'UCC-APP',
+  'UniControl',
+  'adctasarm-com',
+]);
+
 export interface ProjectDownload {
   title: string;
   href: string;
@@ -173,6 +182,7 @@ export function getAllProjects(lang: string = 'tr'): ProjectMetadata[] {
   return baseFiles
     .map(file => {
       const slug = file.replace(/\.md$/, '');
+      if (HIDDEN_PROJECT_SLUGS.has(slug)) return null;
       const project = getProjectBySlug(slug, lang);
       return project ? project.metadata : null;
     })
@@ -184,6 +194,8 @@ export function getAllProjects(lang: string = 'tr'): ProjectMetadata[] {
 }
 
 export function getProjectBySlug(slug: string, lang: string = 'tr') {
+  if (HIDDEN_PROJECT_SLUGS.has(slug)) return null;
+
   const enFilePath = path.join(PROJECTS_PATH, `${slug}.en.md`);
   const defaultFilePath = path.join(PROJECTS_PATH, `${slug}.md`);
 

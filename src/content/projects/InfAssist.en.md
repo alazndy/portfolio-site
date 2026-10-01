@@ -6,6 +6,7 @@ area: "lab"
 status: "Early"
 date: "2026-10-01"
 github: "https://github.com/gturhan71/infassist"
+live: "https://alazlab.com/infassist"
 gallery:
   - src: "/projects/InfAssist/en/01-inbox.png"
     alt: "InfAssist sample inbox"

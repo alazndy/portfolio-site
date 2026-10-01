@@ -45,15 +45,15 @@ export function TrackDoors({ projects }: TrackDoorsProps) {
                 <ArrowRight className="w-4 h-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-apple-orange" />
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                {isEn 
-                  ? 'Real-world embedded hardware, automotive CAN-bus radar, isolated 24V I/O units, and HMI dashboards deployed in mining and heavy machinery at ADC Design.'
-                  : 'ADC Tasarım bünyesinde, gerçek donanıma bağlı, madenlerde ve ağır vasıtalarda sahada çalışan gömülü sistemler, CAN-bus radar ve HMI kontrol üniteleri.'}
+                {isEn
+                  ? 'Independent engineering tools for technical diagrams, project workflows, and connected systems.'
+                  : 'Teknik şemalar, proje akışları ve bağlantılı sistemler için bağımsız mühendislik araçları.'}
               </p>
             </div>
           </div>
 
           <div className="flex flex-wrap gap-2 pt-3 border-t border-border">
-            {['UniControl V2', 'RCPS', 'VCT 360', 'UCC APP'].map((badge) => (
+            {['Weave', 'NEXUS', 'UPH'].map((badge) => (
               <span
                 key={badge}
                 className="text-xs font-mono px-2.5 py-1 rounded-md bg-muted text-foreground/80 border border-border/80"

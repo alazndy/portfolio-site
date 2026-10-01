@@ -29,6 +29,13 @@ videos:
 
 The shared route at `/proje/[slug]` renders these sections only when real data exists. Local files belong under `public/projects/<slug>/`; YouTube and Vimeo embeds are supported through the allowlisted video URL parser. Legacy single-file `download` metadata remains supported for backwards compatibility.
 
+### Publishing exclusions
+
+Projects that should not appear on AlazLab are listed in `HIDDEN_PROJECT_SLUGS` in
+`src/lib/markdown.ts`. The shared project loader applies this exclusion to the
+catalog, project routes, navigation, Spotlight search data, and sitemap generation.
+The source Markdown and media remain in the repository for archival purposes.
+
 ### GT Launcher release history
 
 `/tr/proje/GT-Launcher` and `/en/proje/GT-Launcher` fetch the private GT Launcher `CHANGELOG.md` on the server with the Vercel-only `GT_LAUNCHER_CHANGELOG_TOKEN` secret, cache it for one hour, and render parsed text-only release entries on alazlab.com. Visitors do not need to open GitHub, the token never reaches the browser, and source Markdown/HTML is never rendered directly.
@@ -50,6 +57,14 @@ InfAssist project content is maintained in `src/content/projects/InfAssist.md` a
 `InfAssist.en.md`. Its localized app privacy policies are published at
 `/tr/infassist/privacy-policy` and `/en/infassist/privacy-policy`; the source copies
 are under `src/content/legal/infassist/`.
+
+The full InfAssist marketing site is mounted at `/infassist` (English), with the
+other supported languages under `/infassist/<lang>`. Its reviewed static source
+snapshot lives in `site-source/infassist/`; `pnpm build` runs
+`scripts/sync-infassist-site.mjs` to prefix assets and internal links before Next.js
+serves it from `public/infassist/`. To refresh it, regenerate the static site in the
+InfAssist repository and sync its HTML, CSS, fonts, and images into that snapshot.
+The portfolio's `/tr` and `/en` routes and the Play policy URLs remain separate.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

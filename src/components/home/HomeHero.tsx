@@ -1,9 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import {
   ArrowRight,
-  Cpu,
   Terminal,
   Smartphone,
   Globe2,
@@ -34,17 +32,17 @@ export function HomeHero({ projectCount, liveCount, categoryCount }: HomeHeroPro
 
   const flagshipProjects = [
     {
-      title: isEn ? 'Industrial Radar ECU' : 'Endüstriyel Radar ECU',
-      name: 'UniControl V2',
-      badge: 'CAN 2.0B / FD · ESP32-S3',
-      desc: isEn 
-        ? 'Heavy vehicle safety controller integrated with Brigade BS-9000 radar sensors.' 
-        : 'Brigade BS-9000 radar sensörleriyle entegre çalışan ağır vasıta güvenlik kontrol ünitesi.',
-      icon: Cpu,
-      color: 'text-apple-orange',
-      bg: 'bg-orange-500/10',
-      border: 'border-orange-500/20',
-      href: '/proje/UniControl',
+      title: isEn ? 'Creator Workflow Assistant' : 'İçerik Üretici Asistanı',
+      name: 'InfAssist',
+      badge: 'Android · iOS',
+      desc: isEn
+        ? 'A private workspace for organizing creator messages, reply drafts and brand deals.'
+        : 'İçerik üreticileri için mesajları, yanıt taslaklarını ve marka anlaşmalarını düzenleyen özel çalışma alanı.',
+      icon: Smartphone,
+      color: 'text-apple-purple',
+      bg: 'bg-purple-500/10',
+      border: 'border-purple-500/20',
+      href: '/proje/InfAssist',
     },
     {
       title: isEn ? 'Modular Android Launcher' : 'Modüler Android Başlatıcı',

@@ -10,7 +10,6 @@ import {
   Cpu,
   Layers,
   Globe,
-  Radio,
   FileCode2,
   Terminal,
   ShieldCheck,
@@ -28,7 +27,7 @@ interface SearchItem {
   summaryEn: string;
   href: string;
   tags: string[];
-  icon: 'cpu' | 'radar' | 'cli' | 'tab' | 'code' | 'page';
+  icon: 'cpu' | 'cli' | 'tab' | 'code' | 'page';
   isExternal?: boolean;
 }
 
@@ -53,16 +52,6 @@ const SEARCH_ITEMS: SearchItem[] = [
     href: '/proje/InfAssist',
     tags: ['Android', 'iOS', 'Capacitor', 'SQLite', 'Google Play Billing', 'Creator', 'Mobile'],
     icon: 'code',
-  },
-  {
-    id: 'unicontrol',
-    title: 'UniControl',
-    category: 'Flagship Embedded',
-    summaryTr: 'ESP32-S3 Brigade BS-9000 radar ve CAN 2.0B / FD araç telemetri kontrolcüsü.',
-    summaryEn: 'ESP32-S3 Brigade BS-9000 radar and CAN 2.0B / FD vehicle telemetry unit.',
-    href: '/proje/UniControl',
-    tags: ['ESP32-S3', 'ESP-IDF', 'CAN Bus', 'Radar', 'FreeRTOS', 'Automotive'],
-    icon: 'radar',
   },
   {
     id: 'raios',
@@ -290,7 +279,6 @@ export function SpotlightCommandPalette() {
                         ? "bg-background/20 text-background"
                         : "bg-muted border border-border text-foreground/80"
                     )}>
-                      {item.icon === 'radar' && <Radio className="w-4 h-4" />}
                       {item.icon === 'cli' && <Terminal className="w-4 h-4" />}
                       {item.icon === 'tab' && <Layers className="w-4 h-4" />}
                       {item.icon === 'cpu' && <Cpu className="w-4 h-4" />}
@@ -334,7 +322,7 @@ export function SpotlightCommandPalette() {
             <span>↵ Select</span>
             <span>ESC Close</span>
           </div>
-          <span>41 projects indexed</span>
+          <span>AlazLab</span>
         </div>
 
       </div>

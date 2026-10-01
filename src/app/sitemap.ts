@@ -3,6 +3,7 @@ import { getAllProjects } from '@/lib/markdown';
 
 const BASE_URL = 'https://alazlab.com';
 const locales = ['tr', 'en'];
+const infassistLocales = ['tr', 'de', 'fr', 'it', 'es', 'ar', 'hi', 'id', 'ko'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const projects = getAllProjects();
@@ -38,6 +39,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.8,
       });
     }
+  }
+
+  entries.push(
+    { url: `${BASE_URL}/infassist`, lastModified: new Date('2026-10-01'), changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE_URL}/infassist/privacy`, lastModified: new Date('2026-10-01'), changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${BASE_URL}/infassist/support`, lastModified: new Date('2026-10-01'), changeFrequency: 'yearly', priority: 0.3 },
+  );
+
+  for (const lang of infassistLocales) {
+    entries.push(
+      { url: `${BASE_URL}/infassist/${lang}`, lastModified: new Date('2026-10-01'), changeFrequency: 'weekly', priority: 0.7 },
+      { url: `${BASE_URL}/infassist/${lang}/privacy`, lastModified: new Date('2026-10-01'), changeFrequency: 'yearly', priority: 0.3 },
+      { url: `${BASE_URL}/infassist/${lang}/support`, lastModified: new Date('2026-10-01'), changeFrequency: 'yearly', priority: 0.3 },
+    );
   }
 
   return entries;

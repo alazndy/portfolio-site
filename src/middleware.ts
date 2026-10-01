@@ -7,6 +7,12 @@ const defaultLocale = 'tr';
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  // The standalone InfAssist marketing site owns its language paths beneath
+  // /infassist; do not prepend the portfolio's /tr or /en locale here.
+  if (pathname === '/infassist' || pathname.startsWith('/infassist/')) {
+    return NextResponse.next();
+  }
+
   // Check if pathname already starts with /tr or /en
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
